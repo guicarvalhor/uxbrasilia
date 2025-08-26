@@ -113,8 +113,10 @@ a {
 }
 
 .nav__links a:hover {
-  background: var(--offwhite);
+  background: var(--green);
   transform: translateY(-1px);
+  color: #fff;
+  cursor: none;
 }
 
 .logo {
