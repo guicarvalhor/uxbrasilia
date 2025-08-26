@@ -1,4 +1,5 @@
-/* Smooth scroll (Lenis) */
+
+/* Smooth scroll (Lenis) 
 const lenis = new Lenis({
   duration: 1.05,
   easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)), // easeOutExpo
@@ -7,7 +8,7 @@ const lenis = new Lenis({
 function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
 requestAnimationFrame(raf);
 
-window.addEventListener('scroll', updateNav);
+window.addEventListener('scroll', updateNav);*/
 
 /* GSAP: parallax + entrances */
 gsap.registerPlugin(ScrollTrigger);
@@ -42,3 +43,4 @@ const revealUp = (targets, delayStep = 0.06) => {
 revealUp(gsap.utils.toArray('.feature-card'));
 revealUp(gsap.utils.toArray('.team-card'));
 revealUp(gsap.utils.toArray('.event-card'));
+

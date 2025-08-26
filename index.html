@@ -28,18 +28,25 @@
     
     <!-- NAV -->
     <header class="nav" id="top-nav" role="banner" aria-label="Navegação principal">
-        <div class="container nav__inner">
-            <a class="brand" href="#" aria-label="UXBrasília — Página inicial">
-                <img src="/assets/logo-ux.svg" alt="" srcset="">
-            </a>
+    <div class="container nav__inner">
+        <a class="brand" href="/index.html" aria-label="UXBrasília — Página inicial">
+            <img src="/assets/logo-ux.svg" alt="Logo UX Brasília">
+        </a>
 
-            <nav class="nav__links" aria-label="Links do site">
-                <a href="/" id="active">Página inicial</a>
-                <a href="/voluntariado.html">Voluntariado</a>
-                <a href="contato.html">Contatos</a>
-            </nav>
-        </div>
-    </header>
+        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-links">
+            <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path class="hamburger-lines" d="M3 12h18M3 6h18M3 18h18"></path>
+                <path class="close-lines" d="M18 6L6 18M6 6l12 12"></path>
+            </svg>
+        </button>
+
+        <nav class="nav__links" id="menu-links" aria-label="Links do site">
+            <a href="/" id="active">Página inicial</a>
+            <a href="/voluntariado.html">Voluntariado</a>
+            <a href="contato.html">Contatos</a>
+        </nav>
+    </div>
+</header>
 
     <!-- HERO -->
     <section id="hero" class="hero">
@@ -275,6 +282,7 @@
 
     <!-- Scripts -->
     <script src="script.js" defer></script>
+    <script src="menu.js"></script>
 </body>
 
 </html>
