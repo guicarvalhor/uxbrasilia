@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Voluntariado — UXBrasília</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700&family=Work+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.37/bundled/lenis.min.js"></script>
+
+    <script defer src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+</head>
+
+<body>
+
+    <header class="nav" id="top-nav" role="banner" aria-label="Navegação principal">
+        <div class="container nav__inner">
+            <a class="brand" href="index.html" aria-label="UXBrasília — Página inicial">
+                <img src="/assets/logo-ux.svg" alt="Logo UX Brasília">
+            </a>
+
+            <nav class="nav__links" aria-label="Links do site">
+                <a href="index.html">Página inicial</a>
+                <a href="index.html#sobre">Sobre nós</a>
+                <a href="voluntariado.html" id="active">Voluntariado</a>
+                <a href="index.html#eventos">Eventos</a>
+                <a href="#contato">Contatos</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero-voluntariado" class="hero">
+        <div class="hero__bg">
+            <div class="rings rings--1"></div>
+            <div class="rings rings--2"></div>
+            <div class="rings rings--3"></div>
+            <div class="rings rings--4"></div>
+            <div class="rings rings--5"></div>
+        </div>
+
+        <div class="container hero__content">
+            <h1 class="hero__title">
+                Faça parte da mudança. <br> <span class="nowrap">Seja um voluntário!</span>
+            </h1>
+            <p class="hero__desc">
+                Junte-se a nós e ajude a fortalecer a comunidade de UX no Distrito Federal. Sua paixão por design pode
+                inspirar e transformar.
+            </p>
+            <div class="hero__video-wrapper">
+                <lottie-player src="/assets/Scene.json" background="transparent" speed="1"
+                    style="width: 100%; height: 100%;" loop autoplay>
+                </lottie-player>
+            </div>
+        </div>
+    </section>
+
+    <section id="processo-voluntariado" class="features">
+        <div class="container">
+            <h2 class="volunteer__title">
+                Como você pode contribuir?
+            </h2>
+            <p class="section__subtitle" style="text-align: center; max-width: 800px; margin: -2rem auto 4rem auto;">
+                Nosso programa de voluntariado é a força por trás da comunidade. Temos diversas frentes de atuação onde
+                suas habilidades e paixão por UX podem fazer a diferença. Veja como você pode se envolver:
+            </p>
+
+            <div class="features__grid">
+                <article class="feature-card">
+
+                    <h3 class="feature-card__title">Mídias Sociais</h3>
+                    <p class="feature-card__text">
+                        Ajude a criar e gerenciar conteúdo para nossas redes, engajando a comunidade e divulgando nossas
+                        iniciativas e eventos.
+                    </p>
+                </article>
+                <article class="feature-card">
+                    <h3 class="feature-card__title">Parcerias</h3>
+                    <p class="feature-card__text">
+                        Conecte a UXBrasília com empresas, instituições e outras comunidades para criar oportunidades e
+                        fortalecer nosso ecossistema.
+                    </p>
+                </article>
+                <article class="feature-card">
+                    <h3 class="feature-card__title">Palestras e Workshops</h3>
+                    <p class="feature-card__text">
+                        Compartilhe seu conhecimento! Seja um palestrante ou ajude na curadoria e organização de
+                        conteúdos relevantes para a comunidade.
+                    </p>
+                </article>
+                <article class="feature-card">
+                    <h3 class="feature-card__title">Eventos</h3>
+                    <p class="feature-card__text">
+                        Participe da linha de frente na organização dos nossos encontros, cuidando da logística,
+                        recepção e garantindo a melhor experiência para todos.
+                    </p>
+                </article>
+            </div>
+
+            <div class="hero__cta" style="margin-top: 4rem;">
+                <a href="#formulario-inscricao" class="btn btn--primary">Quero ser voluntário!</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="team" aria-labelledby="team-title">
+        <div class="team__bg"></div>
+        <div class="container">
+            <h2 id="team-title" class="section__title section__title--light">Nossas pessoas voluntárias</h2>
+
+            <div class="team__grid">
+                <figure class="team-card">
+                    <img src="https://via.placeholder.com/250" alt="Nome do Voluntário 1" />
+                    <figcaption>
+                        <h3>Nome do Voluntário</h3>
+                        <p>Área de atuação</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="team-card">
+                    <img src="https://via.placeholder.com/250" alt="Nome da Voluntária 2" />
+                    <figcaption>
+                        <h3>Nome da Voluntária</h3>
+                        <p>Área de atuação</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="team-card">
+                    <img src="https://via.placeholder.com/250" alt="Nome do Voluntário 3" />
+                    <figcaption>
+                        <h3>Nome do Voluntário</h3>
+                        <p>Área de atuação</p>
+                    </figcaption>
+                </figure>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato" class="footer" role="contentinfo">
+        <div class="container footer__inner">
+            <a class="brand brand--footer" href="#hero" aria-label="Voltar ao topo">
+                <img src="/assets/logo-ux.svg" alt="Logo UX Brasília">
+                <p id="footer-text">A comunidade onde o design é coletivo <br> e a experiência é compartilhada!</p>
+            </a>
+
+            <div class="footer__cols">
+                <div class="footer__col">
+                    <h4>Comunidade</h4>
+                    <ul>
+                        <li><a href="index.html#sobre">Sobre nós</a></li>
+                        <li><a href="voluntariado.html">Voluntariado</a></li>
+                        <li><a href="index.html#eventos">Eventos</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h4>Nossas redes</h4>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Linkedin</a></li>
+                        <li><a href="#">Youtube</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><a href="#">Fale conosco</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer__copy">
+            <div class="container">
+                © 2025 UXBrasília. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contato — UXBrasília</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700&family=Work+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css" />
+    
+    <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico"> 
+</head>
+
+<body>
+    
+    <header class="nav" id="top-nav" role="banner" aria-label="Navegação principal">
+        <div class="container nav__inner">
+            <a class="brand" href="index.html" aria-label="UXBrasília — Página inicial">
+                <img src="/assets/logo-ux.svg" alt="Logo UX Brasília">
+            </a>
+
+            <nav class="nav__links" aria-label="Links do site">
+                <a href="index.html">Página inicial</a>
+                <a href="index.html#sobre">Sobre nós</a>
+                <a href="voluntariado.html">Voluntariado</a>
+                <a href="index.html#eventos">Eventos</a>
+                <a href="contato.html" id="active">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero-contato" class="hero">
+        <div class="hero__bg">
+            <div class="rings rings--1"></div>
+            <div class="rings rings--2"></div>
+            <div class="rings rings--3"></div>
+            <div class="rings rings--4"></div>
+            <div class="rings rings--5"></div>
+        </div>
+
+        <div class="container hero__content">
+            <h1 class="hero__title">
+                Conecte-se conosco!
+            </h1>
+            <p class="hero__desc">
+                Siga nossas redes para não perder nenhuma novidade ou nos envie uma mensagem. Estamos ansiosos para ouvir você!
+            </p>
+        </div>
+    </section>
+
+    <section id="contato-redes" class="features">
+        <div class="container">
+            <div class="social-highlight-grid">
+                <a href="https://www.instagram.com/uxbrasilia/" target="_blank" rel="noopener noreferrer" class="social-card social-card--instagram">
+                    <div class="social-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </div>
+                    <div class="social-card__content">
+                        <h3>Instagram</h3>
+                        <p>@uxbrasilia</p>
+                    </div>
+                    <div class="social-card__action">
+                        <span>Seguir</span>
+                    </div>
+                </a>
+
+                <a href="https://www.linkedin.com/company/uxbrasilia" target="_blank" rel="noopener noreferrer" class="social-card social-card--linkedin">
+                    <div class="social-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </div>
+                    <div class="social-card__content">
+                        <h3>LinkedIn</h3>
+                        <p>UXBrasília</p>
+                    </div>
+                    <div class="social-card__action">
+                        <span>Conectar</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="form-container">
+                 <h2 class="section__title">Ou nos envie uma mensagem</h2>
+                 <p class="section__subtitle" style="text-align: center; max-width: 600px; margin: -2rem auto 3rem auto;">
+                    Para parcerias, sugestões ou dúvidas, preencha o formulário abaixo.
+                 </p>
+                 <form action="https://formsubmit.co/organizacaouxbrasilia@gmail.com" method="POST" class="form">
+                    <div class="form__group">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+                    </div>
+                    <div class="form__group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="seu.email@exemplo.com">
+                    </div>
+                    <div class="form__group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="6" required placeholder="Escreva sua mensagem aqui..."></textarea>
+                    </div>
+                    <input type="hidden" name="_next" value="URL_DA_SUA_PAGINA_DE_OBRIGADO">
+                    <input type="hidden" name="_subject" value="Nova mensagem do site UXBrasília!">
+                    <button type="submit" class="btn btn--primary">Enviar mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="footer" role="contentinfo">
+        <div class="container footer__inner">
+            <a class="brand brand--footer" href="#hero-contato" aria-label="Voltar ao topo">
+                <img src="/assets/logo-ux.svg" alt="Logo UX Brasília">
+                <p id="footer-text">A comunidade onde o design é coletivo <br> e a experiência é compartilhada!</p>
+            </a>
+            <div class="footer__cols">
+                <div class="footer__col">
+                    <h4>Comunidade</h4>
+                    <ul>
+                        <li><a href="index.html#sobre">Sobre nós</a></li>
+                        <li><a href="voluntariado.html">Voluntariado</a></li>
+                        <li><a href="index.html#eventos">Eventos</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4>Nossas redes</h4>
+                    <ul>
+                        <li><a href="https://www.instagram.com/uxbrasilia/" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/company/uxbrasilia" target="_blank">Linkedin</a></li>
+                        <li><a href="#">Youtube</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><a href="mailto:organizacaouxbrasilia@gmail.com">Fale conosco</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copy">
+            <div class="container">
+                © 2025 UXBrasília. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
