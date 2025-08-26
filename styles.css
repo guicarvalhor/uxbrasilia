@@ -831,7 +831,35 @@ font-family: "Cabinet Grotesk", system-ui;
 .social-card--linkedin .social-card__icon {
     color: #0A66C2;
 }
+/*-----------------------------------*/
+/* Ajuste do Grid para 3 Colunas
+/*-----------------------------------*/
+.social-highlight-grid {
+    /* Altere o número de colunas para 3 */
+    grid-template-columns: repeat(3, 1fr);
+}
 
+@media (max-width: 992px) {
+    .social-highlight-grid {
+        /* Mantém 1 coluna em telas médias para não quebrar o layout */
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/*-----------------------------------*/
+/* Estilo do Card do YouTube
+/*-----------------------------------*/
+.social-card--youtube:hover {
+    border-color: #FF0000;
+}
+.social-card--youtube:hover .social-card__action {
+    background-color: #FF0000;
+    border-color: #FF0000;
+}
+.social-card--youtube .social-card__icon {
+    color: #FF0000;
+}
 
 /* Container do Formulário */
 .form-container {
