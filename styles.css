@@ -116,7 +116,7 @@ a {
   background: var(--green);
   transform: translateY(-1px);
   color: #fff !important;
-  cursor: none;
+  cursor: url(/assets/arrowhead-rounded-outline.svg) 10 10, auto;
 }
 
 .logo {
@@ -264,16 +264,21 @@ a {
 .btn--primary {
   background: #3681FF;
   color: var(--white); 
+  cursor: url(/assets/arrowhead-rounded-outline.svg) 10 10, auto;
 }
 .btn--primary:hover {
   transform: translateY(-2px);
   box-shadow: 4px 4px 0px black;
-  cursor: none; 
+  cursor: url(/assets/arrowhead-rounded-outline.svg) 10 10, auto;
 }
 .btn--ghost {
   background: #fff;
   color: #1f2937;
   border: none;
+  cursor: url(/assets/arrowhead-rounded-outline.svg) 10 10, auto;
+}
+a {
+  cursor: url(/assets/arrowhead-rounded-outline.svg) 10 10, auto;
 }
 
 /* =========
