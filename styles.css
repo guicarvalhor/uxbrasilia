@@ -195,10 +195,11 @@ a {
   border: 2px solid rgba(255, 255, 255, 0.18);
   transform: translateY(0);
   animation-name: zoom-in-out;
-  animation-duration: 10s;
+  animation-duration: 15s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
+
 .rings--2 {
   width: 900px;
   height: 900px;
