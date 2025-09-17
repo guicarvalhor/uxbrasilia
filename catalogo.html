@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lojinha — UXBrasília</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico">
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.37/bundled/lenis.min.js"></script>
+</head>
+
+<body>
+
+    <header class="nav" id="top-nav" role="banner" aria-label="Navegação principal">
+        <div class="container nav__inner">
+            <a class="brand" href="/" aria-label="UXBrasília — Página inicial">
+                <img src="/assets/logo-ux.svg" alt="Logo UX Brasília">
+            </a>
+
+            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-links">
+                <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path class="hamburger-lines" d="M3 12h18M3 6h18M3 18h18"></path>
+                    <path class="close-lines" d="M18 6L6 18M6 6l12 12"></path>
+                </svg>
+            </button>
+
+            <nav class="nav__links" id="menu-links" aria-label="Links do site">
+                <a href="/">Página inicial</a>
+                <a href="/voluntariado.html">Voluntariado</a>
+                <a href="loja.html" id="active">Lojinha</a> 
+                <a href="contato.html">Contatos</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero blue"> 
+            <div class="hero__bg">
+            <div class="rings rings--1"></div>
+            <div class="rings rings--2"></div>
+            <div class="rings rings--3"></div>
+            <div class="rings rings--4"></div>
+            <div class="rings rings--5"></div>
+        </div>
+        <div class="container hero__content">
+            <h1 class="hero__title">
+                Vista a camisa da nossa comunidade
+            </h1>
+            <p class="hero__desc">
+                Produtos feitos com carinho para quem faz parte da UXBrasília. Para fazer seu pedido, basta entrar em contato!
+            </p>
+        </div>
+    </section>
+    
+    <main class="team" style="border-radius: 0; background-color: var(--offwhite);">
+        <div class="container">
+            <h2 class="section__title" style="color: var(--blue);">Nossos Produtos</h2>
+
+            <div class="team__grid">
+                
+                <figure class="team-card" style="background-color: #1A1A1A;">
+                    <img src="/assets/lojinha/camiseta.png" alt="Camiseta preta com logo UXBrasília"/>
+                    <figcaption>
+                        <h3>Camiseta UXBrasília</h3>
+                        <p>Algodão de alta qualidade, disponível nos tamanhos P, M, G e GG.</p>
+                        <p style="font-size: 24px; padding:20px 0px; font-weight: 700;">R$ 60,00</p>
+                        <a href="https://forms.gle/BMsVS9C2TrGtgXFd9" class="btn btn--ghost" style="margin-top: 16px; width: 100%;">Quero encomendar!</a>
+                    </figcaption>
+                </figure>
+
+                <figure class="team-card" style="background-color: #1A1A1A;">
+                    <img src="/assets/lojinha/caneca.png" alt="Caneca branca com logo UXBrasília"/>
+                    <figcaption>
+                        <h3>Caneca da Comunidade</h3>
+                        <p>Perfeita para o seu café enquanto planeja a sua próxima interface incrível.</p>
+                        <a href="" class="btn btn--ghost" style="margin-top: 16px; width: 100%;">Encomendas em breve!</a>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </main>
+
+    <footer id="contato" class="footer" role="contentinfo">
+        <div class="container footer__inner">
+            <a class="brand brand--footer" href="#top-nav" aria-label="Voltar ao topo">
+                <img src="/assets/logo-ux.svg" alt="" srcset="">
+                <p id="footer-text">A comunidade onde o design é coletivo <br> e a experiência é compartilhada!</p>
+            </a>
+            <div class="footer__cols">
+                <div class="footer__col">
+                    <h4>Comunidade</h4>
+                    <ul>
+                        <li><a href="voluntariado.html">Voluntariado</a></li>
+                        <li><a href="loja.html">Lojinha</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4>Nossas redes</h4>
+                    <ul>
+                        <li><a target="_blank" href="https://www.instagram.com/uxbrasilia">Instagram</a></li>
+                        <li><a target="_blank" href="https://www.linkedin.com/company/uxbrasilia">Linkedin</a></li>
+                        <li><a target="_blank" href="https://www.youtube.com/@UXBrasilia">Youtube</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copy">
+            <div class="container">
+                © 2025 UXBrasília. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script src="menu.js"></script>
+
+</body>
+</html>

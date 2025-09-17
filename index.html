@@ -37,6 +37,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <!-- Lenis (smooth scroll) -->
     <script defer src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.37/bundled/lenis.min.js"></script>
+    <script defer src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FWYM4MXY6K"></script>
@@ -68,6 +69,7 @@
             <nav class="nav__links" id="menu-links" aria-label="Links do site">
                 <a href="/" id="active">Página inicial</a>
                 <a href="/voluntariado.html">Voluntariado</a>
+                <a href="catalogo.html">Lojinha</a>
                 <a href="contato.html">Contatos</a>
             </nav>
         </div>
@@ -106,6 +108,45 @@
             </div>
         </div>
     </section>
+
+<section class="destaques container">
+  <h2 class="section__title">Destaques</h2>
+  <div class="carousel">
+    <div class="slides">
+      <div class="slide active" style="background-image: url('/assets/img1.png');">
+        <div class="overlay">
+          <h3>1ª Edição - UX Brasília no Museu</h3>
+          <p>Confira as fotos do nosso último encontro!</p>
+          <a href="#" class="btn btn--ghost">Ver fotos</a>
+        </div>
+      </div>
+      
+      <div class="slide" style="background-image: url('/assets/img2.png');">
+        <div class="overlay">
+          <h3>2ª Edição - UX Brasília no Museu</h3>
+          <p>Primeiro lote aberto! Resgate seu ingresso.</p>
+          <a href="https://www.sympla.com.br/evento/2-edicao---ux-brasilia-no-museu/3124049" class="btn btn--ghost">Resgatar ingresso</a>
+        </div>
+      </div>
+
+      <div class="slide" style="background-image: url('/assets/img3.png');">
+        <div class="overlay">
+          <h3>Lojinha do UX Brasília</h3>
+          <p>Confira os produtos e faça seu pedido</p>
+          <a href="/voluntariado.html" class="btn btn--ghost">Ver produtos</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Indicadores -->
+    <div class="indicators">
+      <span class="dot active" data-slide="0"></span>
+      <span class="dot" data-slide="1"></span>
+      <span class="dot" data-slide="2"></span>
+    </div>
+  </div>
+</section>
+
 
     <!-- SOBRE / PROPÓSITO / VALORES -->
 

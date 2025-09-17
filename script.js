@@ -71,3 +71,32 @@ revealUp(gsap.utils.toArray('.event-card'));
     }
 
     getPosts();
+
+    let currentIndex = 0;
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
+const totalSlides = slides.length;
+
+function showSlide(index) {
+  const slidesContainer = document.querySelector(".slides");
+  slidesContainer.style.transform = `translateX(-${index * 100}%)`;
+  
+  dots.forEach(dot => dot.classList.remove("active"));
+  dots[index].classList.add("active");
+  
+  currentIndex = index;
+}
+
+// Passar automaticamente
+setInterval(() => {
+  let nextIndex = (currentIndex + 1) % totalSlides;
+  showSlide(nextIndex);
+}, 5000);
+
+// Navegação manual pelas bolinhas
+dots.forEach(dot => {
+  dot.addEventListener("click", () => {
+    let index = parseInt(dot.getAttribute("data-slide"));
+    showSlide(index);
+  });
+});
