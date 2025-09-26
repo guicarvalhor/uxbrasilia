@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog — UXBrasília</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700&family=Work+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="nav" id="top-nav">
+        <div class="container nav__inner">
+            <a class="brand" href="/index.html"><img src="/assets/logo-ux.svg" alt="Logo UX Brasília"></a>
+            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-links">
+                <svg class="menu-icon" viewBox="0 0 24 24">
+                    <path class="hamburger-lines" d="M3 12h18M3 6h18M3 18h18"></path>
+                    <path class="close-lines" d="M18 6L6 18M6 6l12 12"></path>
+                </svg>
+            </button>
+            <nav class="nav__links" id="menu-links">
+                <a href="/">Página inicial</a>
+                <a href="/voluntariado.html">Voluntariado</a>
+                <a href="/blog.html" id="active">Blog</a>
+                <a href="/catalogo.html">Lojinha</a>
+                <a href="/contato.html">Contatos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+  <section id="hero-voluntariado" class="hero">
+        <div class="hero__bg">
+            <div class="rings rings--1"></div>
+            <div class="rings rings--2"></div>
+            <div class="rings rings--3"></div>
+            <div class="rings rings--4"></div>
+            <div class="rings rings--5"></div>
+        </div>
+
+        <div class="container hero__content-pink">
+            <h1 class="hero__title">
+                Nosso blog
+            </h1>
+            <p class="hero__desc">
+                Artigos, dicas e novidades do universo de UX/UI, direto da nossa comunidade.
+            </p>
+        </div>
+    </section>
+        <section class="blog-section">
+            <div class="container">
+                <div class="blog-grid">
+                    <article class="post-card">
+                        <a href="/blog/paginas/post-1.html" class="post-card__image-link">
+                            <img src="/blog/imagens/mulher-trabalhando.jpg"
+                                alt="Pessoa trabalhando com um notebook em uma cafeteria aconchegante"
+                                class="post-card__image">
+                        </a>
+                        <div class="post-card__content">
+                            <div class="post-card__meta">
+                                <span class="post-card__category">Dicas Locais</span>
+                                <span class="post-card__date">26 de Setembro, 2025</span>
+                            </div>
+                            <h3 class="post-card__title">
+                                <a href="/blog/paginas/post-1.html">Café e Frame: As melhores cafeterias para trabalhar
+                                    em Brasília</a>
+                            </h3>
+                            <p class="post-card__excerpt">Cansado do home office? Preparamos uma seleção especial com os
+                                melhores cantinhos de Brasília para você conectar seu notebook, tomar um bom café e ser
+                                produtivo...</p>
+                            <a href="/blog/paginas/post-1.html" class="post-card__read-more">Ver a lista completa →</a>
+                        </div>
+                    </article>
+                    <article class="post-card">
+                        <a href="/blog/paginas/post-2.html" class="post-card__image-link">
+                            <img src="/assets/destaque-1.png"
+                                alt="Foto da comunidade reunida na 1ª edição do evento UX Brasília"
+                                class="post-card__image">
+                        </a>
+                        <div class="post-card__content">
+                            <div class="post-card__meta">
+                                <span class="post-card__category">Eventos da Comunidade</span>
+                                <span class="post-card__date">06 de Setembro, 2025</span>
+                            </div>
+                            <h3 class="post-card__title">
+                                <a href="/blog/paginas/post-2.html">1ª Edição UX Brasília no Museu: Como foi o encontro
+                                    da comunidade?</a>
+                            </h3>
+                            <p class="post-card__excerpt">A nossa primeira edição do UX Brasília no museu foi um sucesso! Um dia incrível de
+                                conexões, aprendizado e muito design. Confira os melhores momentos e veja as fotos do
+                                evento.</p>
+                            <a href="/blog/paginas/post-2.html" class="post-card__read-more">Leia e veja as fotos
+                                →</a>
+                        </div>
+                    </article>
+
+
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- FOOTER -->
+    <footer id="contato" class="footer" role="contentinfo">
+        <div class="container footer__inner">
+            <a class="brand brand--footer" href="#hero" aria-label="Voltar ao topo">
+                <img src="/assets/logo-ux.svg" alt="" srcset="">
+                <p id="footer-text">A comunidade onde o design é coletivo <br> e a experiência é compartilhada!</p>
+            </a>
+
+            <div class="footer__cols">
+                <div class="footer__col">
+                    <h4>Comunidade</h4>
+                    <ul>
+                        <li><a href="/voluntariado.html">Voluntariado</a></li>
+                        <li><a href="/catalogo.html">Lojinha</a></li>
+                        <li><a href="/blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h4>Nossas redes</h4>
+                    <ul>
+                        <li><a target="_blank" href="https://www.instagram.com/uxbrasilia">Instagram</a></li>
+                        <li><a target="_blank" href="https://www.linkedin.com/company/uxbrasilia">Linkedin</a></li>
+                        <li><a target="_blank" href="https://www.youtube.com/@UXBrasilia">Youtube</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__copy">
+            <div class="container">
+                © 2025 UXBrasília. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+    <script src="script.js" defer></script>
+    <script src="menu.js" defer></script>
+</body>
+
+</html>
