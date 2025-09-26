@@ -281,6 +281,9 @@ a {
   border: none;
   cursor: url(/assets/arrowhead-rounded-outline.svg) 10 10, auto;
 }
+.btn--small{
+  margin: 30px 0px 0px 0px;
+}
 a {
   cursor: url(/assets/arrowhead-rounded-outline.svg) 10 10, auto;
 }
@@ -529,8 +532,12 @@ transform: rotate(45deg);
   color: #fff;
 }
 .event-card--green {
-  background: #359657;
+  background: #1C8045;
   color: #fff;
+}
+.event-card--white{
+  background-color: #f1f1f1;
+  color: #000;
 }
 .event-card__meta {
   display: flex;
