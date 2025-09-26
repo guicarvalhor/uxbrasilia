@@ -1322,3 +1322,217 @@ font-family: "Cabinet Grotesk", system-ui;
 @media (max-width: 768px) {
     .post-title { font-size: 2.5rem; }
 }
+
+/* ==================
+   PÁGINA DE PARCEIROS
+   ================== */
+
+/* Hero da Página de Parceiros */
+.partners-hero {
+    background-color: #f4f7f6;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Seção de Parceiros Atuais */
+.partners-section {
+    padding: 4rem 0;
+}
+.partners-section .section__title {
+    margin-bottom: 3rem;
+}
+
+/* Card de Parceria */
+.partner-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 2.5rem;
+    padding: 2.5rem;
+    align-items: flex-start;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+.partner-card__logo {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.partner-card__logo img {
+    max-width: 100%;
+    height: auto;
+}
+.partner-card__name {
+    font-family: 'Cabinet Grotesk', sans-serif;
+    font-size: 2rem;
+    margin: 0 0 0.5rem 0;
+}
+.partner-card__description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+/* Benefícios dentro do card */
+.partner-card__benefits {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+.benefit-item {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+.benefit-item__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.benefit-item__description {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+.benefit-item .btn {
+    width: 100%;
+}
+
+/* Seção para Atrair Parceiros */
+.join-partners-section {
+    background: var(--blue);
+    color: #fff;
+    padding: 5rem 0;
+    text-align: center;
+}
+.section__subtitle--light {
+    color: rgba(255,255,255,0.8);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Números da Comunidade */
+.community-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+    margin: 4rem auto;
+}
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+.stat-item__number {
+    font-family: 'Cabinet Grotesk', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--white);
+}
+.stat-item__label {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.7);
+}
+
+/* Botões de CTA */
+.partners-cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.btn--ghost-light {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+.btn--ghost-light:hover {
+    background: #fff;
+    color: #111;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .partner-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .partner-card__logo {
+        max-width: 200px;
+        margin: 0 auto 1.5rem auto;
+    }
+    .partner-card__benefits {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 768px) {
+    .community-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+/* ==================
+   SEÇÃO "QUEM NOS APOIA"
+   ================== */
+.supporters-section {
+    background-color: #f4f7f6; /* Fundo neutro, igual ao hero */
+    padding: 4rem 0;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.supporters-section .section__title {
+    margin-bottom: 3rem;
+}
+
+.supporter-logos {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as logos quebrem para a linha de baixo */
+    justify-content: center; /* Centraliza as logos na linha */
+    align-items: center;
+    gap: 2.5rem; /* Espaçamento entre as bolinhas */
+}
+
+.supporter-logo-item {
+    display: block;
+    width: 130px; /* Tamanho da bolinha */
+    height: 130px;
+    border-radius: 50%; /* A mágica para criar a bolinha */
+    overflow: hidden;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.supporter-logo-item:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 4px 4px 0px black;
+}
+
+.supporter-logo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Garante que a logo caiba perfeitamente */
+    padding: 18px; /* Adiciona uma margem interna para a logo respirar */
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho da bolinha */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .supporter-logo-item {
+        width: 100px;
+        height: 100px;
+    }
+    .supporter-logos {
+        gap: 1.5rem;
+    }
+}
