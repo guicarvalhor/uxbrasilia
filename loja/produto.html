@@ -41,12 +41,13 @@
 
     <main class="product-page-wrapper">
         <div class="product-container">
+
             <section class="product-image-gallery">
                 <img id="main-product-image" src="" alt="Imagem principal do produto">
             </section>
 
             <section class="product-details">
-
+                <a href="/catalogo.html" class="back-to">← Voltar para a loja</a>
                 <h1 id="product-name">Carregando...</h1>
                 <p class="price" id="product-price"></p>
 
@@ -64,6 +65,7 @@
                     <button class="btn btn-on-demand hidden" id="on-demand-button">Encomendar sob Demanda</button>
                     <p class="sold-out-message hidden" id="sold-out-message">Produto Esgotado</p>
                 </div>
+
             </section>
         </div>
     </main>
@@ -76,65 +78,70 @@
     </div>
     </main>
 
- <div id="order-modal" class="modal-overlay hidden">
-    <div class="modal-content">
-        
-        <div class="modal-header">
-            <h2>Finalizar Encomenda</h2>
-            <button id="close-modal" class="close-button">&times;</button>
-        </div>
-        
-        <div class="modal-body">
-            <div class="order-summary" id="modal-order-summary">
+    <div id="order-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h2>Finalizar Encomenda</h2>
+                <button id="close-modal" class="close-button">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <div class="order-summary" id="modal-order-summary">
                 </div>
 
-            <form id="order-form" action="https://formspree.io/f/movkwvzg" method="POST" enctype="multipart/form-data">
-                <div class="form-group">
-                    <label for="user-name">Seu Nome Completo:</label>
-                    <input type="text" id="user-name" name="Nome" required>
-                </div>
-                <div class="form-group">
-                    <label for="user-phone">Seu Telefone (WhatsApp):</label>
-                    <input type="tel" id="user-phone" name="Telefone" placeholder="(XX) XXXXX-XXXX" required>
-                </div>
-
-                <div class="pix-payment">
-                    <h3>1. Realize o Pagamento</h3>
-                    <p>Faça o pagamento do valor total para a chave PIX abaixo para confirmar seu pedido.</p>
-                    <div class="pix-key-wrapper">
-                        <input type="text" id="pix-key" value="00.000.000/0001-00" readonly>
-                        <button type="button" id="copy-pix-button">Copiar</button>
+                <form id="order-form" action="https://formspree.io/f/movkwvzg" method="POST"
+                    enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="user-name">Seu Nome Completo:</label>
+                        <input type="text" id="user-name" name="Nome" required>
                     </div>
-                    <p id="copy-feedback" class="copy-feedback-hidden">Chave copiada!</p>
-                </div>
+                    <div class="form-group">
+                        <label for="user-phone">Seu Telefone (WhatsApp):</label>
+                        <input type="tel" id="user-phone" name="Telefone" placeholder="(XX) XXXXX-XXXX" required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="file-upload">2. Anexe o Comprovante PIX</label>
-                    <label for="file-upload" class="file-upload-label">
-                        <span>Selecionar arquivo...</span>
-                    </label>
-                    <input type="file" id="file-upload" name="Comprovante de Pagamento" required>
-                </div>
-                
-                <div class="delivery-info">
-                    <p>✅ <b>Entrega:</b> Os itens serão entregues presencialmente no dia do nosso próximo evento.</p>
-                </div>
-                
-                <input type="hidden" id="form-product-name" name="Produto">
-                <input type="hidden" id="form-product-details" name="Detalhes da Seleção">
-                <input type="hidden" id="form-product-value" name="Valor">
+                    <div class="pix-payment">
+                        <h3>1. Realize o Pagamento</h3>
+                        <p>Faça o pagamento do valor total para a chave PIX abaixo para confirmar seu pedido.</p>
+                        <div class="pix-key-wrapper">
+                            <input type="text" id="pix-key" value="00.000.000/0001-00" readonly>
+                            <button type="button" id="copy-pix-button">Copiar</button>
+                        </div>
+                        <p id="copy-feedback" class="copy-feedback-hidden">Chave copiada!</p>
+                    </div>
 
-                <input type="hidden" name="_next" value="https://uxbrasilia.com/obrigado.html">
-                <input type="hidden" name="_subject" value="Novo Pedido na Lojinha (com anexo)!">
-            </form>
+                    <div class="form-group">
+                        <label for="file-upload">2. Anexe o Comprovante PIX</label>
+                        <label for="file-upload" class="file-upload-label">
+                            <span>Selecionar arquivo...</span>
+                        </label>
+                        <input type="file" id="file-upload" name="Comprovante de Pagamento" required>
+                    </div>
+
+                    <div class="delivery-info">
+                        <p>✅ <b>Entrega:</b> Os itens serão entregues presencialmente no dia do nosso próximo evento.
+                        </p>
+                    </div>
+
+                    <input type="hidden" id="form-product-name" name="Produto">
+                    <input type="hidden" id="form-product-details" name="Detalhes da Seleção">
+                    <input type="hidden" id="form-product-value" name="Valor">
+
+                    <input type="hidden" name="_next" value="https://uxbrasilia.com/obrigado.html">
+                    <input type="hidden" name="_subject" value="Novo Pedido na Lojinha (com anexo)!">
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="submit" form="order-form" class="btn btn-buy">Confirmar Encomenda e Enviar</button>
+            </div>
         </div>
 
-        <div class="modal-footer">
-            <button type="submit" form="order-form" class="btn btn-buy">Confirmar Encomenda e Enviar</button>
-        </div>
+
     </div>
-</div>
-<footer id="contato" class="footer" role="contentinfo">
+
+    <footer id="contato" class="footer" role="contentinfo">
         <div class="container footer__inner">
             <a class="brand brand--footer" href="#top-nav" aria-label="Voltar ao topo">
                 <img src="/assets/logo-ux.svg" alt="" srcset="">

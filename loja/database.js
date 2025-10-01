@@ -22,7 +22,7 @@ const storeProducts = {
     // --- PRODUTO 2: COBOGÓ ---
     "cobogo": {
         name: "Cobogó",
-        description: "Inspirado nos cobogós das superquadras de Brasília, este elemento vazado é uma releitura moderna do clássico modernista. Produzido em impressão 3D, une o design icônico com a leveza, a variedade de cores e a versatilidade dos novos materiais. Perfeito para quem busca um toque da identidade brasiliense em seu projeto.",
+        description: "Inspirado nos cobogós das superquadras de Brasília, este elemento vazado é uma releitura moderna do clássico modernista. Produzido em impressão 3D, une o design icônico com a leveza. Perfeito para quem busca um toque da identidade brasiliense em seu projeto.",
         defaultImage: "/assets/lojinha/UXBrasilia.jpg",
         images: {
             "106 Sul": { main: "/assets/lojinha/106Sul.jpg", thumb: "/assets/lojinha/106Sul.jpg" },
