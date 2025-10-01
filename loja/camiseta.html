@@ -4,23 +4,24 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Lojinha — UXBrasília</title>
+    <title>Camiseta UXBrasília — Lojinha</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css" />
+    
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="produto.css" />
+
     <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico">
     
     <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.37/bundled/lenis.min.js"></script>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FWYM4MXY6K"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-FWYM4MXY6K');
     </script>
 </head>
@@ -32,14 +33,12 @@
             <a class="brand" href="/" aria-label="UXBrasília — Página inicial">
                 <img src="/assets/logo-ux.svg" alt="Logo UX Brasília">
             </a>
-
             <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-links">
                 <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path class="hamburger-lines" d="M3 12h18M3 6h18M3 18h18"></path>
                     <path class="close-lines" d="M18 6L6 18M6 6l12 12"></path>
                 </svg>
             </button>
-
             <nav class="nav__links" id="menu-links" aria-label="Links do site">
                 <a href="/">Página inicial</a>
                 <a href="voluntariado.html">Voluntariado</a>
@@ -51,67 +50,44 @@
         </div>
     </header>
 
-    <section class="hero blue"> 
-            <div class="hero__bg">
-            <div class="rings rings--1"></div>
-            <div class="rings rings--2"></div>
-            <div class="rings rings--3"></div>
-            <div class="rings rings--4"></div>
-            <div class="rings rings--5"></div>
-        </div>
-        <div class="container hero__content">
-            <h1 class="hero__title">
-                Vista a camisa da nossa comunidade
-            </h1>
-            <p class="hero__desc">
-                Produtos feitos com carinho para quem faz parte da UXBrasília. Para fazer seu pedido, basta entrar em contato!
-            </p>
-        </div>
-    </section>
-    
-    <main class="team" style="border-radius: 0; background-color: var(--offwhite);">
-        <div class="container">
-            <h2 class="section__title" style="color: var(--blue);">Nossos Produtos</h2>
+    <main class="product-page-wrapper">
+    <div class="product-container">
+        <section class="product-image-gallery">
+            <img id="main-product-image" src="/assets/lojinha/camiseta.png" alt="Imagem principal do produto">
+        </section>
 
-            <div class="team__grid">
-                
-                <figure class="team-card">
-                    <img src="/assets/lojinha/camiseta.png" alt="Camiseta preta com logo UXBrasília"/>
-                    <figcaption>
-                        <h3>Camiseta UXBrasília</h3>
-                        <p>A camiseta oficial da comunidade é feita com um algodão de alta qualidade, disponível nos tamanhos P, M, G e EG.</p>
-                        <p style="font-size: 24px; padding:20px 0px; font-weight: 700;">R$ 60,00</p>
-                        <!--<a href="https://forms.gle/BMsVS9C2TrGtgXFd9" class="btn btn--ghost" target="_blank" style="margin-top: 16px; width: 100%;">Quero encomendar!</a>-->
-                        <a class="btn btn--ghost full" href="/loja/produto.html?id=camiseta-uxb">Ver produto ></a>
-                    </figcaption>
-                </figure>
-
-                <figure class="team-card">
-                    <img src="/assets/lojinha/UXBrasilia.jpg" alt="Caneca branca com logo UXBrasília"/>
-                    <figcaption>
-                        <h3>Cobogós</h3>
-                        <p>Inspirado nas superquadras de Brasília, este elemento vazado é uma releitura moderna do clássico modernista.</p>
-                        </p>
-                        <p style="font-size: 24px; padding:20px 0px; font-weight: 700;">R$ 10,00</p> 
-                        <a class="btn btn--ghost full"href="/loja/produto.html?id=cobogo">Ver produto ></a>
-                    </figcaption>
-                   
-                </figure>
-
-                <figure class="team-card">
-                    <img src="/assets/lojinha/caneca.png" alt="Caneca branca com logo UXBrasília"/>
-                    <figcaption>
-                        <h3>Caneca da Comunidade</h3>
-                        <p>Perfeita para o seu café enquanto planeja a sua próxima interface incrível.</p>
-                        <p style="font-size: 24px; padding:20px 0px; font-weight: 700;">R$ 15,00</p>
-                        <a class="btn btn--ghost full" href="/loja/produto.html?id=caneca-comunidade">Ver produto ></a>
-                    </figcaption>
-                    
-                </figure>
+        <section class="product-details">
+            <h1 id="product-name">Camiseta UXBrasília</h1>
+            <p class="price" id="product-price">R$ 60,00</p>
+            
+            <div class="option-group">
+                <label id="color-label">Cor: Preta</label>
+                <div class="color-options" id="color-options-container">
+                    </div>
             </div>
-        </div>
-    </main>
 
+            <div class="option-group">
+                <label>Tamanho:</label>
+                <div class="size-options" id="size-options-container">
+                    </div>
+            </div>
+
+            <div class="stock-status" id="stock-status">
+                </div>
+
+            <div class="product-description">
+                <h2>Descrição do Produto</h2>
+                <p>Leve o orgulho da comunidade no peito! Nossa camiseta oficial é feita com malha 100% algodão de alta qualidade, garantindo conforto e durabilidade. Design exclusivo e tiragem limitada para membros e apoiadores da UXBrasília.</p>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn btn-buy hidden" id="buy-button">Quero Encomendar!</button>
+                <button class="btn btn-on-demand hidden" id="on-demand-button">Encomendar sob Demanda</button>
+                <p class="sold-out-message hidden" id="sold-out-message">Produto Esgotado</p>
+            </div>
+        </section>
+    </div>
+</main>
     <footer id="contato" class="footer" role="contentinfo">
         <div class="container footer__inner">
             <a class="brand brand--footer" href="#top-nav" aria-label="Voltar ao topo">
@@ -145,6 +121,7 @@
     </footer>
 
     <script src="menu.js"></script>
+    <script src="produto.js"></script>
 
 </body>
 </html>

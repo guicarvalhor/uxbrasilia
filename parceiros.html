@@ -9,18 +9,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="nav" id="top-nav">
+     <header class="nav" id="top-nav" role="banner" aria-label="Navegação principal">
         <div class="container nav__inner">
-            <a class="brand" href="/index.html"><img src="/assets/logo-ux.svg" alt="Logo UX Brasília"></a>
+            <a class="brand" href="/" aria-label="UXBrasília — Página inicial">
+                <img src="/assets/logo-ux.svg" alt="Logo UX Brasília">
+            </a>
+
             <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-links">
-                <svg class="menu-icon" viewBox="0 0 24 24"><path class="hamburger-lines" d="M3 12h18M3 6h18M3 18h18"></path><path class="close-lines" d="M18 6L6 18M6 6l12 12"></path></svg>
+                <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path class="hamburger-lines" d="M3 12h18M3 6h18M3 18h18"></path>
+                    <path class="close-lines" d="M18 6L6 18M6 6l12 12"></path>
+                </svg>
             </button>
-            <nav class="nav__links" id="menu-links">
-                <a href="/index.html">Página inicial</a>
+
+            <nav class="nav__links" id="menu-links" aria-label="Links do site">
+                <a href="/">Página inicial</a>
                 <a href="/voluntariado.html">Voluntariado</a>
                 <a href="/blog.html">Blog</a>
                 <a href="/parceiros.html" id="active">Parceiros</a>
-                <a href="/catalogo.html">Lojinha</a>
+                <a href="/catalogo.html" >Lojinha</a> 
                 <a href="/contato.html">Contatos</a>
             </nav>
         </div>
@@ -115,7 +122,7 @@
 
                <div class="partners-cta-buttons">
                   <!--   <a href="URL_PARA_SEU_MIDIA_KIT.pdf" target="_blank" class="btn btn--primary">Baixar Mídia Kit</a>-->
-                    <a href="contato.html" class="btn btn--ghost-light">Fale Conosco</a>
+                    <a href="contato.html" class="btn btn--ghost-light">Fale Conosco</a>cv
                 </div> 
             </div>
         </section>
@@ -157,8 +164,7 @@
         </div>
     </footer>
 
-
-    <script src="script.js" defer></script>
-    <script src="menu.js" defer></script>
+    <script src="/menu.js" ></script>
 </body>
+
 </html>
