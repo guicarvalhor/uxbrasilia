@@ -11,12 +11,31 @@
 </head>
 <body>
     <div class="container">
-        <h1>✅ Pedido Enviado com Sucesso!</h1>
-        <p>Obrigado! Recebemos os detalhes da sua encomenda.</p>
-        <p>Lembre-se de realizar o pagamento via PIX para confirmá-la. Entraremos em contato pelo WhatsApp em breve.</p>
-        <p><strong>A entrega será realizada no dia do nosso próximo evento.</strong></p>
-        <br>
         <a href="/catalogo.html">Voltar para a Lojinha</a>
+        <h1>✅ Pedido Recebido!</h1>
+        <p>
+            Obrigado! Recebemos os detalhes da sua encomenda. Para finalizar e garantir seu produto, falta apenas um passo.
+        </p>
+
+        <div class="divider"></div>
+        
+        <h2>Envie o Comprovante PIX</h2>
+        <p>
+            Por favor, clique no botão abaixo para nos enviar o comprovante de pagamento por email. Já deixamos tudo preparado para você.
+        </p>
+
+        <a id="email-link" href="#" class="cta-button btn">Enviar Comprovante por Email</a>
+        <br>
+        <a href="catalogo.html" class="back-link">← Voltar para a Lojinha</a>
     </div>
+    <script>
+        // Script para montar o link de email dinamicamente
+        const emailAddress = "mailto:organizacaouxbrasilia@gmail.com";
+        const emailSubject = "Comprovante de Pagamento - Pedido Lojinha UXBrasília";
+        const emailBody = "Olá!\n\nSegue em anexo o comprovante de pagamento do meu pedido.\n\n(Por favor, anexe seu comprovante aqui)\n\nObrigado!";
+
+        const emailLink = document.getElementById('email-link');
+        emailLink.href = `mailto:${emailAddress}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+    </script>
 </body>
 </html>

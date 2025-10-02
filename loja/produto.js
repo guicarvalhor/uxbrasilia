@@ -1,4 +1,5 @@
 /* Salve este código como produto.js (VERSÃO CORRIGIDA) */
+let submitted = false;
 
 document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -151,27 +152,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function openOrderModal() {
         if (!currentVariation) {
-            alert("Por favor, selecione uma opção válida.");
-            return;
-        }
+        alert("Por favor, selecione uma opção válida.");
+        return;
+    }
 
-        let selectionDetails = Object.entries(currentVariation.attributes)
-            .map(([key, value]) => `<strong>${key}:</strong> ${value}`)
-            .join(', ');
+    // Preenche o resumo visual (código que você já tem)
+    const selectionDetails = Object.entries(currentVariation.attributes)
+        .map(([key, value]) => `<strong>${key}:</strong> ${value}`)
+        .join(', ');
 
-        modalSummary.innerHTML = `
-            <p><strong>Produto:</strong> ${product.name}</p>
-            <p>${selectionDetails}</p>
-            <p class="price"><strong>Valor:</strong> R$ ${currentVariation.price.toFixed(2).replace('.', ',')}</p>
-        `;
-        
-       // NOVO/ATUALIZADO: Preenche os campos ocultos do formulário para o Formspree
-    const details = Object.entries(currentVariation.attributes).map(([k, v]) => `${k}: ${v}`).join(' / ');
-    
-    document.getElementById('form-product-name').value = product.name;
-    document.getElementById('form-product-details').value = details;
+    modalSummary.innerHTML = `
+        <p><strong>Produto:</strong> ${product.name}</p>
+        <p>${selectionDetails}</p>
+        <p class="price"><strong>Valor:</strong> R$ ${currentVariation.price.toFixed(2).replace('.', ',')}</p>
+    `;
+
+    // Preenche os campos ocultos do formulário
+    const detailsForForm = Object.entries(currentVariation.attributes).map(([k, v]) => `${k}: ${v}`).join(' / ');
+    document.getElementById('form-product-details').value = `${product.name} - ${detailsForForm}`;
     document.getElementById('form-product-value').value = `R$ ${currentVariation.price.toFixed(2)}`;
     
+    // Mostra o modal
     orderModal.classList.remove('hidden');
     }
 

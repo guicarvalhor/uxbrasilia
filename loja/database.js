@@ -38,16 +38,16 @@ const storeProducts = {
             
         },
         variations: [
-            { sku: "COB-106", attributes: { "Cor": "106 Sul" }, price: 10.00, stock: 1 },
-            { sku: "COB-202", attributes: { "Cor": "202 Sul"}, price: 10.00, stock: 1 },
-            { sku: "COB-205", attributes: { "Cor": "205 Sul"}, price: 10.00, stock: 1 },
-            { sku: "COB-206", attributes: { "Cor": "206 Norte" }, price: 10.00, stock: 1 },
-            { sku: "COB-402", attributes: { "Cor": "402 Sul"}, price: 10.00, stock: 1 },
-            { sku: "COB-410", attributes: { "Cor": "210 Norte"}, price: 10.00, stock: 1 },
-            { sku: "COB-BAND", attributes: { "Cor": "Bandeira" }, price: 10.00, stock: 1 },
-            { sku: "COB-MARG", attributes: { "Cor": "Margarida"}, price: 10.00, stock: 1 },
-            { sku: "COB-TES", attributes: { "Cor": "Tesourinha"}, price: 10.00, stock: 1 },
-            { sku: "COB-UX", attributes: { "Cor": "UXBrasilia" }, price: 10.00, stock: 1 },
+            { sku: "COB-106", attributes: { "Cor": "106 Sul" }, price: 10.00, stock: 0 },
+            { sku: "COB-202", attributes: { "Cor": "202 Sul"}, price: 10.00, stock: 0 },
+            { sku: "COB-205", attributes: { "Cor": "205 Sul"}, price: 10.00, stock: 0 },
+            { sku: "COB-206", attributes: { "Cor": "206 Norte" }, price: 10.00, stock: 0 },
+            { sku: "COB-402", attributes: { "Cor": "402 Sul"}, price: 10.00, stock: 0 },
+            { sku: "COB-410", attributes: { "Cor": "210 Norte"}, price: 10.00, stock: 0 },
+            { sku: "COB-BAND", attributes: { "Cor": "Bandeira" }, price: 10.00, stock: 0},
+            { sku: "COB-MARG", attributes: { "Cor": "Margarida"}, price: 10.00, stock: 0 },
+            { sku: "COB-TES", attributes: { "Cor": "Tesourinha"}, price: 10.00, stock: 0 },
+            { sku: "COB-UX", attributes: { "Cor": "UXBrasilia" }, price: 10.00, stock: 0 },
 
            // { sku: "COB-ORB-TER-PETG", attributes: { "Cor": "Terracota", "Material": "PETG (Externo)" }, price: 55.00, stock: 0, onDemand: true }
         ]
@@ -65,9 +65,9 @@ const storeProducts = {
         },
         variations: [
             // Caneca tem apenas variação de cor, não de tamanho ou material.
-            { sku: "CAN-BRA", attributes: { "Cor": "Verde" }, price: 15.00, stock: 1 },
-            { sku: "CAN-PRE", attributes: { "Cor": "Preta" }, price: 15.00, stock: 1, },
-            { sku: "CAN-PRE", attributes: { "Cor": "Branca" }, price: 15.00, stock: 1, }
+            { sku: "CAN-BRA", attributes: { "Cor": "Verde" }, price: 15.00, stock: 0 },
+            { sku: "CAN-PRE", attributes: { "Cor": "Preta" }, price: 15.00, stock: 0, },
+            { sku: "CAN-PRE", attributes: { "Cor": "Branca" }, price: 15.00, stock: 0, }
         ]
     }
 };
