@@ -25,7 +25,7 @@ const storeProducts = {
         description: "Inspirado nos cobogós das superquadras de Brasília, este elemento vazado é uma releitura moderna do clássico modernista. Produzido em impressão 3D, une o design icônico com a leveza. Perfeito para quem busca um toque da identidade brasiliense em seu projeto.",
         defaultImage: "/assets/lojinha/UXBrasilia.jpg",
         images: {
-            "106 Sul": { main: "/assets/lojinha/106Sul.jpg", thumb: "/assets/lojinha/106Sul.jpg" },
+            "106 Sul": { main: "/assets/lojinha/106Sul.jpeg", thumb: "/assets/lojinha/106Sul.jpeg" },
             "202 Sul": { main: "/assets/lojinha/202Sul.jpg", thumb: "/assets/lojinha/202Sul.jpg" },
             "205 Sul": { main: "/assets/lojinha/205Norte.jpg", thumb: "/assets/lojinha/205Norte.jpg" },
             "206 Norte": { main: "/assets/lojinha/206Norte.jpg", thumb: "/assets/lojinha/206Norte.jpg" },
