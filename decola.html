@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Decola UXBrasília — Mentoria</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="nav" id="top-nav">
+  <div class="container nav__inner">
+    <a class="brand" href="/">
+      <img src="/assets/logo-ux.svg" alt="Logo UX Brasília">
+    </a>
+
+    <button class="menu-toggle" aria-label="Abrir menu">
+      <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path class="hamburger-lines" d="M3 12h18M3 6h18M3 18h18"></path>
+        <path class="close-lines" d="M18 6L6 18M6 6l12 12"></path>
+      </svg>
+    </button>
+
+      <nav class="nav__links" id="menu-links" aria-label="Links do site">
+                <a href="/">Página inicial</a>
+                <a href="/voluntariado.html">Voluntariado</a>
+                <a href="/blog.html">Blog</a>
+                <a href="/parceiros.html">Parceiros</a>
+                <a href="/catalogo.html" >Lojinha</a> 
+                <a href="/decola.html" id="active"> Decola UX</a>
+                <a href="/contato.html">Contatos</a>
+            </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero yellow-700" id="hero-voluntariado">
+    <div class="hero__bg">
+      <div class="rings rings--1"></div>
+      <div class="rings rings--2"></div>
+      <div class="rings rings--3"></div>
+      <div class="rings rings--4"></div>
+      <div class="rings rings--5"></div>
+    </div>
+
+    <div class="container hero__content-pink">
+      <h1 class="hero__title">Decola UXBrasília</h1>
+      <p class="hero__desc">
+        Programa de mentoria <strong>gratuito</strong> para impulsionar sua carreira em UX/UI por e para a comunidade UX Brasília.
+      </p>
+
+      <div class="partners-cta-buttons">
+        <span class="badge badge--date yellow-800">Início: 23 de fevereiro</span>
+    
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="mentoria-section">
+    <div class="container">
+      <h2 class="section__title text-center yellow-text">Sobre o Programa</h2>
+
+      <p class="mentoria-about">
+        O Decola UXBrasília é um programa de mentoria <strong>100% gratuito</strong>, com duração de
+        <strong>1 mês</strong>, que conecta participantes a mentores parceiros da comunidade.
+        <br><br>
+        Os participantes terão acesso à agenda dos mentores durante todo o período do programa.
+        Sugerimos <strong>dois encontros</strong> com intervalo de <strong>15 a 20 dias</strong>,
+        mas mentor e participante podem acordar encontros adicionais, se necessário.
+      </p>
+
+      <div class="mentoria-steps">
+        <div class="mentoria-step">
+          <div class="mentoria-step__num">1</div>
+          <h3 class="mentoria-step__title">Inscrição</h3>
+          <p class="mentoria-step__desc">
+            Cadastro dos participantes com objetivos e temas de interesse.
+          </p>
+        </div>
+
+        <div class="mentoria-step">
+          <div class="mentoria-step__num">2</div>
+          <h3 class="mentoria-step__title">Acesso à agenda</h3>
+          <p class="mentoria-step__desc">
+            Acesso às agendas dos mentores durante todo o mês do programa.
+          </p>
+        </div>
+
+        <div class="mentoria-step">
+          <div class="mentoria-step__num">3</div>
+          <h3 class="mentoria-step__title">Encontros sugeridos</h3>
+          <p class="mentoria-step__desc">
+            Dois encontros com intervalo de 15 a 20 dias.
+          </p>
+        </div>
+
+        <div class="mentoria-step">
+          <div class="mentoria-step__num">4</div>
+          <h3 class="mentoria-step__title">Encontros extras</h3>
+          <p class="mentoria-step__desc">
+            Possibilidade de encontros adicionais acordados entre mentor e participante.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENTORES -->
+  <section class="mentors-section" id="mentores">
+    <div class="container">
+      <h2 class="section__title text-center yellow-text">Conheça os Mentores Parceiros</h2>
+
+      <div class="mentors-grid">
+
+        <article class="mentor-card">
+          <img src="decola/assets/carlos.png" alt="Mentor 1" class="mentor-card__photo">
+          <div class="mentor-card__body">
+            <h3 class="mentor-card__name">Carlos Guilherme</h3>
+            <p class="mentor-card__role">Product Designer Sênior</p>
+            <p class="mentor-card__bio">
+              Especialista em Mentoria de Práticas de UX na Fóton
+            </p>
+            <div class="mentor-tags">
+              <span class="mentor-tag">UI Design/Visual Design</span>
+              <span class="mentor-tag">Carreira e Portfólio</span>
+            </div>
+            <a href="https://www.linkedin.com/in/ocarlosguilherme/" target="_blank" class="btn btn--primary yellow-button">
+              Ver Linkedin
+            </a>
+          </div>
+        </article>
+
+        <article class="mentor-card">
+          <img src="decola/assets/gui.png" alt="Mentor 2" class="mentor-card__photo ">
+          <div class="mentor-card__body">
+            <h3 class="mentor-card__name">Gui Rodrigues</h3>
+            <p class="mentor-card__role">Designer de UI Sênior</p>
+            <p class="mentor-card__bio">
+              Atua com criação de interfaces, estratégia e métricas na Fóton.
+            </p>
+            <div class="mentor-tags">
+              <span class="mentor-tag">Design de UI</span>
+
+              <span class="mentor-tag">Portfólio</span>
+            </div>
+            <a href="https://www.linkedin.com/in/guilherme-cr/" target="_blank" class="btn btn--primary yellow-button">
+              Ver Linkedin
+            </a>
+          </div>
+        </article>
+        <article class="mentor-card">
+          <img src="decola/assets/kary.png" alt="Mentor 3" class="mentor-card__photo ">
+          <div class="mentor-card__body">
+            <h3 class="mentor-card__name">Karynne Marinho</h3>
+            <p class="mentor-card__role">Product Designer</p>
+            <p class="mentor-card__bio">
+              AI Experience & Product Designer Spec | Liderança e Estratégia
+            </p>
+            <div class="mentor-tags">
+              <span class="mentor-tag">Produtos</span>
+
+              <span class="mentor-tag">Estratégia</span>
+            </div>
+            <a href="https://www.linkedin.com/in/karymarinho/" target="_blank" class="btn btn--primary yellow-button">
+              Ver Linkedin
+            </a>
+          </div>
+        </article>
+        <article class="mentor-card">
+          <img src="decola/assets/lai.png" alt="Mentor 4" class="mentor-card__photo ">
+          <div class="mentor-card__body">
+            <h3 class="mentor-card__name">Láisa Rebelo</h3>
+            <p class="mentor-card__role">Service Designer</p>
+            <p class="mentor-card__bio">
+              Designer e pesquisadora com background acadêmico e de mercado, atua como Designer de Serviços.
+            </p>
+            <div class="mentor-tags">
+              <span class="mentor-tag">UX Research</span>
+
+              <span class="mentor-tag">Carreira e Portfólio</span>
+            </div>
+            <a href="https://www.linkedin.com/in/laisarebelo" target="_blank" class="btn btn--primary yellow-button">
+              Ver Linkedin
+            </a>
+          </div>
+        </article>
+        <article class="mentor-card">
+          <img src="decola/assets/lucas.png" alt="Mentor 5" class="mentor-card__photo ">
+          <div class="mentor-card__body">
+            <h3 class="mentor-card__name">Lucas Santos</h3>
+            <p class="mentor-card__role">Senior Product Designer</p>
+            <p class="mentor-card__bio">
+             Atua com o produto de cartões na criação de interface web e mobile e estratégia no Asaas.
+            </p>
+            <div class="mentor-tags">
+              <span class="mentor-tag">UX Design</span>
+
+              <span class="mentor-tag">Product Design / Estratégia</span>
+            </div>
+            <a href="https://www.linkedin.com/in/lucasso" target="_blank" class="btn btn--primary yellow-button">
+              Ver Linkedin
+            </a>
+          </div>
+        </article>
+        <article class="mentor-card">
+          
+          <img src="decola/assets/marcela.png" alt="Mentor 6" class="mentor-card__photo ">
+          <div class="mentor-card__body">
+            <h3 class="mentor-card__name">Marcela Noronha</h3>
+            <p class="mentor-card__role">Founder & Design Strategist na lio studio.ai</p>
+            <p class="mentor-card__bio">
+              Atuação como AI Product Designer, unindoUX Research à especialização em Generative AI.
+            </p>
+            <div class="mentor-tags">
+              <span class="mentor-tag">UX Design</span>
+
+              <span class="mentor-tag">UX Research</span>
+            </div>
+            <a href="https://www.linkedin.com/in/marcela-noronha/" target="_blank" class="btn btn--primary yellow-button">
+              Ver Linkedin
+            </a>
+          </div>
+        </article>
+        <article class="mentor-card">
+          <img src="decola/assets/rai.png" alt="Mentor 7" class="mentor-card__photo ">
+          <div class="mentor-card__body">
+            <h3 class="mentor-card__name">Raianne Rodrigues</h3>
+            <p class="mentor-card__role">UX Designer</p>
+            <p class="mentor-card__bio">
+              UX Designer com foco em Interação e UI na Novatics
+            </p>
+            <div class="mentor-tags">
+              <span class="mentor-tag">UX Design</span>
+
+              <span class="mentor-tag">Product Design / Estratégia</span>
+            </div>
+            <a href="https://www.linkedin.com/in/raiannerodrigues/" target="_blank" class="btn btn--primary yellow-button">
+              Ver Linkedin
+            </a>
+          </div>
+        </article> <article class="mentor-card">
+          <img src="decola/assets/thiago.png" alt="Mentor 8" class="mentor-card__photo ">
+          <div class="mentor-card__body">
+            <h3 class="mentor-card__name">Thiago Souza</h3>
+            <p class="mentor-card__role">Design Lead</p>
+            <p class="mentor-card__bio">
+              Design Lead no Asaas com experiência em UX e Product Design, atuando na criação e evolução de produtos digitais complexos, especialmente no setor financeiro. 
+            </p>
+            <div class="mentor-tags">
+              <span class="mentor-tag">UX Design</span>
+
+              <span class="mentor-tag">Product Design / Estratégia</span>
+            </div>
+            <a href="https://www.linkedin.com/in/souzaty/" target="_blank" class="btn btn--primary yellow-button">
+              Ver Linkedin
+            </a>
+          </div>
+        </article>
+        
+        </article> <article class="mentor-card">
+          <img src="decola/assets/van.png" alt="Mentor 9" class="mentor-card__photo ">
+          <div class="mentor-card__body">
+            <h3 class="mentor-card__name">Vanessa Souza</h3>
+            <p class="mentor-card__role">Designer conversacional</p>
+            <p class="mentor-card__bio">
+            UX Writer, Dev e Curadora IAs Conversacionais | Formada em ADS | Voluntária | Casada, mãe de pet, aquariana raiz, maluca por shows, comida e Coca Cola.
+            </p>
+            <div class="mentor-tags">
+              <span class="mentor-tag">UX Writer</span>
+
+              <span class="mentor-tag">Carreira e Portfólio</span>
+            </div>
+            <a href="https://www.linkedin.com/in/vanessa20sousa/" target="_blank" class="btn btn--primary yellow-button">
+              Ver Linkedin
+            </a>
+          </div>
+        </article>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="join-partners-section">
+    <div class="container">
+      <h2 class="section__title section__title--light text-center">
+        Inscrições abertas — início em 23 de fevereiro
+      </h2>
+
+      <p class="section__subtitle section__subtitle--light text-center">
+        Participe gratuitamente do Decola UXBrasília e conecte-se com mentores experientes
+        para acelerar sua evolução profissional em apenas 1 mês.
+      </p>
+      <br>
+      <div class="partners-cta-buttons \">
+        <a href="https://forms.gle/My66vkQZhp8si29r6" target="_blank" class="btn btn--primary yellow-800">
+          Inscreva-se agora
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <a class="brand brand--footer" href="/">
+      <img src="/assets/logo-ux.svg" alt="">
+      <p id="footer-text">A comunidade onde o design é coletivo<br>e a experiência é compartilhada!</p>
+    </a>
+
+    <div class="footer__cols">
+      <div class="footer__col">
+        <h4>Comunidade</h4>
+        <ul>
+          <li><a href="/voluntariado.html">Voluntariado</a></li>
+          <li><a href="/catalogo.html">Lojinha</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Nossas redes</h4>
+        <ul>
+          <li><a target="_blank" href="https://www.instagram.com/uxbrasilia">Instagram</a></li>
+          <li><a target="_blank" href="https://www.linkedin.com/company/uxbrasilia">Linkedin</a></li>
+          <li><a target="_blank" href="https://www.youtube.com/@UXBrasilia">Youtube</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__copy">
+    <div class="container">
+      © 2025 UXBrasília. Todos os direitos reservados.
+    </div>
+  </div>
+</footer>
+
+<script src="/menu.js"></script>
+</body>
+</html>
