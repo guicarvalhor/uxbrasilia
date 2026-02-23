@@ -452,6 +452,97 @@
 
   </div>
 </section>
+<!-- FAQ DECOLA UX -->
+<section class="faq-section">
+  <div class="container">
+
+    <h2 class="section__title text-center yellow-text">
+      Dúvidas Frequentes — Decola UXBrasília
+    </h2>
+
+    <p class="faq-subtitle text-center">
+      Entenda como funciona o programa e como aproveitar melhor sua jornada de mentoria.
+    </p>
+
+    <div class="faq-container">
+
+      <!-- item -->
+      <div class="faq-item">
+        <button class="faq-question">
+          Quanto tempo dura o programa?
+        </button>
+        <div class="faq-answer">
+          O programa tem duração aproximada de 8 semanas, com encontros sugeridos a cada 15 a 20 dias entre mentor e participante. :contentReference[oaicite:0]{index=0}
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          O programa é gratuito?
+        </button>
+        <div class="faq-answer">
+          Sim. O Decola UXBrasília é um programa totalmente gratuito, realizado de forma voluntária pelos mentores da comunidade.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Quantas mentorias posso fazer?
+        </button>
+        <div class="faq-answer">
+          Recomendamos entre 2 a 4 encontros durante o programa, mas a quantidade pode variar conforme a disponibilidade das agendas dos mentores.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Como faço para agendar uma mentoria?
+        </button>
+        <div class="faq-answer">
+          Suba a página e clique no mentor de sua escolha para visualizar os horários disponíveis e agendar seu encontro diretamente na agenda do mentor.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          O mentor vai revisar meu portfólio ou me indicar para vagas?
+        </button>
+        <div class="faq-answer">
+          A mentoria é estratégica e focada no desenvolvimento profissional. O objetivo é orientar sua evolução e tomada de decisões — não garantir indicações ou executar tarefas técnicas.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Preciso me preparar para as mentorias?
+        </button>
+        <div class="faq-answer">
+          Sim. É importante chegar com objetivos claros, materiais organizados e dúvidas definidas para aproveitar melhor cada encontro.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          O que acontece se eu faltar a uma mentoria?
+        </button>
+        <div class="faq-answer">
+          Cancelamentos devem ser feitos com no mínimo 24 horas de antecedência. Faltas sem aviso podem resultar no desligamento do programa para respeitar o tempo voluntário dos mentores.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Posso continuar conversando com o mentor depois do programa?
+        </button>
+        <div class="faq-answer">
+          Isso depende de cada mentor. O programa cobre apenas o período oficial da mentoria.
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
 
 
@@ -513,6 +604,32 @@
   </footer>
 
   <script src="/menu.js"></script>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  faqItems.forEach(item => {
+    const question = item.querySelector(".faq-question");
+
+    question.addEventListener("click", () => {
+
+      /* fecha os outros (efeito profissional) */
+      faqItems.forEach(i => {
+        if(i !== item){
+          i.classList.remove("active");
+        }
+      });
+
+      /* abre o atual */
+      item.classList.toggle("active");
+
+    });
+
+  });
+
+});
+</script>
 </body>
 
 </html>
