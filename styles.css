@@ -1934,7 +1934,7 @@ padding-bottom:20px;
 }
 /* Seção Status do Programa */
         .status-banner {
-            background: linear-gradient(135deg, rgba(0, 209, 178, 0.1) 0%, rgba(0, 148, 255, 0.1) 100%);
+            background: var(--yellow);
             border: 1px solid rgba(0, 209, 178, 0.2);
             border-radius: 24px;
             max-width: 900px;
@@ -1966,7 +1966,7 @@ padding-bottom:20px;
         }
 
         .status-banner p {
-            color: #b3b3b3;
+            color: #000;
             font-size: 1.05rem;
             line-height: 1.6;
             margin: 0 0 20px 0;
@@ -1974,14 +1974,13 @@ padding-bottom:20px;
 
         .fase-2-alert {
             background: rgba(255, 255, 255, 0.05);
-            border-left: 4px solid #0094ff;
+            border-left: 4px solid var(--yellow-800);
             padding: 12px 20px;
             border-radius: 4px 12px 12px 4px;
             font-size: 0.95rem;
-            color: #e0e0e0;
             display: inline-block;
         }
 
         .fase-2-alert strong {
-            color: #0094ff;
+            color: var(--yellow-800);
         }
