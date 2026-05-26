@@ -1932,3 +1932,56 @@ opacity:.8;
 max-height:300px;
 padding-bottom:20px;
 }
+/* Seção Status do Programa */
+        .status-banner {
+            background: linear-gradient(135deg, rgba(0, 209, 178, 0.1) 0%, rgba(0, 148, 255, 0.1) 100%);
+            border: 1px solid rgba(0, 209, 178, 0.2);
+            border-radius: 24px;
+            max-width: 900px;
+            margin: 0 auto 40px auto;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .container-status {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .badge-sucesso {
+            background-color: rgba(0, 209, 178, 0.2);
+            color: var(--primary-color);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .status-banner h2 {
+            font-size: 1.8rem;
+            margin: 0 0 10px 0;
+            color: #ffffff;
+        }
+
+        .status-banner p {
+            color: #b3b3b3;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin: 0 0 20px 0;
+        }
+
+        .fase-2-alert {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid #0094ff;
+            padding: 12px 20px;
+            border-radius: 4px 12px 12px 4px;
+            font-size: 0.95rem;
+            color: #e0e0e0;
+            display: inline-block;
+        }
+
+        .fase-2-alert strong {
+            color: #0094ff;
+        }
