@@ -15,11 +15,11 @@ const menuConfig = {
     },
     links: [
         { href: "/", label: "Página inicial", id: "link-home" },
-        { href: "/voluntariado.html", label: "Voluntariado", id: "link-voluntariado" },
+        //{ href: "/voluntariado.html", label: "Voluntariado", id: "link-voluntariado" },
         { href: "/blog.html", label: "Blog", id: "link-blog" },
         { href: "/parceiros.html", label: "Parceiros", id: "link-parceiros" },
-        { href: "/catalogo.html", label: "Lojinha", id: "link-lojinha" },
-        { href: "/decola.html", label: "Decola UX", id: "link-decola" },
+        //{ href: "/catalogo.html", label: "Lojinha", id: "link-lojinha" },
+        //{ href: "/decola.html", label: "Decola UX", id: "link-decola" },
         { href: "/contato.html", label: "Contatos", id: "link-contatos" }
     ]
 };
@@ -38,7 +38,7 @@ const footerConfig = {
         {
             title: "Comunidade",
             links: [
-                { href: "/voluntariado.html", label: "Voluntariado" },
+                //{ href: "/voluntariado.html", label: "Voluntariado" },
                 { href: "/catalogo.html", label: "Lojinha" },
                 { href: "/blog.html", label: "Blog" }
             ]
