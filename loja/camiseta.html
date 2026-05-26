@@ -27,29 +27,7 @@
 </head>
 
 <body>
-
-    <header class="nav" id="top-nav" role="banner" aria-label="Navegação principal">
-        <div class="container nav__inner">
-            <a class="brand" href="/" aria-label="UXBrasília — Página inicial">
-                <img src="/assets/logo-ux.svg" alt="Logo UX Brasília">
-            </a>
-            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-links">
-                <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path class="hamburger-lines" d="M3 12h18M3 6h18M3 18h18"></path>
-                    <path class="close-lines" d="M18 6L6 18M6 6l12 12"></path>
-                </svg>
-            </button>
-            <nav class="nav__links" id="menu-links" aria-label="Links do site">
-                <a href="/">Página inicial</a>
-                <a href="voluntariado.html">Voluntariado</a>
-                <a href="/blog.html">Blog</a>
-                <a href="/parceiros.html">Parceiros</a>
-                <a href="catalogo.html" id="active">Lojinha</a> 
-                <a href="/decola.html"> Decola UX</a>
-                <a href="contato.html">Contatos</a>
-            </nav>
-        </div>
-    </header>
+    <div id="menu-container"></div>
 
     <main class="product-page-wrapper">
     <div class="product-container">
@@ -89,39 +67,8 @@
         </section>
     </div>
 </main>
-    <footer id="contato" class="footer" role="contentinfo">
-        <div class="container footer__inner">
-            <a class="brand brand--footer" href="#top-nav" aria-label="Voltar ao topo">
-                <img src="/assets/logo-ux.svg" alt="" srcset="">
-                <p id="footer-text">A comunidade onde o design é coletivo <br> e a experiência é compartilhada!</p>
-            </a>
-            <div class="footer__cols">
-                <div class="footer__col">
-                    <h4>Comunidade</h4>
-                    <ul>
-                        <li><a href="/voluntariado.html">Voluntariado</a></li>
-                        <li><a href="/catalogo.html">Lojinha</a></li>
-                        <li><a href="/blog.html">Blog</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h4>Nossas redes</h4>
-                    <ul>
-                        <li><a target="_blank" href="https://www.instagram.com/uxbrasilia">Instagram</a></li>
-                        <li><a target="_blank" href="https://www.linkedin.com/company/uxbrasilia">Linkedin</a></li>
-                        <li><a target="_blank" href="https://www.youtube.com/@UXBrasilia">Youtube</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer__copy">
-            <div class="container">
-                © 2025 UXBrasília. Todos os direitos reservados.
-            </div>
-        </div>
-    </footer>
-
-    <script src="menu.js"></script>
+    <div id="footer-container"></div>
+    <script src="/menu-footer.js" defer></script>
     <script src="produto.js"></script>
 
 </body>

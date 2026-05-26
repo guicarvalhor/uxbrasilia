@@ -50,33 +50,7 @@
 </script>
 
 <body>
-
-    <!-- NAV -->
-    <header class="nav" id="top-nav" role="banner" aria-label="Navegação principal">
-        <div class="container nav__inner">
-            <a class="brand" href="https://www.uxbrasilia.com.br" aria-label="UXBrasília — Página inicial">
-                <img src="/assets/logo-ux.svg" alt="Logo UX Brasília">
-            </a>
-
-            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-links">
-                <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path class="hamburger-lines" d="M3 12h18M3 6h18M3 18h18"></path>
-                    <path class="close-lines" d="M18 6L6 18M6 6l12 12"></path>
-                </svg>
-            </button>
-
-            <nav class="nav__links" id="menu-links" aria-label="Links do site">
-                <a href="/" id="active">Página inicial</a>
-                <a href="/voluntariado.html">Voluntariado</a>
-                <a href="/blog.html">Blog</a>
-                <a href="/parceiros.html">Parceiros</a>
-                <a href="catalogo.html">Lojinha</a>
-                <a href="/decola.html"> Decola UX</a>
-                <a href="contato.html">Contatos</a>
-            </nav>
-        </div>
-    </header>
+    <div id="menu-container"></div>
 
     <!-- HERO -->
     <section id="hero" class="hero">
@@ -89,7 +63,7 @@
         </div>
 
         <div class="floating-label" style="--color:#ffcc00; top:30%; left:10%; ">Lucas</div>
-        <div class="floating-label floating-label1" style="--color:#e94092; top:30%; left:80%;">Lucas</div>
+        <div class="floating-label floating-label1" style="--color:#e94092; top:30%; left:80%;">Joana</div>
         <div class="floating-label floating-label2" style="--color:#2f80ff; top:60%; left:70%;">Roberta</div>
         <div class="floating-label floating-label3" style="--color:#1c8045; top:70%; left:20%;">Carlos</div>
 
@@ -335,46 +309,33 @@
         </div>
     </section>
 
-    
-    <!-- FOOTER -->
-    <footer id="contato" class="footer" role="contentinfo">
-        <div class="container footer__inner">
-            <a class="brand brand--footer" href="#hero" aria-label="Voltar ao topo">
-                <img src="/assets/logo-ux.svg" alt="" srcset="">
-                <p id="footer-text">A comunidade onde o design é coletivo <br> e a experiência é compartilhada!</p>
+    <section id="cta-whatsapp" class="cta-whatsapp">
+
+    <div class="floating-label floating-label1" style="--color:var(--pink, #d83b96); top:20%; left:12%;">Vagas 💼</div>
+    <div class="floating-label floating-label3" style="--color:var(--yellow, #f6c446); top:25%; left:82%;">Portfólio 🎨</div>
+    <div class="floating-label floating-label2" style="--color:var(--green, #38b26f); top:65%; left:75%;">Networking 🚀</div>
+    <div class="floating-label" style="--color:var(--blue, #2e67ff); top:70%; left:8%;">Troca de experiências ☕</div>
+
+    <div class="container cta-whatsapp__content">
+        <h2 class="cta-whatsapp__title">
+            Não fique desenhando sozinho <span class="nowrap">no quadradinho.</span>
+        </h2>
+        <p class="cta-whatsapp__desc">
+            Participe do nosso grupo oficial no WhatsApp. É lá onde as vagas reais aparecem, o bate-papo é livre e o networking acontece diariamente com profissionais do DF.
+        </p>
+        <div class="cta-whatsapp__cta">
+            <a href="https://chat.whatsapp.com/D6ycyYpQCWFDedC5rY6IYt?mode=ems_copy_t" target="_blank" class="btn btn--primary">
+                Bora entrar no WhatsApp!
             </a>
-
-            <div class="footer__cols">
-                <div class="footer__col">
-                    <h4>Comunidade</h4>
-                    <ul>
-                        <li><a href="/voluntariado.html">Voluntariado</a></li>
-                        <li><a href="/catalogo.html">Lojinha</a></li>
-                        <li><a href="/blog.html">Blog</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer__col">
-                    <h4>Nossas redes</h4>
-                    <ul>
-                        <li><a target="_blank" href="https://www.instagram.com/uxbrasilia">Instagram</a></li>
-                        <li><a target="_blank" href="https://www.linkedin.com/company/uxbrasilia">Linkedin</a></li>
-                        <li><a target="_blank" href="https://www.youtube.com/@UXBrasilia">Youtube</a></li>
-                    </ul>
-                </div>
-            </div>
         </div>
-
-        <div class="footer__copy">
-            <div class="container">
-                © 2025 UXBrasília. Todos os direitos reservados.
-            </div>
-        </div>
-    </footer>
+    </div>
+</section>
+    
+    <div id="footer-container"></div>
 
     <!-- Scripts -->
     <script src="script.js" defer></script>
-    <script src="menu.js"></script>
+    <script src="menu-footer.js" defer></script>
 </body>
 
 </html>
