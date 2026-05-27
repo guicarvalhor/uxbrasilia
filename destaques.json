@@ -1,0 +1,32 @@
+{
+  "destaques": [
+    {
+      "image": "/assets/clube.png",
+      "title": "Clube do livro UX Brasília",
+      "description": "Saiba sobre o clube do livro, participe das discussões e explore os temas mais relevantes em UX/UI",
+      "link": "https://chat.whatsapp.com/JjShRWCa8qe5fOYNBy09Bu?mode=gi_t",
+      "buttonText": "Ver mais"
+    },
+    {
+      "image": "/assets/comunidade.png",
+      "title": "Faça parte da comunidade UX Brasília",
+      "description": "Designers, desenvolvedores e entusiastas de UX/UI se encontram aqui para crescer juntos",
+      "link": "https://chat.whatsapp.com/D6ycyYpQCWFDedC5rY6IYt",
+      "buttonText": "Entrar no grupo do whatsapp"
+    },
+    {
+      "image": "/assets/img1.png",
+      "title": "Eventos e Workshops",
+      "description": "Participe de encontros presenciais e online para expandir seus conhecimentos em UX/UI",
+      "link": "#eventos",
+      "buttonText": "Ver eventos"
+    },
+    {
+      "image": "/assets/palestra.png",
+      "title": "Submissão de palestras e workshops",
+      "description": "Quer palestrar ou ministrar um workshop? Submeta sua proposta para os próximos eventos do UX Brasília",
+      "link": "",
+      "buttonText": "Em breve"
+    }
+  ]
+}

@@ -89,35 +89,19 @@
 <section class="destaques container">
   <h2 class="section__title">Destaques</h2>
   <div class="carousel">
-    <div class="slides"><!--
-      <div class="slide active" style="background-image: url('/assets/img4.png');">
-        <div class="overlay">
-          <h3>Decola UX Brasília</h3>
-          <p>Lançamos o nosso programa de mentorias</p>
-          <a href="/decola.html" target="" class="btn btn--ghost">Ver mais</a>
-        </div>
-      </div>-->
-      <div class="slide " style="background-image: url('/assets/img1.png');">
-        <div class="overlay">
-          <h3>1ª Edição - UX Brasília no Museu</h3>
-          <p>Confira as fotos do nosso último encontro!</p>
-          <a href="/decola.html" target="_blank" class="btn btn--ghost">Ver mais </a>
-        </div>
-      </div>
-      
-      <div class="slide" style="background-image: url('/assets/img3.png');">
-        <div class="overlay">
-          <h3>Lojinha do UX Brasília</h3>
-          <p>Confira os produtos e faça seu pedido</p>
-          <a href="catalogo.html" class="btn btn--ghost">Ver produtos</a>
-        </div>
-      </div>
+    <!-- Botões de navegação -->
+    <div class="carousel-nav">
+      <button class="carousel-nav__btn carousel-nav__prev" aria-label="Slide anterior">←</button>
+      <button class="carousel-nav__btn carousel-nav__next" aria-label="Próximo slide">→</button>
+    </div>
+
+    <div class="slides">
+      <!-- Slides carregados dinamicamente via carousel-loader.js -->
     </div>
 
     <!-- Indicadores -->
     <div class="indicators">
-      <span class="dot active" data-slide="0"></span>
-      <span class="dot" data-slide="1"></span>
+      <!-- Indicadores carregados dinamicamente -->
     </div>
   </div>
 </section>
@@ -267,6 +251,7 @@
     <script src="script.js" defer></script>
     <script src="menu-footer.js" defer></script>
     <script src="events-loader.js" defer></script>
+    <script src="carousel-loader.js" defer></script>
 </body>
 
 </html>

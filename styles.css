@@ -390,7 +390,7 @@ transform: rotate(45deg);
 
 .slides {
   display: flex;
-  transition: transform 0.8s ease-in-out;
+  transition: transform 1.2s ease-in-out;
 }
 
 .slide {
@@ -399,29 +399,35 @@ transform: rotate(45deg);
   background-size: cover;
   background-position: center;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: flex-start;
   position: relative;
-  padding-left: 2rem;
+  padding: 0;
 }
 
 .slide .overlay {
-  padding: 0rem 2rem;
+  padding: 2.5rem 2rem;
   color: #fff;
-  max-width: 600px;
+  max-width: 100%;
   text-align: left;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 60%, transparent 100%);
+  width: 100%;
 }
 
 .slide .overlay h3 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
   font-family: "Cabinet Grotesk", sans-serif;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
 }
 
 .slide .overlay p {
   font-family: "Work Sans", sans-serif;
-  font-size: 1rem;
+  font-size: 0.95rem;
   margin-bottom: 1.5rem;
+  margin-top: 0;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
 }
 /* Indicadores */
 .indicators {
@@ -430,20 +436,74 @@ transform: rotate(45deg);
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 8px;
+  gap: 6px;
+  width: 80%;
+  max-width: 600px;
 }
 
-.dot {
-  width: 12px;
-  height: 12px;
-  background: #ccc;
-  border-radius: 50%;
+.progress-bar {
+  flex: 1;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 2px;
   cursor: pointer;
   transition: background 0.3s ease;
+  overflow: hidden;
+  position: relative;
 }
 
-.dot.active {
-  background: #007bff;
+.progress-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #fff;
+  border-radius: 2px;
+  width: 0%;
+}
+
+.progress-bar.active::after {
+  animation: progressBar 4s linear forwards;
+}
+
+@keyframes progressBar {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Botões de navegação */
+.carousel-nav {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.carousel-nav__btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.carousel-nav__btn:hover {
+  background: rgba(0, 0, 0, 0.9);
+  transform: scale(1.1);
 }
 
 /* =========
