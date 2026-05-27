@@ -1,0 +1,28 @@
+[
+  {
+    "id": "post-1",
+    "slug": "cafes-brasilia",
+    "title": "Café e Frame: As melhores cafeterias para trabalhar em Brasília",
+    "subtitle": "Uma seleção da comunidade para você encontrar o ambiente perfeito para focar e ser criativo.",
+    "category": "Dicas Locais",
+    "date": "26 de Setembro, 2025",
+    "image": "/blog/imagens/cafes.jpg",
+    "imageAlt": "Pessoa trabalhando com um notebook em uma cafeteria aconchegante",
+    "excerpt": "Cansado do home office? Preparamos uma seleção especial com os melhores cantinhos de Brasília para você conectar seu notebook, tomar um bom café e ser produtivo...",
+    "content": "blog/paginas/post-1.html",
+    "format": "html"
+  },
+  {
+    "id": "post-2",
+    "slug": "ux-brasilia-primeira-edicao",
+    "title": "Memórias da nossa 1ª Edição: Como foi o encontro da comunidade UX Brasília",
+    "subtitle": "Um dia que ficará para a história, marcado por reencontros, novas conexões e muito amor pelo design.",
+    "category": "Eventos da Comunidade",
+    "date": "06 de Setembro, 2025",
+    "image": "/assets/destaque-1.png",
+    "imageAlt": "Foto da comunidade reunida na 1ª edição do evento UX Brasília",
+    "excerpt": "Que dia incrível! A 1ª edição do encontro da comunidade UX Brasília foi tudo o que sonhamos e muito mais. A energia no local era contagiante!",
+    "content": "blog/paginas/post-2.md",
+    "format": "md"
+  }
+]

@@ -42,55 +42,16 @@
             </p>
         </div>
     </section>
+    <section class="blog-controls">
+        <div class="container">
+            <div id="blog-filters" class="blog-filters" aria-label="Filtrar posts por categoria"></div>
+            <div id="blog-pagination" class="blog-pagination" aria-label="Paginação do blog"></div>
+        </div>
+    </section>
         <section class="blog-section">
             <div class="container">
                 <div class="blog-grid">
-                    <article class="post-card">
-                        <a href="/blog/paginas/post-1.html" class="post-card__image-link">
-                            <img src="/blog/imagens/mulher-trabalhando.jpg"
-                                alt="Pessoa trabalhando com um notebook em uma cafeteria aconchegante"
-                                class="post-card__image">
-                        </a>
-                        <div class="post-card__content">
-                            <div class="post-card__meta">
-                                <span class="post-card__category">Dicas Locais</span>
-                                <span class="post-card__date">26 de Setembro, 2025</span>
-                            </div>
-                            <h3 class="post-card__title">
-                                <a href="/blog/paginas/post-1.html">Café e Frame: As melhores cafeterias para trabalhar
-                                    em Brasília</a>
-                            </h3>
-                            <p class="post-card__excerpt">Cansado do home office? Preparamos uma seleção especial com os
-                                melhores cantinhos de Brasília para você conectar seu notebook, tomar um bom café e ser
-                                produtivo...</p>
-                            <a href="/blog/paginas/post-1.html" class="post-card__read-more">Ver a lista completa →</a>
-                        </div>
-                    </article>
-                    <article class="post-card">
-                        <a href="/blog/paginas/post-2.html" class="post-card__image-link">
-                            <img src="/assets/destaque-1.png"
-                                alt="Foto da comunidade reunida na 1ª edição do evento UX Brasília"
-                                class="post-card__image">
-                        </a>
-                        <div class="post-card__content">
-                            <div class="post-card__meta">
-                                <span class="post-card__category">Eventos da Comunidade</span>
-                                <span class="post-card__date">06 de Setembro, 2025</span>
-                            </div>
-                            <h3 class="post-card__title">
-                                <a href="/blog/paginas/post-2.html">1ª Edição UX Brasília no Museu: Como foi o encontro
-                                    da comunidade?</a>
-                            </h3>
-                            <p class="post-card__excerpt">A nossa primeira edição do UX Brasília no museu foi um sucesso! Um dia incrível de
-                                conexões, aprendizado e muito design. Confira os melhores momentos e veja as fotos do
-                                evento.</p>
-                            <a href="/blog/paginas/post-2.html" class="post-card__read-more">Leia e veja as fotos
-                                →</a>
-                        </div>
-                    </article>
-
-
-
+                    <!-- Posts carregados dinamicamente via blog-loader.js -->
                 </div>
             </div>
         </section>
@@ -98,6 +59,7 @@
     <div id="footer-container"></div>
     <script src="script.js" defer></script>
     <script src="menu-footer.js" defer></script>
+    <script src="/blog/blog-loader.js" defer></script>
 </body>
 
 </html>
