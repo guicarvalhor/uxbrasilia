@@ -166,14 +166,15 @@ function getCurrentPage() {
 // FUNÇÃO: VERIFICAR SE LINK ESTÁ ATIVO
 // ====================
 function isLinkActive(href, currentPage) {
-    // Comparações especiais para página inicial
-    if ((href === '/' || href === 'https://www.uxbrasilia.com.br') && 
-        (currentPage === '/' || currentPage === '/index.html')) {
-        return true;
+    // Página inicial: comparação exata
+    if ((href === '/' || href === 'https://www.uxbrasilia.com.br')) {
+        return (currentPage === '/' || currentPage === '/index.html');
     }
 
-    // Comparação normal de caminhos
-    return currentPage.includes(href.replace(/^\//, ''));
+    // Outros links: compara o pathname
+    const hrefPath = href.replace(/^\//, '').split('?')[0]; // remove / e query params
+    const currentPath = currentPage.replace(/^\//, '').split('?')[0];
+    return currentPath === hrefPath;
 }
 
 // ====================
