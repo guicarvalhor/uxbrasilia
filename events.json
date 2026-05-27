@@ -1,0 +1,94 @@
+{
+  "2025": [
+    {
+      "date": "22 — Novembro",
+      "status": "realizado",
+      "title": "Workshops UX/UI",
+      "local": "Impact Hub",
+      "hora": "",
+      "color": "white",
+      "linkType": "photos",
+      "linkUrl": ""
+    },
+    {
+      "date": "04 — Setembro",
+      "status": "realizado",
+      "title": "O impacto da visão de negócio na experiência do usuário",
+      "local": "Museu Nacional",
+      "hora": "",
+      "color": "yellow",
+      "linkType": "photos",
+      "linkUrl": "https://uxbrasilia.photos.live/photos?fbclid=PAZXh0bgNhZW0CMTEAAaeNz7xWaxxrfP2QziXUyRVM6qM71iRPX7i3mRli5PvDhy01nNltSYWB4W-kwQ_aem_3uHOaHnEy9Z4h34nhzgS1A"
+    },
+    {
+      "date": "06 — Agosto",
+      "status": "realizado",
+      "title": "UX Research: ética, IA e prática em pesquisa de experiência.",
+      "local": "Museu Nacional",
+      "hora": "",
+      "color": "pink",
+      "linkType": "photos",
+      "linkUrl": "/blog/paginas/post-2.html"
+    },
+    {
+      "date": "19 - Julho",
+      "status": "realizado",
+      "title": "UX Inclusivo além da acessibilidade técnica",
+      "local": "Online",
+      "hora": "",
+      "color": "blue",
+      "linkType": "video",
+      "linkUrl": "https://www.youtube.com/live/TaYdNV2gLNY?si=9F1nMZr4ml3oyEG1"
+    },
+    {
+      "date": "07 - Junho",
+      "status": "realizado",
+      "title": "Uso de IA no design UX/UI e atualizações do Figma",
+      "local": "Presencial",
+      "hora": "",
+      "color": "green",
+      "linkType": "photos",
+      "linkUrl": "https://drive.google.com/drive/folders/13VltBaPIGFtjkUMuGkHkkDFvlk-TbqgT?usp=sharing"
+    },
+    {
+      "date": "11 - Abril",
+      "status": "realizado",
+      "title": "UX Além das telas",
+      "local": "Presencial",
+      "hora": "",
+      "color": "white",
+      "linkType": null,
+      "linkUrl": null
+    }
+  ],
+  "2026": [
+    {
+      "date": "27 - Junho",
+      "status": "em breve",
+      "title": "Roda de conversa: IA no dia a dia do UX/UI",
+      "local": "Presencial | Senac",
+      "color": "pink",
+      "linkType": "video",
+      "linkUrl": ""
+    },
+    {
+      "date": "28 - Março",
+      "status": "realizado",
+      "title": "Workshops de Aniversário UX Brasília",
+      "local": "Presencial | Senac",
+      "color": "yellow",
+      "linkType": "video",
+      "linkUrl": ""
+    },
+    {
+      "date": "28 - Março",
+      "status": "realizado",
+      "title": "Mulheres em UX - Voz, Impacto e Decisão",
+      "local": "Online",
+      "hora": "",
+      "color": "blue",
+      "linkType": "video",
+      "linkUrl": "https://www.youtube.com/watch?v=kHFC7ov9fM8&t=164s"
+    }
+  ]
+}

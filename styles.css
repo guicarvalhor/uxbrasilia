@@ -521,6 +521,15 @@ transform: rotate(45deg);
   gap: 18px;
   grid-template-columns: repeat(12, 1fr);
 }
+.events__year-title {
+  grid-column: span 12;
+  font-family: "Cabinet Grotesk";
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
 .event-card {
   grid-column: span 4;
   border-radius: 20px;
