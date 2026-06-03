@@ -37,11 +37,15 @@ const storeProducts = {
             { type: 'image', src: '../assets/lojinha/frente-modelo.png', thumb: '../assets/lojinha/frente-modelo.png' }
         ],
         variations: [
-            { sku: "CAF-PRE-P", attributes: { "Cor": "Preta", "Tamanho": "P" }, price: 70.00, stock: 5 },
-            { sku: "CAF-PRE-M", attributes: { "Cor": "Preta", "Tamanho": "M" }, price: 70.00, stock: 5 },
-            { sku: "CAF-PRE-G", attributes: { "Cor": "Preta", "Tamanho": "G" }, price: 70.00, stock: 5 },
-            { sku: "CAF-PRE-GG", attributes: { "Cor": "Preta", "Tamanho": "GG" }, price: 70.00, stock: 5 },
-            { sku: "CAF-PRE-EXG", attributes: { "Cor": "Preta", "Tamanho": "EXG" }, price: 70.00, stock: 5 }
+            { sku: "CAF-PRE-P", attributes: { "Cor": "Preta", "Corte": "Regular", "Tamanho": "P" }, price: 70.00, stock: 5 },
+            { sku: "CAF-PRE-M", attributes: { "Cor": "Preta", "Corte": "Regular", "Tamanho": "M" }, price: 70.00, stock: 5 },
+            { sku: "CAF-PRE-G", attributes: { "Cor": "Preta", "Corte": "Regular", "Tamanho": "G" }, price: 70.00, stock: 5 },
+            { sku: "CAF-PRE-GG", attributes: { "Cor": "Preta", "Corte": "Regular", "Tamanho": "GG" }, price: 70.00, stock: 5 },
+            { sku: "CAF-PRE-EXG", attributes: { "Cor": "Preta", "Corte": "Regular", "Tamanho": "EXG" }, price: 70.00, stock: 5 },
+            { sku: "CAF-OVR-P", attributes: { "Cor": "Preta", "Corte": "Oversized", "Tamanho": "P" }, price: 80.00, stock: 5 },
+            { sku: "CAF-OVR-M", attributes: { "Cor": "Preta", "Corte": "Oversized", "Tamanho": "M" }, price: 80.00, stock: 5 },
+            { sku: "CAF-OVR-G", attributes: { "Cor": "Preta", "Corte": "Oversized", "Tamanho": "G" }, price: 80.00, stock: 5 },
+            { sku: "CAF-OVR-GG", attributes: { "Cor": "Preta", "Corte": "Oversized", "Tamanho": "GG" }, price: 80.00, stock: 5 }
         ]
     },
     

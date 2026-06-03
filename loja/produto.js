@@ -50,29 +50,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
         initializeGallery();
 
-        const optionTypes = Object.keys(product.variations[0].attributes);
-        
+        const attributeOrder = ['Cor', 'Corte', 'Tamanho'];
+        const optionTypes = Object.keys(product.variations[0].attributes)
+            .sort((a, b) => {
+                const ai = attributeOrder.indexOf(a);
+                const bi = attributeOrder.indexOf(b);
+                if (ai !== -1 && bi !== -1) return ai - bi;
+                if (ai !== -1) return -1;
+                if (bi !== -1) return 1;
+                return a.localeCompare(b);
+            });
+
         optionTypes.forEach(type => {
-            const values = [...new Set(product.variations.map(v => v.attributes[type]))];
+            const values = getUniqueValues(type, selectedAttributes);
             createOptionGroup(type, values);
-        });
 
-        optionsContainer.addEventListener('click', handleOptionClick);
-
-        optionTypes.forEach(type => {
-            const firstOption = optionsContainer.querySelector(`[data-type="${type}"]`);
+            const firstOption = optionsContainer.querySelector(`.option-group[data-type="${type}"] [data-type="${type}"]`);
             if (firstOption) {
                 firstOption.classList.add('selected');
                 selectedAttributes[type] = firstOption.dataset.value;
             }
         });
 
+        optionsContainer.addEventListener('click', handleOptionClick);
+
+        refreshDependentOptions('Corte');
         updateProductView();
+    }
+
+    function getUniqueValues(type, filters = {}) {
+        const values = product.variations
+            .filter(v => Object.entries(filters).every(([key, val]) => v.attributes[key] === val))
+            .map(v => v.attributes[type]);
+        return [...new Set(values)];
     }
 
     function createOptionGroup(type, values) {
         const groupWrapper = document.createElement('div');
         groupWrapper.className = 'option-group';
+        groupWrapper.dataset.type = type;
         
         const label = document.createElement('label');
         label.textContent = `${type}:`;
@@ -105,6 +121,61 @@ document.addEventListener('DOMContentLoaded', () => {
         optionsContainer.appendChild(groupWrapper);
     }
     
+    function refreshDependentOptions(changedType) {
+        if (changedType === 'Cor') {
+            refreshOptionGroup('Corte');
+        }
+        refreshOptionGroup('Tamanho');
+    }
+
+    function refreshOptionGroup(type) {
+        const group = optionsContainer.querySelector(`.option-group[data-type="${type}"]`);
+        if (!group) return;
+
+        const filters = {};
+        if (type === 'Corte' && selectedAttributes['Cor']) {
+            filters.Cor = selectedAttributes['Cor'];
+        }
+        if (type === 'Tamanho') {
+            if (selectedAttributes['Cor']) filters.Cor = selectedAttributes['Cor'];
+            if (selectedAttributes['Corte']) filters.Corte = selectedAttributes['Corte'];
+        }
+
+        const values = getUniqueValues(type, filters);
+        let currentValue = selectedAttributes[type];
+        if (!values.includes(currentValue)) {
+            currentValue = values[0];
+            if (currentValue) {
+                selectedAttributes[type] = currentValue;
+            }
+        }
+
+        const optionsDiv = group.querySelector('div');
+        optionsDiv.innerHTML = '';
+
+        values.forEach(value => {
+            const optionButton = document.createElement('button');
+            optionButton.dataset.type = type;
+            optionButton.dataset.value = value;
+            optionButton.className = type.toLowerCase() === 'cor' ? 'color-swatch' : 'size-option';
+            if (type.toLowerCase() === 'cor') {
+                optionButton.title = value;
+                const colorData = product.images[value];
+                if (colorData?.colorHex) {
+                    optionButton.style.backgroundColor = colorData.colorHex;
+                } else if (colorData?.thumb) {
+                    optionButton.innerHTML = `<img src="${colorData.thumb}" alt="Miniatura ${value}">`;
+                }
+            } else {
+                optionButton.textContent = value;
+            }
+            if (currentValue === value) {
+                optionButton.classList.add('selected');
+            }
+            optionsDiv.appendChild(optionButton);
+        });
+    }
+
     function handleOptionClick(e) {
         const target = e.target.closest('button');
         if (!target || !target.dataset.type) return;
@@ -116,6 +187,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const siblings = optionsContainer.querySelectorAll(`[data-type="${type}"]`);
         siblings.forEach(btn => btn.classList.remove('selected'));
         target.classList.add('selected');
+
+        if (type === 'Corte' || type === 'Cor') {
+            refreshDependentOptions();
+        }
 
         updateProductView();
     }
