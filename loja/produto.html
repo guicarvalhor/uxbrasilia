@@ -51,14 +51,75 @@
                     <p class="sold-out-message hidden" id="sold-out-message">Produto Esgotado</p>
                 </div>
 
-                <div class="purchase-process">
-                    <h2>Como funciona?</h2>
-                    <p>Nós fazemos encomendas por lote e todo o processo é realizado por WhatsApp. Ao clicar no link, você será redirecionado para o WhatsApp e precisará fazer o PIX e enviar o comprovante para fechar o pedido.</p>
-                    <p>O pedido deverá ser retirado no dia do próximo evento.</p>
+
+
+            </section>
+        </div>
+        <div class="product-how-to">
+            <section class="purchase-process" aria-labelledby="how-to-order">
+                <h2 id="how-to-order" class="purchase-process__label">Como encomendar?</h2>
+
+                <div class="purchase-process__step">
+                    <div class="purchase-process__icon" aria-hidden="true">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true">
+                            <path d="M21 7H3v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7z" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 10h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="purchase-process__content">
+                        <h3><span class="step-number">1</span> Fazer o PIX</h3>
+                        <p>Copie a chave PIX abaixo</p>
+                        <div class="purchase-process__key-row">
+                            <span class="pix-key">e3f62633-d75e-43df-b360-cc084bc268be</span>
+                            <button type="button" id="copy-pix-button-summary" class="copy-field" data-copy-value="e3f62633-d75e-43df-b360-cc084bc268be">Copiar</button>
+                        </div>
+                        <p class="purchase-process__recipient"><strong>Destinatário:</strong> Lanyelle Kathleen Santos da Mota</p>
+                    </div>
+                </div>
+
+                <div class="purchase-process__step">
+                    <div class="purchase-process__icon" aria-hidden="true">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M8 10h8M8 14h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="purchase-process__content">
+                        <h3><span class="step-number">2</span> Confirmar pedido</h3>
+                        <p>Clique em <strong>Quero Encomendar</strong> para abrir o WhatsApp em nova aba.</p>
+                        <p>No WhatsApp, envie <strong>seu nome completo</strong>, <strong>tamanho</strong> e o <strong>comprovante</strong>.</p>
+                        <p>Receberemos a confirmação e registraremos seu pedido.</p>
+                    </div>
+                </div>
+
+                <div class="purchase-process__step">
+                    <div class="purchase-process__icon" aria-hidden="true">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true">
+                            <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="purchase-process__content">
+                        <h3><span class="step-number">3</span> Retirar no evento</h3>
+                        <p>Retire seu pedido presencialmente no dia do evento do dia 27/06.</p>
+                        <p>Apresente seu comprovante ou mostre a conversa do WhatsApp.</p>
+                        <p>Não há opção de envio posterior — apenas retirada no evento.</p>
+                    </div>
                 </div>
 
             </section>
         </div>
+
     </main>
     <div id="order-modal" class="modal-overlay hidden">
         <div class="modal-content">
@@ -75,7 +136,7 @@
                 <form id="order-form"
                     action="https://docs.google.com/forms/d/e/1FAIpQLSdw07yOVkG1bGvFzKaxFFqaAGQSJknxxTHTzpzvEPvGRpiz8Q/formResponse"
                     method="POST" target="hidden_iframe" onsubmit="submitted=true;">
-                    
+
 
                     <div class="form-group">
                         <label for="user-name">Seu Nome Completo:</label>
@@ -90,7 +151,7 @@
                         <h3>1. Realize o Pagamento</h3>
                         <p>Faça o pagamento do valor total para a chave PIX abaixo para confirmar seu pedido.</p>
                         <div class="pix-key-wrapper">
-                            <input type="text" id="pix-key" value="00.000.000/0001-00" readonly>
+                            <input type="text" id="pix-key" value="e3f62633-d75e-43df-b360-cc084bc268be" readonly>
                             <button type="button" id="copy-pix-button">Copiar</button>
                         </div>
                         <p id="copy-feedback" class="copy-feedback-hidden">Chave copiada!</p>

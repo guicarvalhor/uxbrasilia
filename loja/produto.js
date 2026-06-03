@@ -35,6 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let selectedMediaIndex = 0;
     const copyPixButton = document.getElementById('copy-pix-button');
     const copyFeedback = document.getElementById('copy-feedback');
+    const copySummaryButton = document.getElementById('copy-pix-button-summary');
+    const copySummaryFeedback = document.getElementById('copy-feedback-summary');
 
     let selectedAttributes = {};
     let currentVariation = null; // <-- CORREÇÃO 1: Variável declarada aqui
@@ -319,13 +321,61 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     copyPixButton.addEventListener('click', () => {
-        pixKeyInput.select();
-        document.execCommand('copy');
-        copyFeedback.style.display = 'block';
-        setTimeout(() => {
-            copyFeedback.style.display = 'none';
-        }, 2000);
+        const text = pixKeyInput.value;
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(() => {
+                copyFeedback.style.display = 'block';
+                setTimeout(() => { copyFeedback.style.display = 'none'; }, 2000);
+            });
+        } else {
+            pixKeyInput.select();
+            document.execCommand('copy');
+            copyFeedback.style.display = 'block';
+            setTimeout(() => { copyFeedback.style.display = 'none'; }, 2000);
+        }
     });
+
+    if (copySummaryButton) {
+        copySummaryButton.addEventListener('click', async () => {
+            const text = copySummaryButton.getAttribute('data-copy-value') || pixKeyInput.value || '';
+            let copied = false;
+
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                try {
+                    await navigator.clipboard.writeText(text);
+                    copied = true;
+                } catch (error) {
+                    copied = false;
+                }
+            }
+
+            if (!copied) {
+                const tmp = document.createElement('textarea');
+                tmp.value = text;
+                tmp.style.position = 'fixed';
+                tmp.style.left = '-9999px';
+                document.body.appendChild(tmp);
+                tmp.select();
+                copied = document.execCommand('copy');
+                document.body.removeChild(tmp);
+            }
+
+            if (copySummaryFeedback) {
+                copySummaryFeedback.textContent = copied ? 'Copiado!' : 'Falha ao copiar';
+                copySummaryFeedback.classList.remove('hidden');
+                copySummaryFeedback.style.display = 'inline-block';
+                copySummaryFeedback.style.opacity = '1';
+                if (copied) {
+                    copySummaryButton.classList.add('copied');
+                }
+                setTimeout(() => {
+                    copySummaryFeedback.style.display = 'none';
+                    copySummaryButton.classList.remove('copied');
+                    copySummaryFeedback.classList.add('hidden');
+                }, 2000);
+            }
+        });
+    }
 
     initializePage();
 });

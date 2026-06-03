@@ -38,9 +38,11 @@ const footerConfig = {
         {
             title: "Comunidade",
             links: [
-                //{ href: "/voluntariado.html", label: "Voluntariado" },
+                { href: "/", label: "Página inicial" },
+                { href: "/blog.html", label: "Blog" },
+                { href: "/parceiros.html", label: "Parceiros" },
                 { href: "/catalogo.html", label: "Lojinha" },
-                { href: "/blog.html", label: "Blog" }
+                { href: "/contato.html", label: "Contatos" }
             ]
         },
         {
