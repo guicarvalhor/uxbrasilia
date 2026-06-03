@@ -149,7 +149,6 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
   align-items: start;
-  padding: 26px;
   background: #f5f8ff;
   border: 1px solid rgba(46, 103, 255, 0.25);
   border-radius: 16px;
