@@ -38,6 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const copySummaryButton = document.getElementById('copy-pix-button-summary');
     const copySummaryFeedback = document.getElementById('copy-feedback-summary');
 
+    const howToDrawer = document.getElementById('how-to-drawer');
+    const drawerClose = document.getElementById('drawer-close');
+    const drawerOverlay = document.getElementById('drawer-overlay');
+    const drawerContinue = document.getElementById('drawer-continue');
+
     let selectedAttributes = {};
     let currentVariation = null; // <-- CORREÇÃO 1: Variável declarada aqui
 
@@ -374,18 +379,72 @@ document.addEventListener('DOMContentLoaded', () => {
         orderModal.classList.remove('hidden');
     }
 
+    function openDrawer() {
+        if (!howToDrawer) return;
+        howToDrawer.classList.remove('hidden');
+        howToDrawer.setAttribute('aria-hidden', 'false');
+        if (drawerOverlay) {
+            drawerOverlay.classList.remove('hidden');
+            drawerOverlay.setAttribute('aria-hidden', 'false');
+        }
+        // focus
+        const focusable = howToDrawer.querySelector('button, a, input, textarea');
+        if (focusable) focusable.focus();
+        // bloquear scroll do fundo para experiência de drawer
+        document.body.classList.add('no-scroll');
+    }
+
+    function closeDrawer() {
+        if (!howToDrawer) return;
+        howToDrawer.classList.add('hidden');
+        howToDrawer.setAttribute('aria-hidden', 'true');
+        drawerOverlay.classList.add('hidden');
+        drawerOverlay.setAttribute('aria-hidden', 'true');
+        // restaurar scroll do fundo
+        document.body.classList.remove('no-scroll');
+    }
+
     function closeModal() {
         orderModal.classList.add('hidden');
     }
 
-    if (product.whatsappLink) {
-        buyButton.addEventListener('click', () => {
-            // Abrir WhatsApp em nova aba sem acesso ao opener
-            const newWin = window.open(product.whatsappLink, '_blank');
+    // Abrir drawer ao clicar em 'Quero Encomendar'
+    buyButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        openDrawer();
+    });
+
+    // Fechar drawer
+    if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
+    if (drawerOverlay) drawerOverlay.addEventListener('click', closeDrawer);
+    document.addEventListener('keydown', (ev) => {
+        if (ev.key === 'Escape') closeDrawer();
+    });
+
+    // Continuar para o WhatsApp — preenche mensagem com seleção atual
+    if (drawerContinue) {
+        drawerContinue.addEventListener('click', () => {
+            // Garantir variação válida
+            if (!currentVariation) {
+                alert('Por favor, selecione opções válidas antes de continuar.');
+                return;
+            }
+
+            const attrs = currentVariation.attributes;
+            const lines = [];
+            lines.push(`Produto: ${product.name}`);
+            Object.keys(attrs).forEach(k => lines.push(`${k}: ${attrs[k]}`));
+            lines.push(`Valor: R$ ${currentVariation.price.toFixed(2).replace('.', ',')}`);
+            lines.push('Nome: ');
+            lines.push('Telefone (WhatsApp): ');
+
+            const text = encodeURIComponent(lines.join('\n'));
+            const base = product.whatsappLink || 'https://wa.me/';
+            const sep = base.includes('?') ? '&' : '?';
+            const url = `${base}${sep}text=${text}`;
+            const newWin = window.open(url, '_blank');
             if (newWin) newWin.opener = null;
         });
-    } else {
-        buyButton.addEventListener('click', openOrderModal);
     }
 
     closeModalButton.addEventListener('click', closeModal);

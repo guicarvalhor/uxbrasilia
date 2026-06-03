@@ -55,9 +55,12 @@
 
             </section>
         </div>
-        <div class="product-how-to">
-            <section class="purchase-process" aria-labelledby="how-to-order">
+        <div id="how-to-drawer" class="product-how-to drawer hidden" role="dialog" aria-labelledby="how-to-order" aria-hidden="true">
+            <div class="drawer-header">
                 <h2 id="how-to-order" class="purchase-process__label">Como encomendar?</h2>
+                <button id="drawer-close" class="drawer-close" aria-label="Fechar">&times;</button>
+            </div>
+            <section class="purchase-process" aria-labelledby="how-to-order">
 
                 <div class="purchase-process__step">
                     <div class="purchase-process__icon" aria-hidden="true">
@@ -118,7 +121,13 @@
                 </div>
 
             </section>
+
+            <div class="drawer-footer">
+                <button id="drawer-continue" class="btn btn-buy">Enviar dados e comprovante</button>
+            </div>
         </div>
+
+        <div id="drawer-overlay" class="drawer-overlay hidden" tabindex="-1" aria-hidden="true"></div>
 
     </main>
     <div id="order-modal" class="modal-overlay hidden">
