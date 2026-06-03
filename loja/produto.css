@@ -160,7 +160,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 12px;
+
   padding-bottom: 28px;
 }
 
@@ -216,12 +216,14 @@
 .copy-feedback {
   display: none;
   opacity: 0;
+  color: var(--green, #38b26f);
+  font-size: 0.95rem;
   transition: opacity 0.2s ease;
 }
 
 .copy-feedback.inline {
-  color: var(--green, #38b26f);
-  font-size: 0.95rem;
+  display: inline-block;
+  opacity: 1;
 }
 
 .copy-feedback.hidden {
@@ -602,6 +604,7 @@
 }
 
 .pix-payment {
+  position: relative;
   margin-top: 25px;
   border-top: 1px solid #eee;
   padding-top: 20px;
@@ -628,13 +631,40 @@
   cursor: pointer;
   font-weight: 600;
 }
+.copy-feedback {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: none;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: var(--green, #38b26f);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  box-shadow: 0 14px 30px rgba(56, 178, 111, 0.18);
+}
+.copy-feedback::before {
+  content: '✓';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 0.85rem;
+}
 .copy-feedback-hidden {
   display: none;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--green);
-  margin-top: 8px;
 }
+.copy-feedback-visible {
+  display: inline-flex;
+}
+
 
 /* MELHORIA: Estilo do input de arquivo */
 input[type="file"] {
@@ -693,8 +723,9 @@ input[type="file"] {
 .drawer-header { display:flex; align-items:center; justify-content:space-between; padding:12px 16px; border-bottom:1px solid #eee; position:sticky; top:0; background:inherit; z-index:20; }
 .drawer-header h2 { font-weight:700; letter-spacing:0; text-transform:none; color:var(--blue-900, #1a3fa9); margin:0; font-size:1.2rem; }
 .drawer-close { background: none; border: none; font-size:28px; width:auto; height:auto; display:inline-block; cursor:pointer; color:var(--muted); }
-.drawer .purchase-process { margin:12px 16px; box-shadow:none; border:none; background:transparent; display:flex; flex-direction:column; gap:14px; flex:1 1 auto; overflow-y:auto; -webkit-overflow-scrolling:touch; padding-right:12px; }
-.drawer .purchase-process__step { background:#fff; padding:12px; border:1px solid rgba(0,0,0,0.06); border-radius:8px; box-shadow: 0 6px 18px rgba(12,24,75,0.04); width:100%; }
+.drawer .purchase-process {  box-shadow:none; border:none; background:transparent; display:flex; flex-direction:column; gap:14px; flex:1 1 auto; overflow-y:auto; -webkit-overflow-scrolling:touch; padding-right:12px; }
+.drawer .purchase-process__step { position: relative; background:#fff; padding:12px; border:1px solid rgba(0,0,0,0.06); border-radius:8px; box-shadow: 0 6px 18px rgba(12,24,75,0.04); width:100%; max-width:100%; box-sizing:border-box; }
+.drawer .purchase-process__content { width:100%; }
 /* esconder ícones apenas dentro do drawer */
 .drawer .purchase-process__icon { display: none; }
 .drawer .purchase-process__content { margin-left: 0; }

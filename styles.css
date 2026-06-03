@@ -851,12 +851,27 @@ transform: rotate(45deg);
   justify-content: center;
   position: relative;
 }
+.slide {
+  align-items: flex-end;
+  justify-content: flex-start;
+}
 .slide .overlay {
   color: #fff;
   max-width: 100%;
-  text-align: center;
+  text-align: left;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
+  .feature-card:hover,
+  .team-card:hover,
+  .event-card:hover,
+  .produto-card:hover,
+  .btn--primary:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
 }
 /* =========
    CATALOGO

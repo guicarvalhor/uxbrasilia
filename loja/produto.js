@@ -455,20 +455,42 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    copyPixButton.addEventListener('click', () => {
+    const showCopied = () => {
+        copyFeedback.textContent = 'Copiado!';
+        copyFeedback.classList.remove('copy-feedback-hidden');
+        copyFeedback.classList.add('copy-feedback-visible');
+        copyFeedback.style.opacity = '1';
+        setTimeout(() => {
+            copyFeedback.classList.remove('copy-feedback-visible');
+            copyFeedback.classList.add('copy-feedback-hidden');
+        }, 2000);
+    };
+
+    const copyPixKey = async () => {
         const text = pixKeyInput.value;
+        let copied = false;
+
         if (navigator.clipboard && navigator.clipboard.writeText) {
-            navigator.clipboard.writeText(text).then(() => {
-                copyFeedback.style.display = 'block';
-                setTimeout(() => { copyFeedback.style.display = 'none'; }, 2000);
-            });
-        } else {
-            pixKeyInput.select();
-            document.execCommand('copy');
-            copyFeedback.style.display = 'block';
-            setTimeout(() => { copyFeedback.style.display = 'none'; }, 2000);
+            try {
+                await navigator.clipboard.writeText(text);
+                copied = true;
+            } catch (error) {
+                copied = false;
+            }
         }
-    });
+
+        if (!copied) {
+            pixKeyInput.select();
+            copied = document.execCommand('copy');
+        }
+
+        if (copied) {
+            showCopied();
+        }
+    };
+
+    copyPixButton.addEventListener('click', copyPixKey);
+    pixKeyInput.addEventListener('click', copyPixKey);
 
     if (copySummaryButton) {
         copySummaryButton.addEventListener('click', async () => {
@@ -497,8 +519,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (copySummaryFeedback) {
                 copySummaryFeedback.textContent = copied ? 'Copiado!' : 'Falha ao copiar';
-                copySummaryFeedback.classList.remove('hidden');
-                copySummaryFeedback.style.display = 'inline-block';
+                copySummaryFeedback.classList.remove('hidden', 'copy-feedback-hidden');
+                copySummaryFeedback.classList.add('copy-feedback-visible');
+                copySummaryFeedback.style.display = 'inline-flex';
                 copySummaryFeedback.style.opacity = '1';
                 if (copied) {
                     copySummaryButton.classList.add('copied');
@@ -506,7 +529,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => {
                     copySummaryFeedback.style.display = 'none';
                     copySummaryButton.classList.remove('copied');
-                    copySummaryFeedback.classList.add('hidden');
+                    copySummaryFeedback.classList.remove('copy-feedback-visible');
+                    copySummaryFeedback.classList.add('copy-feedback-hidden');
                 }, 2000);
             }
         });
