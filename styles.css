@@ -566,6 +566,43 @@ transform: rotate(45deg);
   opacity: 0.9;
 }
 
+/* Catalog enhancements */
+.team-card { position: relative; }
+.team-card .card-link { position: absolute; inset: 0; z-index: 2; text-indent: -9999px; }
+.catalog-layout { display: flex; gap: 24px; align-items: flex-start; margin-top: 12px; }
+.catalog-filters { width: 20%; display: flex; flex-direction: column; gap: 8px; font-family: inherit; }
+.catalog-filters-header h4 { margin: 0 0 6px; font-size: 18px; font-weight: 600; }
+.catalog-filters-header hr { border: 0; height: 1px; background: #e6e6e6; margin-bottom: 10px; }
+.catalog-filters .filter-btn { background: transparent; border: none; padding: 6px 4px; border-radius: 0; cursor: pointer; text-align: left; font-family: inherit; }
+.catalog-filters .filter-btn.active { color: var(--blue); font-weight: 600; }
+.catalog-main { width: 80%; }
+
+/* Make grid a bit tighter and centered */
+.team__grid { gap: 24px; }
+.team-card img { height: 240px; }
+
+/* Catalog-specific grid: cards ocupam a área e têm gap de 20px */
+.catalog-main .team__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 20px;
+}
+.catalog-main .team-card { grid-column: auto; }
+
+.team-card img { height: 320px; object-fit: cover; }
+.team-card h3 { font-size: 26px; }
+.team-card figcaption { padding: 18px 16px 20px; }
+
+@media (max-width: 900px) {
+  .catalog-layout { flex-direction: column; }
+  .catalog-filters { width: 100%; flex-direction: row; flex-wrap: wrap; }
+  .catalog-filters .filter-btn { border-radius: 999px; }
+  .team-card { grid-column: span 6; }
+}
+@media (max-width: 600px) {
+  .team-card { grid-column: span 12; }
+}
+
 /* =========
    EVENTS
 ========= */
@@ -2226,4 +2263,8 @@ padding-bottom:20px;
     .cta-whatsapp .floating-label {
         display: none;
     }
+}
+
+.catalog-filters-title{
+color:#000;
 }

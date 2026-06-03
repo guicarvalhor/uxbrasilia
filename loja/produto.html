@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Lojinha UXBrasília</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../styles.css" />
     <link rel="stylesheet" href="produto.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -20,11 +20,19 @@
         <div class="product-container">
 
             <section class="product-image-gallery">
-                <img id="main-product-image" src="" alt="Imagem principal do produto">
+                <div class="product-media-viewer">
+                    <img id="main-product-image" src="" alt="Imagem principal do produto">
+                    <video id="main-product-video" class="hidden" controls autoplay muted loop playsinline></video>
+                </div>
+                <div class="product-gallery-thumbs" id="product-gallery-thumbs"></div>
             </section>
 
             <section class="product-details">
-                <a href="/catalogo.html" class="back-to">← Voltar para a loja</a>
+                <nav class="product-breadcrumbs" aria-label="Breadcrumb">
+                    <a href="../catalogo.html">Lojinha</a>
+                    <span aria-hidden="true">›</span>
+                    <span id="breadcrumb-current">Produto</span>
+                </nav>
                 <h1 id="product-name">Carregando...</h1>
                 <p class="price" id="product-price"></p>
 
@@ -39,20 +47,18 @@
 
                 <div class="action-buttons">
                     <button class="btn btn-buy hidden" id="buy-button">Quero Encomendar!</button>
-                    <button class="btn btn-on-demand hidden" id="on-demand-button">Encomendar sob Demanda</button>
+                    <a id="whatsapp-reserve" class="btn btn-buy hidden" target="_blank">Reservar via WhatsApp</a>
                     <p class="sold-out-message hidden" id="sold-out-message">Produto Esgotado</p>
+                </div>
+
+                <div class="purchase-process">
+                    <h2>Como funciona?</h2>
+                    <p>Nós fazemos encomendas por lote e todo o processo é realizado por WhatsApp. Ao clicar no link, você será redirecionado para o WhatsApp e precisará fazer o PIX e enviar o comprovante para fechar o pedido.</p>
+                    <p>O pedido deverá ser retirado no dia do próximo evento.</p>
                 </div>
 
             </section>
         </div>
-    </main>
-
-    <div class="action-buttons">
-        <button class="btn btn-buy hidden" id="buy-button">Quero Encomendar!</button>
-        <p class="sold-out-message hidden" id="sold-out-message">Produto Esgotado</p>
-    </div>
-    </section>
-    </div>
     </main>
     <div id="order-modal" class="modal-overlay hidden">
         <div class="modal-content">
@@ -114,9 +120,9 @@
     </div>
 
     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
-        onload="if(submitted){window.location='obrigado.html';}"></iframe>
+        onload="if(window.submitted){window.location='obrigado.html';}"></iframe>
     <div id="footer-container"></div>
-    <script src="/menu-footer.js" defer></script>
+    <script src="../menu-footer.js" defer></script>
     <script src="database.js"></script>
     <script src="produto.js"></script>
 

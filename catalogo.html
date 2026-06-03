@@ -38,10 +38,10 @@
         </div>
         <div class="container hero__content">
             <h1 class="hero__title">
-                Vista a camisa da nossa comunidade
+                Leve pra casa um pedaço da comunidade
             </h1>
             <p class="hero__desc">
-                Produtos feitos com carinho para quem faz parte da UXBrasília. Para fazer seu pedido, basta entrar em contato!
+                Produtos feitos com carinho para quem faz parte da UXBrasília.
             </p>
         </div>
     </section>
@@ -49,45 +49,95 @@
     <main class="team" style="border-radius: 0; background-color: var(--offwhite);">
         <div class="container">
             <h2 class="section__title" style="color: var(--blue);">Nossos Produtos</h2>
+            <div class="catalog-layout">
+                <aside class="catalog-filters" id="catalog-filters">
+                    <div class="catalog-filters-header">
+                        <h4 class="catalog-filters-title">Filtre por</h4>
+                        <hr />
+                    </div>
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="camiseta">Camisetas</button>
+                    <button class="filter-btn" data-filter="caneca">Canecas</button>
+                    <button class="filter-btn" data-filter="cobogo">Cobogós</button>
+                </aside>
 
-            <div class="team__grid">
-                
-                <figure class="team-card">
-                    <img src="/assets/lojinha/camiseta.png" alt="Camiseta preta com logo UXBrasília"/>
-                    <figcaption>
-                        <h3>Camiseta UXBrasília</h3>
-                        <p>A camiseta oficial da comunidade é feita com um algodão de alta qualidade, disponível nos tamanhos P, M, G e EG.</p>
-                        <p style="font-size: 24px; padding:20px 0px; font-weight: 700;">R$ 60,00</p>
-                        <!--<a href="https://forms.gle/BMsVS9C2TrGtgXFd9" class="btn btn--ghost" target="_blank" style="margin-top: 16px; width: 100%;">Quero encomendar!</a>-->
-                        <a class="btn btn--ghost full" href="/loja/produto.html?id=camiseta-uxb">Ver produto ></a>
-                    </figcaption>
-                </figure>
+                <div class="catalog-main">
+                    <div class="team__grid" id="catalog-grid">
+                        <figure class="team-card" data-category="camiseta">
+                            <img src="assets/lojinha/café-ux.png" alt="Camiseta Café e UX/UI"/>
+                            <a class="card-link" href="loja/produto.html?id=camiseta-cafe-uxui">Ir ao produto</a>
+                            <figcaption>
+                                <h3>Camiseta Café e UX/UI</h3>
+                                <p>Camiseta temática "Café e UX/UI" — perfeita para encontros e cafés da comunidade.</p>
+                                <p style="font-size: 24px; padding:20px 0px; font-weight: 700;">R$ 70,00</p>
+                                <a class="btn btn--ghost full" href="loja/produto.html?id=camiseta-cafe-uxui">Ver produto &gt;</a>
+                            </figcaption>
+                        </figure>
 
-                <figure class="team-card">
-                    <img src="/assets/lojinha/UXBrasilia.jpg" alt="Caneca branca com logo UXBrasília"/>
-                    <figcaption>
-                        <h3>Cobogós</h3>
-                        <p>Inspirado nas superquadras de Brasília, este elemento vazado é uma releitura moderna do clássico modernista.</p>
-                        </p>
-                        <p style="font-size: 24px; padding:20px 0px; font-weight: 700;">R$ 10,00</p> 
-                        <a class="btn btn--ghost full"href="/loja/produto.html?id=cobogo">Ver produto ></a>
-                    </figcaption>
-                   
-                </figure>
+                        <figure class="team-card" data-category="camiseta">
+                            <img src="assets/lojinha/oficial.png" alt="Camiseta oficial UXBrasília"/>
+                            <a class="card-link" href="loja/produto.html?id=camiseta-uxb">Ir ao produto</a>
+                            <figcaption>
+                                <h3>Camiseta UXBrasília</h3>
+                                <p>A camiseta oficial da comunidade é feita com um algodão de alta qualidade</p>
+                                <p style="font-size: 24px; padding:20px 0px; font-weight: 700;">R$ 60,00</p>
+                                <a class="btn btn--ghost full" href="loja/produto.html?id=camiseta-uxb">Ver produto &gt;</a>
+                            </figcaption>
+                        </figure>
 
-                <figure class="team-card">
-                    <img src="/assets/lojinha/caneca.png" alt="Caneca branca com logo UXBrasília"/>
-                    <figcaption>
-                        <h3>Caneca da Comunidade</h3>
-                        <p>Perfeita para o seu café enquanto planeja a sua próxima interface incrível.</p>
-                        <p style="font-size: 24px; padding:20px 0px; font-weight: 700;">R$ 15,00</p>
-                        <a class="btn btn--ghost full" href="/loja/produto.html?id=caneca-comunidade">Ver produto ></a>
-                    </figcaption>
-                    
-                </figure>
-            </div>
+                        <figure class="team-card" data-category="cobogo">
+                            <img src="assets/lojinha/UXBrasilia.jpg" alt="Cobogó"/>
+                            <a class="card-link" href="loja/produto.html?id=cobogo">Ir ao produto</a>
+                            <figcaption>
+                                <h3>Cobogós</h3>
+                                <p>Inspirado nas superquadras de Brasília, este elemento vazado é uma releitura moderna do clássico modernista.</p>
+                                <p style="font-size: 24px; padding:20px 0px; font-weight: 700;">R$ 10,00</p> 
+                                <a class="btn btn--ghost full"href="loja/produto.html?id=cobogo">Ver produto &gt;</a>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="team-card" data-category="caneca">
+                            <img src="assets/lojinha/caneca.png" alt="Caneca branca com logo UXBrasília"/>
+                            <a class="card-link" href="loja/produto.html?id=caneca-comunidade">Ir ao produto</a>
+                            <figcaption>
+                                <h3>Caneca da Comunidade</h3>
+                                <p>Perfeita para o seu café enquanto planeja a sua próxima interface incrível.</p>
+                                <p style="font-size: 24px; padding:20px 0px; font-weight: 700;">R$ 15,00</p>
+                                <a class="btn btn--ghost full" href="loja/produto.html?id=caneca-comunidade">Ver produto &gt;</a>
+                            </figcaption>
+                        </figure>
+                    </div>
         </div>
     </main>
+
+    <script>
+        // Filtros do catálogo
+        (function(){
+            const filters = document.getElementById('catalog-filters');
+            const grid = document.getElementById('catalog-grid');
+            if(!filters || !grid) return;
+
+            filters.addEventListener('click', (e) => {
+                const btn = e.target.closest('.filter-btn');
+                if(!btn) return;
+                const filter = btn.dataset.filter;
+
+                // toggle active class
+                filters.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const cards = grid.querySelectorAll('.team-card');
+                cards.forEach(card => {
+                    const cat = card.dataset.category || 'all';
+                    if(filter === 'all' || cat === filter) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        })();
+    </script>
 
     <div id="footer-container"></div>
     <script src="menu-footer.js" defer></script>

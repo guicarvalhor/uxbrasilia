@@ -1,5 +1,12 @@
 {
-  "destaques": [
+  "destaques": [  
+    {
+      "image": "/assets/lojinha.png",
+      "title": "Lançamento!",
+      "description": "Nova camiseta da lojinha UXBrasília — encomende a sua agora e vista a camisa da nossa comunidade",
+      "link": "loja/produto.html?id=camiseta-cafe-uxui",
+      "buttonText": "Comprar agora"
+    },
     {
       "image": "/assets/clube.png",
       "title": "Clube do livro UX Brasília",
