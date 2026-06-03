@@ -227,7 +227,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             if (variation.stock > 0) {
-                stockStatus.textContent = `${variation.stock} em estoque`;
+                // Não exibir a contagem de estoque visível — apenas manter estado via classes
+                stockStatus.textContent = '';
                 stockStatus.classList.add(variation.stock <= 5 ? 'status-low-stock' : 'status-in-stock');
                 buyButton.classList.remove('hidden');
                 buyButton.style.display = 'block';
