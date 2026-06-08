@@ -42,10 +42,10 @@ const storeProducts = {
             { sku: "CAF-PRE-G", attributes: { "Cor": "Preta", "Corte": "Regular", "Tamanho": "G" }, price: 70.00, stock: 5 },
             { sku: "CAF-PRE-GG", attributes: { "Cor": "Preta", "Corte": "Regular", "Tamanho": "GG" }, price: 70.00, stock: 5 },
             { sku: "CAF-PRE-EXG", attributes: { "Cor": "Preta", "Corte": "Regular", "Tamanho": "EXG" }, price: 70.00, stock: 5 },
-            { sku: "CAF-OVR-P", attributes: { "Cor": "Preta", "Corte": "Oversized", "Tamanho": "P" }, price: 80.00, stock: 5 },
-            { sku: "CAF-OVR-M", attributes: { "Cor": "Preta", "Corte": "Oversized", "Tamanho": "M" }, price: 80.00, stock: 5 },
-            { sku: "CAF-OVR-G", attributes: { "Cor": "Preta", "Corte": "Oversized", "Tamanho": "G" }, price: 80.00, stock: 5 },
-            { sku: "CAF-OVR-GG", attributes: { "Cor": "Preta", "Corte": "Oversized", "Tamanho": "GG" }, price: 80.00, stock: 5 }
+            { sku: "CAF-OVR-P", attributes: { "Cor": "Branca", "Corte": "Oversized", "Tamanho": "P" }, price: 80.00, stock: 5 },
+            { sku: "CAF-OVR-M", attributes: { "Cor": "Branca", "Corte": "Oversized", "Tamanho": "M" }, price: 80.00, stock: 5 },
+            { sku: "CAF-OVR-G", attributes: { "Cor": "Branca", "Corte": "Oversized", "Tamanho": "G" }, price: 80.00, stock: 5 },
+            { sku: "CAF-OVR-GG", attributes: { "Cor": "Branca", "Corte": "Oversized", "Tamanho": "GG" }, price: 80.00, stock: 5 }
         ]
     },
     
