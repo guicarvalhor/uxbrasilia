@@ -28,7 +28,7 @@ const storeProducts = {
         // Link de WhatsApp (substitua pelo seu número quando estiver pronto)
         whatsappLink: "http://wa.me/+5561984572636",
         images: {
-            "Preta": { main: "../assets/lojinha/café-ux.png", thumb: "../assets/lojinha/café-ux.png" }
+            "branca": { main: "../assets/lojinha/café-ux.png", thumb: "../assets/lojinha/café-ux.png" }
         },
         gallery: [{ 
             type: 'video', src: '../assets/lojinha/video-fundo.mp4', thumb: '../assets/lojinha/estampa-fundo.png' },
@@ -37,11 +37,11 @@ const storeProducts = {
             { type: 'image', src: '../assets/lojinha/frente-modelo.png', thumb: '../assets/lojinha/frente-modelo.png' }
         ],
         variations: [
-            { sku: "CAF-PRE-P", attributes: { "Cor": "Preta", "Corte": "Regular", "Tamanho": "P" }, price: 70.00, stock: 5 },
-            { sku: "CAF-PRE-M", attributes: { "Cor": "Preta", "Corte": "Regular", "Tamanho": "M" }, price: 70.00, stock: 5 },
-            { sku: "CAF-PRE-G", attributes: { "Cor": "Preta", "Corte": "Regular", "Tamanho": "G" }, price: 70.00, stock: 5 },
-            { sku: "CAF-PRE-GG", attributes: { "Cor": "Preta", "Corte": "Regular", "Tamanho": "GG" }, price: 70.00, stock: 5 },
-            { sku: "CAF-PRE-EXG", attributes: { "Cor": "Preta", "Corte": "Regular", "Tamanho": "EXG" }, price: 70.00, stock: 5 },
+            { sku: "CAF-BRA-P", attributes: { "Cor": "Branca", "Corte": "Regular", "Tamanho": "P" }, price: 70.00, stock: 5 },
+            { sku: "CAF-BRA-M", attributes: { "Cor": "Branca", "Corte": "Regular", "Tamanho": "M" }, price: 70.00, stock: 5 },
+            { sku: "CAF-BRA-G", attributes: { "Cor": "Branca", "Corte": "Regular", "Tamanho": "G" }, price: 70.00, stock: 5 },
+            { sku: "CAF-BRA-GG", attributes: { "Cor": "Branca", "Corte": "Regular", "Tamanho": "GG" }, price: 70.00, stock: 5 },
+            { sku: "CAF-BRA-EXG", attributes: { "Cor": "Branca", "Corte": "Regular", "Tamanho": "EXG" }, price: 70.00, stock: 5 },
             { sku: "CAF-OVR-P", attributes: { "Cor": "Branca", "Corte": "Oversized", "Tamanho": "P" }, price: 80.00, stock: 5 },
             { sku: "CAF-OVR-M", attributes: { "Cor": "Branca", "Corte": "Oversized", "Tamanho": "M" }, price: 80.00, stock: 5 },
             { sku: "CAF-OVR-G", attributes: { "Cor": "Branca", "Corte": "Oversized", "Tamanho": "G" }, price: 80.00, stock: 5 },
