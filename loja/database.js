@@ -12,11 +12,11 @@ const storeProducts = {
             "Preta": { main: "../assets/lojinha/oficial.png", thumb: "../assets/lojinha/oficial.png" }
         },
         variations: [
-            { sku: "CAM-PRE-P", attributes: { "Cor": "Preta", "Tamanho": "P" }, price: 60.00, stock: 5 },
-            { sku: "CAM-PRE-M", attributes: { "Cor": "Preta", "Tamanho": "M" }, price: 60.00, stock: 5 },
-            { sku: "CAM-PRE-G", attributes: { "Cor": "Preta", "Tamanho": "G" }, price: 60.00, stock: 5 },
-            { sku: "CAM-PRE-G", attributes: { "Cor": "Preta", "Tamanho": "GG" }, price: 60.00, stock: 5 },
-            { sku: "CAM-PRE-GG", attributes: { "Cor": "Preta", "Tamanho": "EXG" }, price: 60.00, stock: 5},
+            { sku: "CAM-PRE-P", attributes: { "Cor": "Preta", "Tamanho": "P" }, price: 60.00, stock: 0 },
+            { sku: "CAM-PRE-M", attributes: { "Cor": "Preta", "Tamanho": "M" }, price: 60.00, stock: 0 },
+            { sku: "CAM-PRE-G", attributes: { "Cor": "Preta", "Tamanho": "G" }, price: 60.00, stock: 0 },
+            { sku: "CAM-PRE-G", attributes: { "Cor": "Preta", "Tamanho": "GG" }, price: 60.00, stock: 0 },
+            { sku: "CAM-PRE-GG", attributes: { "Cor": "Preta", "Tamanho": "EXG" }, price: 60.00, stock: 0},
            // { sku: "CAM-PRE-GG", attributes: { "Cor": "Preta", "Tamanho": "EXG" }, price: 60.00, stock: 1, onDemand: true },
         ]
     },
@@ -37,15 +37,15 @@ const storeProducts = {
             { type: 'image', src: '../assets/lojinha/frente-modelo.png', thumb: '../assets/lojinha/frente-modelo.png' }
         ],
         variations: [
-            { sku: "CAF-BRA-P", attributes: { "Cor": "Branca", "Corte": "Regular", "Tamanho": "P" }, price: 70.00, stock: 5 },
-            { sku: "CAF-BRA-M", attributes: { "Cor": "Branca", "Corte": "Regular", "Tamanho": "M" }, price: 70.00, stock: 5 },
-            { sku: "CAF-BRA-G", attributes: { "Cor": "Branca", "Corte": "Regular", "Tamanho": "G" }, price: 70.00, stock: 5 },
-            { sku: "CAF-BRA-GG", attributes: { "Cor": "Branca", "Corte": "Regular", "Tamanho": "GG" }, price: 70.00, stock: 5 },
-            { sku: "CAF-BRA-EXG", attributes: { "Cor": "Branca", "Corte": "Regular", "Tamanho": "EXG" }, price: 70.00, stock: 5 },
-            { sku: "CAF-OVR-P", attributes: { "Cor": "Branca", "Corte": "Oversized", "Tamanho": "P" }, price: 80.00, stock: 5 },
-            { sku: "CAF-OVR-M", attributes: { "Cor": "Branca", "Corte": "Oversized", "Tamanho": "M" }, price: 80.00, stock: 5 },
-            { sku: "CAF-OVR-G", attributes: { "Cor": "Branca", "Corte": "Oversized", "Tamanho": "G" }, price: 80.00, stock: 5 },
-            { sku: "CAF-OVR-GG", attributes: { "Cor": "Branca", "Corte": "Oversized", "Tamanho": "GG" }, price: 80.00, stock: 5 }
+            { sku: "CAF-BRA-P", attributes: { "Cor": "Branca", "Corte": "Regular", "Tamanho": "P" }, price: 70.00, stock: 0 },
+            { sku: "CAF-BRA-M", attributes: { "Cor": "Branca", "Corte": "Regular", "Tamanho": "M" }, price: 70.00, stock: 0 },
+            { sku: "CAF-BRA-G", attributes: { "Cor": "Branca", "Corte": "Regular", "Tamanho": "G" }, price: 70.00, stock: 0 },
+            { sku: "CAF-BRA-GG", attributes: { "Cor": "Branca", "Corte": "Regular", "Tamanho": "GG" }, price: 70.00, stock: 0 },
+            { sku: "CAF-BRA-EXG", attributes: { "Cor": "Branca", "Corte": "Regular", "Tamanho": "EXG" }, price: 70.00, stock: 0 },
+            { sku: "CAF-OVR-P", attributes: { "Cor": "Branca", "Corte": "Oversized", "Tamanho": "P" }, price: 80.00, stock: 0 },
+            { sku: "CAF-OVR-M", attributes: { "Cor": "Branca", "Corte": "Oversized", "Tamanho": "M" }, price: 80.00, stock: 0 },
+            { sku: "CAF-OVR-G", attributes: { "Cor": "Branca", "Corte": "Oversized", "Tamanho": "G" }, price: 80.00, stock: 0 },
+            { sku: "CAF-OVR-GG", attributes: { "Cor": "Branca", "Corte": "Oversized", "Tamanho": "GG" }, price: 80.00, stock: 0 }
         ]
     },
     
