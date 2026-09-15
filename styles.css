@@ -298,6 +298,89 @@ a {
 .btn--small{
   margin: 30px 0px 0px 0px;
 }
+
+.welcome-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(12, 17, 16, 0.55);
+  display: grid;
+  place-items: center;
+  z-index: 1000;
+  padding: 20px;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.welcome-modal-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.welcome-modal {
+  position: relative;
+  width: min(560px, 100%);
+  background: #fff;
+  border-radius: 28px;
+  box-shadow: 0 24px 60px rgba(12, 17, 16, 0.18);
+  padding: 28px 24px 22px;
+  text-align: center;
+}
+
+.welcome-modal__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(56, 178, 111, 0.12);
+  color: #2f855a;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 8px 14px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.welcome-modal h2 {
+  font-family: "Cabinet Grotesk", system-ui;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  margin: 0 0 12px;
+  color: #0c1110;
+}
+
+.welcome-modal p {
+  margin: 0 auto 22px;
+  max-width: 440px;
+  line-height: 1.7;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.welcome-modal__actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.welcome-modal__close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  border: none;
+  background: transparent;
+  font-size: 2rem;
+  line-height: 1;
+  color: #4b5563;
+  cursor: pointer;
+}
+
+.welcome-modal__dismiss {
+  border: 1px solid rgba(11, 27, 18, 0.12);
+}
+
 a {
   cursor: url(/assets/arrowhead-rounded-outline.svg) 10 10, auto;
 }
@@ -2275,7 +2358,8 @@ padding-bottom:20px;
    ========================================================================== */
 .cta-whatsapp {
     position: relative;
-    background-color: var(--white); /* Mantém o fundo verde principal da comunidade */
+    background: var(--green);
+    color: var(--white);
     padding: clamp(5rem, 10vw, 8rem) 0;
     overflow: hidden;
     display: flex;
@@ -2288,15 +2372,16 @@ padding-bottom:20px;
     position: absolute;
     inset: 0;
     pointer-events: none;
-    opacity: 0.4; /* Opacidade reduzida para dar foco ao texto central */
+    opacity: 0.18;
 }
 
 .cta-whatsapp__content {
     position: relative;
     z-index: 10;
     text-align: center;
-    max-width: 800px; /* Mantém a leitura confortável do texto do antigo footer */
+    max-width: 800px;
     margin-inline: auto;
+    color: var(--white);
 }
 
 .cta-whatsapp__title {
@@ -2304,14 +2389,14 @@ padding-bottom:20px;
     font-weight: 700;
     font-size: clamp(2.2rem, 5vw, 3.8rem);
     line-height: 1.15;
-    color: var(--green, #38b26f);
+    color: var(--white);
     margin-bottom: 1.5rem;
 }
 
 .cta-whatsapp__desc {
     font-size: clamp(1.1rem, 2vw, 1.3rem);
     line-height: 1.5;
-    color: var(--ink, #0b1b12);
+    color: rgba(255, 255, 255, 0.9);
     max-width: 650px;
     margin: 0 auto 2.5rem auto;
     font-weight: 500;
@@ -2320,6 +2405,19 @@ padding-bottom:20px;
 .cta-whatsapp__cta {
     display: flex;
     justify-content: center;
+}
+
+.cta-whatsapp .btn--primary {
+    background: var(--white) !important;
+    color: var(--green-600) !important;
+    border-color: rgba(12, 17, 16, 0.08) !important;
+    box-shadow: 0 10px 20px rgba(12, 17, 16, 0.12);
+}
+
+.cta-whatsapp .btn--primary:hover {
+    background: #f0f8f3 !important;
+    color: var(--green-600) !important;
+    box-shadow: 0 14px 26px rgba(12, 17, 16, 0.14);
 }
 
 /* Ajuste sutil de responsividade para esconder as tags flutuantes em telas muito pequenas */

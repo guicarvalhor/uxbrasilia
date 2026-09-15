@@ -17,8 +17,9 @@ const menuConfig = {
         { href: "/", label: "Página inicial", id: "link-home" },
         //{ href: "/voluntariado.html", label: "Voluntariado", id: "link-voluntariado" },
         { href: "/blog.html", label: "Blog", id: "link-blog" },
+        { href: "/vagas.html", label: "Vagas", id: "link-vagas" },
         { href: "/parceiros.html", label: "Parceiros", id: "link-parceiros" },
-        { href: "/catalogo.html", label: "Lojinha", id: "link-lojinha" },
+       // { href: "/catalogo.html", label: "Lojinha", id: "link-lojinha" },
         //{ href: "/decola.html", label: "Decola UX", id: "link-decola" },
         { href: "/contato.html", label: "Contatos", id: "link-contatos" }
     ]
@@ -40,8 +41,9 @@ const footerConfig = {
             links: [
                 { href: "/", label: "Página inicial" },
                 { href: "/blog.html", label: "Blog" },
+                { href: "/vagas.html", label: "Vagas" },
                 { href: "/parceiros.html", label: "Parceiros" },
-                { href: "/catalogo.html", label: "Lojinha" },
+                //{ href: "/catalogo.html", label: "Lojinha" },
                 { href: "/contato.html", label: "Contatos" }
             ]
         },

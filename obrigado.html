@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obrigado — UX Brasília</title>
+    <meta name="description" content="Página de confirmação de envio do formulário de vagas da UX Brasília." />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        body {
+            background: linear-gradient(180deg, #f7f8f7 0%, #ecfdf5 100%);
+            color: var(--ink);
+        }
+
+        .thanks-shell {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 32px 20px;
+        }
+
+        .thanks-card {
+            width: min(700px, 100%);
+            background: rgba(255, 255, 255, 0.92);
+            border: 1px solid rgba(56, 178, 111, 0.18);
+            border-radius: 28px;
+            box-shadow: var(--shadow);
+            padding: clamp(28px, 5vw, 52px);
+            text-align: center;
+        }
+
+        .thanks-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(56, 178, 111, 0.12);
+            color: var(--green-600);
+            border-radius: 999px;
+            padding: 10px 18px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            font-size: 0.72rem;
+            margin-bottom: 18px;
+        }
+
+        .thanks-card h1 {
+            font-family: "Cabinet Grotesk", system-ui;
+            font-size: clamp(2.1rem, 4vw, 3.5rem);
+            line-height: 1.08;
+            letter-spacing: -0.04em;
+            margin: 0 0 16px;
+            color: var(--ink);
+        }
+
+        .thanks-card p {
+            max-width: 560px;
+            margin: 0 auto 24px;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--muted);
+        }
+
+        .thanks-actions {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .thanks-actions .btn {
+            min-width: 210px;
+        }
+    </style>
+</head>
+<body>
+    <main class="thanks-shell">
+        <section class="thanks-card" aria-labelledby="thanks-title">
+            <div class="thanks-badge">Formulário enviado</div>
+            <h1 id="thanks-title">Obrigado pela sua candidatura!</h1>
+            <p>
+                Sua inscrição foi enviada com sucesso. A nossa equipe vai analisar seu interesse e entraremos em contato em breve.
+            </p>
+            <div class="thanks-actions">
+                <a href="/index.html" class="btn btn--primary">Voltar para a página inicial</a>
+                <a href="/vagas.html" class="btn btn--ghost">Ver outras oportunidades</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

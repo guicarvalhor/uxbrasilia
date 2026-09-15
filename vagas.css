@@ -1,0 +1,288 @@
+/* ==========================================================================
+   ESTILOS ESPECÍFICOS DA PÁGINA DE VAGAS
+   ========================================================================== */
+
+/* Controle rigoroso dos modais para iniciarem ocultos */
+#order-modal.hidden, 
+#details-modal.hidden {
+    display: none !important;
+}
+
+#order-modal, 
+#details-modal {
+    display: flex;
+    position: fixed;
+    inset: 0;
+    background: rgba(12, 17, 16, 0.58);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal-content {
+    background: #fff;
+    border-radius: 24px;
+    max-width: 620px;
+    width: 100%;
+    padding: 30px 28px;
+    box-shadow: 0 18px 50px rgba(12, 17, 16, 0.12);
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #555;
+}
+
+.modal-area-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    background: #e5e7eb;
+    padding: 4px 10px;
+    border-radius: 99px;
+    text-transform: uppercase;
+}
+
+/* Layout de listagem melhorado e limpo */
+.positions-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.area-section {
+    background: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 24px;
+    padding: 32px 28px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+}
+
+.area-section__title {
+    font-family: 'Cabinet Grotesk', sans-serif;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    margin: 0 0 1.5rem 0;
+    color: #0b1b12;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid #eef0ee;
+    padding-bottom: 14px;
+}
+
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.program-card {
+    background: #f9faf9;
+    border: 1px solid #eceeed;
+    border-radius: 18px;
+    padding: 24px 20px;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 160px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.02);
+}
+
+.program-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 24px rgba(0,0,0,0.06);
+    border-color: #d9dedb;
+}
+
+.program-badge {
+    font-size: 0.78rem;
+    background: rgba(56, 178, 111, 0.14);
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-weight: 700;
+    color: var(--green-600);
+    display: inline-block;
+    margin-top: 8px;
+}
+
+.card-link-text {
+    font-size: 0.85rem;
+    color: var(--green);
+    font-weight: 700;
+    margin-top: 18px;
+    display: inline-block;
+}
+
+/* ==========================================================================
+   ESTILOS DAS SEÇÕES EXTRAS (Relação de Papéis & Princípios)
+   ========================================================================== */
+
+.roles-section {
+    padding: 80px 0;
+    background: #f7f8f7;
+    border-top: 1px solid #ebeeeb;
+}
+
+.roles-subtitle {
+    text-align: center;
+    font-family: 'Cabinet Grotesk', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.18em;
+    color: var(--muted);
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.roles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.role-card {
+    background: #fff;
+    border: 1px solid #ecf0ee;
+    border-radius: 22px;
+    padding: 30px 26px;
+    box-shadow: 0 10px 22px rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.role-card__icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.role-card__icon--blue { background: rgba(46, 103, 255, 0.1); color: var(--blue); }
+.role-card__icon--yellow { background: rgba(246, 196, 70, 0.15); color: var(--yellow-800); }
+.role-card__icon--green { background: rgba(56, 178, 111, 0.1); color: var(--green); }
+
+.role-card__title {
+    font-family: 'Cabinet Grotesk', sans-serif;
+    font-size: 1.35rem;
+    margin: 0 0 12px 0;
+}
+
+.role-card__desc {
+    font-size: 0.95rem;
+    color: var(--muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.roles-footer-note {
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--muted);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Princípios e Como Participar */
+.principles-section {
+    padding: 60px 0 90px 0;
+    background: #ffffff;
+}
+
+.principles-grid-two {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 30px;
+}
+
+.principle-box {
+    background: #f9faf9;
+    border: 1px solid #ebeeeb;
+    border-radius: 24px;
+    padding: 32px 28px;
+    box-shadow: 0 10px 22px rgba(0,0,0,0.02);
+}
+
+.box-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 99px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.box-badge--green { background: rgba(56, 178, 111, 0.15); color: var(--green); }
+.box-badge--blue { background: rgba(46, 103, 255, 0.15); color: var(--blue); }
+
+.principles-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.principles-list li {
+    font-size: 1rem;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.participate-text {
+    font-size: 1.15rem;
+    color: var(--ink);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.participate-cta-box {
+    background: rgba(46, 103, 255, 0.08);
+    border: 1px solid rgba(46, 103, 255, 0.2);
+    color: var(--blue);
+    padding: 18px 20px;
+    border-radius: 14px;
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.participate-subtext {
+    font-size: 0.95rem;
+    color: var(--muted);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Responsividade Geral */
+@media (max-width: 900px) {
+    .roles-grid {
+        grid-template-columns: 1fr;
+    }
+    .principles-grid-two {
+        grid-template-columns: 1fr;
+    }
+}

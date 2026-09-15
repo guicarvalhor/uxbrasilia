@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vagas Abertas — Liderança de Programas | UX Brasília</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="vagas.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@700&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico">
+</head>
+
+<body>
+    <!-- Menu Carregado via script comum -->
+    <div id="menu-container"></div>
+
+    <!-- HERO DA PÁGINA DE VAGAS -->
+    <header id="hero-voluntariado" class="hero">
+        <div class="hero__bg">
+            <div class="rings rings--1"></div>
+            <div class="rings rings--2"></div>
+            <div class="rings rings--3"></div>
+            <div class="rings rings--4"></div>
+            <div class="rings rings--5"></div>
+        </div>
+        <div class="container hero__content-pink">
+            <span class="badge" style="background: rgba(255,255,255,0.15); color: #fff; margin-bottom: 16px; display: inline-block; border: 1px solid rgba(255,255,255,0.2);">VAGAS ABERTAS</span>
+            <h1 class="hero__title">Lead do UX Brasília</h1>
+            <p class="hero__desc">
+                Com base no nosso mapa organizacional, abraçamos uma estrutura horizontal e colaborativa. Clique em qualquer programa abaixo para ver a descrição detalhada da vaga e candidatar-se!
+            </p>
+            <div class="hero__cta">
+                <a href="#vagas-container" class="btn btn--primary">Ver vagas</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- LISTAGEM DOS PROGRAMAS POR FRENTE -->
+    <main class="features" style="padding-top: 80px;" id="vagas-container">
+        <div class="container">
+            
+            <div style="max-width: 800px; margin: 0 auto 50px auto; text-align: center;">
+                <h2 class="section__title" style="margin-bottom: 20px;">Frentes estratégicas e programas</h2>
+                <p style="font-size: 1.1rem; line-height: 1.7; color: var(--muted);">
+                    Cada frente conta com vagas de <strong>Lead de Programas</strong> (estruturadas para 2 ou mais pessoas por programa) com total autonomia para planejar e executar ações.
+                </p>
+            </div>
+
+            <div class="positions-wrapper">
+                
+                <!-- 1. EVENTOS E EXPERIÊNCIAS -->
+                <div class="area-section">
+                    <h3 class="area-section__title">🎯 Eventos e Experiências</h3>
+                    <div class="programs-grid">
+                        <div class="program-card" onclick="openDetailsModal('Workshops & Palestras', 'Eventos e Experiências', 'Responsável por estruturar a curadoria técnica, convidar palestrantes e organizar os encontros de capacitação da comunidade.', '2 Vagas para Lead')">
+                            <div>
+                                <h4 style="font-size: 1.1rem; margin: 0 0 6px 0; font-weight: 700;">Workshops & Palestras</h4>
+                                <span class="program-badge">2 Vagas • Lead</span>
+                            </div>
+                            <span class="card-link-text">Ver detalhes →</span>
+                        </div>
+                        <div class="program-card" onclick="openDetailsModal('Eventos Especiais', 'Eventos e Experiências', 'Condução de grandes ativações presenciais da comunidade (ex: UX Brasília no Museu, aniversários e festivais).', '2 Vagas para Lead')">
+                            <div>
+                                <h4 style="font-size: 1.1rem; margin: 0 0 6px 0; font-weight: 700;">Eventos Especiais</h4>
+                                <span class="program-badge">2 Vagas • Lead</span>
+                            </div>
+                            <span class="card-link-text">Ver detalhes →</span>
+                        </div>
+                        <div class="program-card" onclick="openDetailsModal('Logística & Experiência', 'Eventos e Experiências', 'Gestão do espaço físico, recepção dos participantes, credenciamento e experiência geral nos dias de evento.', '2 Vagas para Lead')">
+                            <div>
+                                <h4 style="font-size: 1.1rem; margin: 0 0 6px 0; font-weight: 700;">Logística & Experiência</h4>
+                                <span class="program-badge">2 Vagas • Lead</span>
+                            </div>
+                            <span class="card-link-text">Ver detalhes →</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. CONTEÚDO E CONHECIMENTO -->
+                <div class="area-section">
+                    <h3 class="area-section__title">✍️ Conteúdo e Conhecimento</h3>
+                    <div class="programs-grid">
+                        <div class="program-card" onclick="openDetailsModal('Curadoria de Conteúdo', 'Conteúdo e Conhecimento', 'Seleção de artigos, temas de relevância no mercado de UX e planejamento editorial da comunidade.', '2 Vagas para Lead')">
+                            <div>
+                                <h4 style="font-size: 1.1rem; margin: 0 0 6px 0; font-weight: 700;">Curadoria de Conteúdo</h4>
+                                <span class="program-badge">2 Vagas • Lead</span>
+                            </div>
+                            <span class="card-link-text" style="color: var(--blue);">Ver detalhes →</span>
+                        </div>
+                        <div class="program-card" onclick="openDetailsModal('Produção de Conteúdo', 'Conteúdo e Conhecimento', 'Criação de artigos, materiais educativos, infográficos e roteiros para as redes e iniciativas.', '2 Vagas para Lead')">
+                            <div>
+                                <h4 style="font-size: 1.1rem; margin: 0 0 6px 0; font-weight: 700;">Produção de Conteúdo</h4>
+                                <span class="program-badge">2 Vagas • Lead</span>
+                            </div>
+                            <span class="card-link-text" style="color: var(--blue);">Ver detalhes →</span>
+                        </div>
+                        <div class="program-card" onclick="openDetailsModal('Materiais & Recursos', 'Conteúdo e Conhecimento', 'Desenvolvimento de templates, guias de boas práticas e repositórios de ferramentas abertas para a comunidade.', '2 Vagas para Lead')">
+                            <div>
+                                <h4 style="font-size: 1.1rem; margin: 0 0 6px 0; font-weight: 700;">Materiais & Recursos</h4>
+                                <span class="program-badge">2 Vagas • Lead</span>
+                            </div>
+                            <span class="card-link-text" style="color: var(--blue);">Ver detalhes →</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. MÍDIAS E IDENTIDADE -->
+                <div class="area-section">
+                    <h3 class="area-section__title">🎨 Mídias e Identidade</h3>
+                    <div class="programs-grid">
+                        <div class="program-card" onclick="openDetailsModal('Redes Sociais', 'Mídias e Identidade', 'Gestão dos canais digitais, agendamento de posts, interação com a comunidade e impulsionamento de campanhas.', '2 Vagas para Lead')">
+                            <div>
+                                <h4 style="font-size: 1.1rem; margin: 0 0 6px 0; font-weight: 700;">Redes Sociais</h4>
+                                <span class="program-badge">2 Vagas • Lead</span>
+                            </div>
+                            <span class="card-link-text" style="color: var(--pink);">Ver detalhes →</span>
+                        </div>
+                        <div class="program-card" onclick="openDetailsModal('Cobertura de Eventos', 'Mídias e Identidade', 'Registro fotográfico, gravação de vídeos, stories em tempo real e cobertura completa dos encontros.', '2 Vagas para Lead')">
+                            <div>
+                                <h4 style="font-size: 1.1rem; margin: 0 0 6px 0; font-weight: 700;">Cobertura de Eventos</h4>
+                                <span class="program-badge">2 Vagas • Lead</span>
+                            </div>
+                            <span class="card-link-text" style="color: var(--pink);">Ver detalhes →</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. PARCERIAS E RELACIONAMENTOS -->
+                <div class="area-section">
+                    <h3 class="area-section__title">🤝 Parcerias e Relacionamentos</h3>
+                    <div class="programs-grid">
+                        <div class="program-card" onclick="openDetailsModal('Parcerias', 'Parcerias e Relacionamentos', 'Prospecção e formalização de parcerias estratégicas com empresas e instituições de ensino.', '2 Vagas para Lead')">
+                            <div>
+                                <h4 style="font-size: 1.1rem; margin: 0 0 6px 0; font-weight: 700;">Parcerias</h4>
+                                <span class="program-badge">2 Vagas • Lead</span>
+                            </div>
+                            <span class="card-link-text" style="color: var(--yellow-800);">Ver detalhes →</span>
+                        </div>
+                        <div class="program-card" onclick="openDetailsModal('Apoiadores', 'Parcerias e Relacionamentos', 'Gestão de relacionamento com marcas apoiadoras e patrocinadoras dos eventos e iniciativas.', '2 Vagas para Lead')">
+                            <div>
+                                <h4 style="font-size: 1.1rem; margin: 0 0 6px 0; font-weight: 700;">Apoiadores</h4>
+                                <span class="program-badge">2 Vagas • Lead</span>
+                            </div>
+                            <span class="card-link-text" style="color: var(--yellow-800);">Ver detalhes →</span>
+                        </div>
+                        <div class="program-card" onclick="openDetailsModal('Oportunidades & Benefícios', 'Parcerias e Relacionamentos', 'Busca por vagas de emprego, descontos e benefícios exclusivos para os membros da comunidade.', '2 Vagas para Lead')">
+                            <div>
+                                <h4 style="font-size: 1.1rem; margin: 0 0 6px 0; font-weight: 700;">Oportunidades & Benefícios</h4>
+                                <span class="program-badge">2 Vagas • Lead</span>
+                            </div>
+                            <span class="card-link-text" style="color: var(--yellow-800);">Ver detalhes →</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. COMUNIDADE E ENGAJAMENTO -->
+                <div class="area-section">
+                    <h3 class="area-section__title">💬 Comunidade e Engajamento</h3>
+                    <div class="programs-grid">
+                        <div class="program-card" onclick="openDetailsModal('Mentorias', 'Comunidade e Engajamento', 'Coordenação de programas de mentoria (como o Decola UXBrasília), conectando seniores a iniciantes.', '2 Vagas para Lead')">
+                            <div>
+                                <h4 style="font-size: 1.1rem; margin: 0 0 6px 0; font-weight: 700;">Mentorias</h4>
+                                <span class="program-badge">2 Vagas • Lead</span>
+                            </div>
+                            <span class="card-link-text">Ver detalhes →</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- SEÇÃO 1: RELAÇÃO ENTRE PAPÉIS (Baseada na imagem 1) -->
+    <section class="roles-section">
+        <div class="container">
+            <h4 class="roles-subtitle">RELAÇÃO ENTRE PAPÉIS</h4>
+            <div class="roles-grid">
+                <!-- Card Head -->
+                <div class="role-card">
+                    <div class="role-card__icon role-card__icon--blue">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h3 class="role-card__title" style="color: var(--blue);">Head / Coordenação de Área</h3>
+                    <p class="role-card__desc">Responsável por uma frente estratégica da UX Brasília. Define direcionamento, prioridades, alinhamento e dá suporte aos programas da sua área.</p>
+                </div>
+                <!-- Card Lead -->
+                <div class="role-card">
+                    <div class="role-card__icon role-card__icon--yellow">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                    </div>
+                    <h3 class="role-card__title" style="color: var(--yellow-700);">Lead de Programa</h3>
+                    <p class="role-card__desc">Responsável por um programa ou iniciativa específica. Tem autonomia para conduzir, planejar e executar as ações com liberdade e foco estratégico.</p>
+                </div>
+                <!-- Card Voluntário -->
+                <div class="role-card">
+                    <div class="role-card__icon role-card__icon--green">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+                    </div>
+                    <h3 class="role-card__title" style="color: var(--green);">Voluntário(a)</h3>
+                    <p class="role-card__desc">Colabora com seu tempo, talento e energia para apoiar iniciativas e programas da comunidade.</p>
+                </div>
+            </div>
+            <p class="roles-footer-note">
+                Head representa <span style="color: var(--blue); font-weight: 600;">responsabilidade sobre uma área</span>. Lead representa <span style="color: var(--yellow-800); font-weight: 600;">responsabilidade sobre um programa</span>. Não é uma relação de chefia e subordinação.
+            </p>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 2: NOSSOS PRINCÍPIOS E COMO PARTICIPAR (Baseada na imagem 2) -->
+    <section class="principles-section">
+        <div class="container">
+            <div class="principles-grid-two">
+                <!-- Coluna Princípios -->
+                <div class="principle-box">
+                    <span class="box-badge box-badge--green">Nossos Princípios</span>
+                    <ul class="principles-list">
+                        <li><span>🟢</span> Colaboração acima da hierarquia</li>
+                        <li><span>🟢</span> Transparência e escuta ativa</li>
+                        <li><span>🟢</span> Diversidade, inclusão e respeito</li>
+                        <li><span>🟢</span> Impacto positivo para a comunidade e para a área</li>
+                        <li><span>🟢</span> Aprendizado contínuo e troca de conhecimento</li>
+                    </ul>
+                </div>
+                <!-- Coluna Como Participar -->
+                <div class="principle-box">
+                    <span class="box-badge box-badge--blue">Como Participar</span>
+                    <p class="participate-text">A UX Brasília é feita por pessoas da área que querem contribuir.</p>
+                    <div class="participate-cta-box">
+                        <strong>Participe. Proponha. Colabore!</strong>
+                    </div>
+                    <p class="participate-subtext">Fale com os responsáveis pelas áreas e descubra como você pode fazer parte desta comunidade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO CTA WHATSAPP -->
+    <section class="cta-whatsapp">
+        <div class="cta-whatsapp__bg">
+            <div class="rings rings--2"></div>
+        </div>
+        <div class="container cta-whatsapp__content">
+            <h2 class="cta-whatsapp__title">Tem dúvidas sobre como atuar como Lead?</h2>
+            <p class="cta-whatsapp__desc">
+                Fale diretamente com a nossa Coordenação Geral pelo WhatsApp e tire suas dúvidas sobre autonomia, tempo dedicado e suporte.
+            </p>
+            <div class="cta-whatsapp__cta">
+                <a href="https://chat.whatsapp.com/exemplo" target="_blank" class="btn btn--primary" style="background: #25d366; border-color: rgba(0,0,0,0.1);">Falar com a Coordenação</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1. MODAL DE DETALHES DA VAGA -->
+    <div id="details-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span id="modal-program-area" class="modal-area-tag">Área</span>
+                <button id="close-details-modal" class="close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h2 id="modal-program-title" style="font-family: 'Cabinet Grotesk', sans-serif; font-size: 26px; margin: 0 0 12px 0;">Nome do Programa</h2>
+                <p id="modal-program-desc" style="font-size: 1rem; color: #4b5563; line-height: 1.6; margin-bottom: 20px;">Descrição detalhada da vaga...</p>
+                
+                <div style="background: #f9fafb; border: 1px solid #e5e7eb; padding: 16px; border-radius: 12px; margin-bottom: 24px;">
+                    <h4 style="margin: 0 0 6px 0; font-size: 0.9rem; font-weight: 600;">Estrutura da Posição:</h4>
+                    <p style="margin: 0; font-size: 0.9rem; color: #6b7280;">Cada programa conta com <strong>2 Leads em duplas</strong> com total autonomia para planejar e executar as ações com foco no impacto da comunidade.</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="btn-apply-from-details" class="btn btn--primary" style="width: 100%;">Quero Candidatar-me a este Lead</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. MODAL DE FORMULÁRIO DE CANDIDATURA -->
+    <div id="order-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 style="font-family: 'Cabinet Grotesk', sans-serif; font-size: 24px; margin: 0;">Candidatura para Lead</h2>
+                <button id="close-order-modal" class="close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p style="margin-bottom: 20px; font-size: 0.95rem; color: var(--muted);">
+                    Preencha os campos abaixo para manifestar seu interesse em liderar o programa selecionado. Entraremos em contato!
+                </p>
+
+                <form id="order-form"
+                    action="https://formspree.io/f/mjykbggk"
+                    method="POST"
+                    class="form">
+
+                    <div class="form__group" style="margin-bottom: 16px;">
+                        <label for="user-name" style="display: block; margin-bottom: 6px; font-weight: 500;">Seu Nome Completo:</label>
+                        <input type="text" id="user-name" name="nome" required placeholder="Ex: Ana Souza" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                    </div>
+
+                    <div class="form__group" style="margin-bottom: 16px;">
+                        <label for="user-phone" style="display: block; margin-bottom: 6px; font-weight: 500;">Seu Telefone (WhatsApp):</label>
+                        <input type="tel" id="user-phone" name="telefone" placeholder="(XX) XXXXX-XXXX" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                    </div>
+
+                    <div class="form__group" style="margin-bottom: 16px;">
+                        <label for="user-linkedin" style="display: block; margin-bottom: 6px; font-weight: 500;">Link do seu LinkedIn:</label>
+                        <input type="url" id="user-linkedin" name="linkedin" placeholder="https://linkedin.com/in/seu-perfil" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                    </div>
+
+                    <div class="form__group" style="margin-bottom: 16px;">
+                        <label for="target-program" style="display: block; margin-bottom: 6px; font-weight: 500;">Programa Desejado:</label>
+                        <input type="text" id="target-program" name="programa" readonly style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; background: #f3f4f6; font-weight: 600;">
+                    </div>
+
+                    <div class="form__group" style="margin-bottom: 20px;">
+                        <label for="user-background" style="display: block; margin-bottom: 6px; font-weight: 500;">Por que quero atuar nessa área?</label>
+                        <textarea id="user-background" name="mensagem" rows="3" placeholder="Conte o motivo do seu interesse em liderar este programa..." style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;" required></textarea>
+                    </div>
+
+                    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-5000px;opacity:0;pointer-events:none;" aria-hidden="true" />
+
+                </form>
+            </div>
+            <div class="modal-footer" style="margin-top: 20px;">
+                <button type="submit" form="order-form" class="btn btn--primary" style="width: 100%;">Enviar Candidatura</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé Carregado via script comum -->
+    <div id="footer-container"></div>
+
+    <script src="menu-footer.js" defer></script>
+    <script src="vagas.js"></script>
+</body>
+
+</html>

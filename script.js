@@ -10,6 +10,43 @@ requestAnimationFrame(raf);
 
 window.addEventListener('scroll', updateNav);*/
 
+const WELCOME_MODAL_KEY = 'uxbrasilia-welcome-modal-seen';
+
+window.addEventListener('load', () => {
+  const modal = document.getElementById('welcome-modal');
+  const closeButtons = document.querySelectorAll('.welcome-modal__close, .welcome-modal__dismiss');
+
+  if (!modal) return;
+
+  const hasSeenModal = localStorage.getItem(WELCOME_MODAL_KEY) === 'true';
+  if (hasSeenModal) {
+    modal.classList.add('hidden');
+    modal.setAttribute('aria-hidden', 'true');
+    return;
+  }
+
+  setTimeout(() => {
+    modal.classList.remove('hidden');
+    modal.setAttribute('aria-hidden', 'false');
+  }, 400);
+
+  closeButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      modal.setAttribute('aria-hidden', 'true');
+      localStorage.setItem(WELCOME_MODAL_KEY, 'true');
+    });
+  });
+
+  modal.addEventListener('click', (event) => {
+    if (event.target === modal) {
+      modal.classList.add('hidden');
+      modal.setAttribute('aria-hidden', 'true');
+      localStorage.setItem(WELCOME_MODAL_KEY, 'true');
+    }
+  });
+});
+
 /* GSAP: parallax + entrances */
 gsap.registerPlugin(ScrollTrigger);
 
