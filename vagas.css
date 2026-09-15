@@ -203,6 +203,112 @@
     margin: 0 auto;
 }
 
+/* Como funciona a atuação dos Leads */
+.lead-guidance-section {
+    padding: 88px 0;
+    background: #fff;
+}
+
+.lead-guidance__intro {
+    max-width: 720px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.lead-guidance__intro .section__title {
+    margin-bottom: 16px;
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+}
+
+.lead-guidance__intro p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 1.08rem;
+    line-height: 1.7;
+}
+
+.lead-guidance__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.lead-guidance__card {
+    min-height: 250px;
+    padding: 18px;
+    border: 0;
+    border-radius: 18px;
+    background: #f2f4f3;
+    transition: transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.lead-guidance__card:hover {
+    transform: translateY(-3px);
+    box-shadow: 8px 8px 0 black;
+}
+
+.lead-guidance__card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 36px;
+}
+
+.lead-guidance__number {
+    display: block;
+    font-family: 'Cabinet Grotesk', sans-serif;
+    font-size: 42px;
+    font-weight: 200;
+    line-height: 1;
+}
+
+.lead-guidance__arrow {
+    font-size: 40px;
+    line-height: 1;
+    opacity: 0.7;
+    transition: transform 0.2s ease;
+}
+
+.lead-guidance__arrow:hover {
+    transform: rotate(45deg);
+}
+
+.lead-guidance__card h3 {
+    margin: 18px 0 24px;
+    font-family: 'Cabinet Grotesk', sans-serif;
+    font-size: 32px;
+    line-height: 1.05;
+}
+
+.lead-guidance__card p {
+    margin: 0;
+    color: inherit;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.lead-guidance__note {
+    display: grid;
+    grid-template-columns: minmax(180px, 0.7fr) 1.3fr;
+    gap: 28px;
+    align-items: center;
+    margin-top: 22px;
+    padding: 24px 26px;
+    border-radius: 18px;
+    background: #fff4cc;
+    color: #5e4c08;
+}
+
+.lead-guidance__note strong {
+    font-family: 'Cabinet Grotesk', sans-serif;
+    font-size: 1.25rem;
+}
+
+.lead-guidance__note p {
+    margin: 0;
+    line-height: 1.6;
+}
+
 /* Princípios e Como Participar */
 .principles-section {
     padding: 60px 0 90px 0;
@@ -298,5 +404,15 @@
     }
     .principles-grid-two {
         grid-template-columns: 1fr;
+    }
+    .lead-guidance__grid {
+        grid-template-columns: 1fr;
+    }
+    .lead-guidance__card {
+        min-height: auto;
+    }
+    .lead-guidance__note {
+        grid-template-columns: 1fr;
+        gap: 10px;
     }
 }

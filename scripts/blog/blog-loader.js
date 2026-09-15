@@ -4,7 +4,7 @@ const ALL_CATEGORY = 'Todos';
 
 async function loadBlogPosts() {
   try {
-    const response = await fetch('/blog/posts.json');
+    const response = await fetch('/data/blog/posts.json');
     const posts = await response.json();
 
     const params = new URLSearchParams(window.location.search);

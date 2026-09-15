@@ -9,7 +9,7 @@ async function loadPost() {
       return;
     }
 
-    const response = await fetch('/blog/posts.json');
+    const response = await fetch('/data/blog/posts.json');
     const posts = await response.json();
     const post = posts.find(p => p.id === postId);
 

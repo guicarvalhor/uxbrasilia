@@ -56,7 +56,7 @@ const footerConfig = {
             ]
         }
     ],
-    copyright: "© 2025 UXBrasília. Todos os direitos reservados."
+    copyright: "© 2026 UXBrasília. Todos os direitos reservados."
 };
 
 // ====================
@@ -189,24 +189,51 @@ function attachMenuEventListeners() {
     const navHeader = document.querySelector('.nav');
     const body = document.body;
     const navLinks = document.querySelectorAll('.nav__links a');
+    const navLinksContainer = document.querySelector('.nav__links');
 
     if (!menuToggle || !navHeader) return;
 
-    // Toggle menu
+    const setMenuOpen = (isOpen, shouldFocus = false) => {
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+        menuToggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+        navHeader.classList.toggle('nav--open', isOpen);
+        body.classList.toggle('no-scroll', isOpen);
+
+        if (isOpen) {
+            requestAnimationFrame(() => navLinks[0]?.focus());
+        } else if (shouldFocus) {
+            menuToggle.focus();
+        }
+    };
+
     menuToggle.addEventListener('click', () => {
         const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-        menuToggle.setAttribute('aria-expanded', String(!isExpanded));
-        navHeader.classList.toggle('nav--open', !isExpanded);
-        body.classList.toggle('no-scroll', !isExpanded);
+        setMenuOpen(!isExpanded);
     });
 
     // Fechar menu ao clicar em um link
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            menuToggle.setAttribute('aria-expanded', 'false');
-            navHeader.classList.remove('nav--open');
-            body.classList.remove('no-scroll');
+            setMenuOpen(false);
         });
+    });
+
+    navLinksContainer?.addEventListener('click', (event) => {
+        if (event.target === navLinksContainer) {
+            setMenuOpen(false, true);
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') {
+            setMenuOpen(false, true);
+        }
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 680 && menuToggle.getAttribute('aria-expanded') === 'true') {
+            setMenuOpen(false);
+        }
     });
 }
 
