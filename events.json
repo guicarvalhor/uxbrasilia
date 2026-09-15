@@ -18,7 +18,7 @@
       "hora": "",
       "color": "yellow",
       "linkType": "photos",
-      "linkUrl": "https://uxbrasilia.photos.live/photos?fbclid=PAZXh0bgNhZW0CMTEAAaeNz7xWaxxrfP2QziXUyRVM6qM71iRPX7i3mRli5PvDhy01nNltSYWB4W-kwQ_aem_3uHOaHnEy9Z4h34nhzgS1A"
+      "linkUrl": "https://uxbrasilia.photos.live/photos?fbclid=PAZXh0bgNhZW0CMTEAAaeNz7xWaxxrfP2QziXUyRVM6qM71iRPX7i3mRli5PvDhy01nNltSYWB4W-kwQ_aem_3uHOaHnEy9Y4h34nhzgS1A"
     },
     {
       "date": "06 — Agosto",
@@ -63,13 +63,23 @@
   ],
   "2026": [
     {
-      "date": "27 - Junho",
+      "date": "26 — Setembro",
       "status": "em breve",
+      "title": "Design como valor para negócios",
+      "local": "Presencial | Local a definir",
+      "hora": "",
+      "color": "pink",
+      "linkType": null,
+      "linkUrl": null
+    },
+    {
+      "date": "27 - Junho",
+      "status": "realizado",
       "title": "Roda de conversa: IA no dia a dia do UX/UI",
       "local": "Presencial | Senac",
-      "color": "pink",
-      "linkType": "video",
-      "linkUrl": ""
+      "color": "blue",
+      "linkType": "photos",
+      "linkUrl": "https://drive.google.com/drive/folders/1pVX9Iwm4aQMR6qnPgyuzzLPE3Ck_3PAA?usp=drive_link"
     },
     {
       "date": "28 - Março",

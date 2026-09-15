@@ -1,5 +1,18 @@
 [
   {
+    "id": "post-3",
+    "slug": "abertura-de-vagas-para-leads",
+    "title": "Abertura de vagas para leads: venha construir a próxima etapa da UX Brasília",
+    "subtitle": "Uma oportunidade para liderar programas, impulsionar iniciativas e fortalecer a comunidade com autonomia e colaboração.",
+    "category": "Comunicado",
+    "date": "15 de Setembro, 2026",
+    "image": "/blog/imagens/leads.jpg",
+    "imageAlt": "Pessoa em reunião colaborativa discutindo iniciativas da comunidade UX Brasília",
+    "excerpt": "A UX Brasília está abrindo um novo ciclo de vagas para leads de programas e frentes estratégicas. Se você quer contribuir com autonomia e impacto, essa é a sua oportunidade.",
+    "content": "blog/paginas/post-3.md",
+    "format": "md"
+  },
+  {
     "id": "post-1",
     "slug": "cafes-brasilia",
     "title": "Café e Frame: As melhores cafeterias para trabalhar em Brasília",

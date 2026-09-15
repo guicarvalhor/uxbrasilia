@@ -43,18 +43,24 @@
         </div>
     </section>
     <section class="blog-controls">
-        <div class="container">
-            <div id="blog-filters" class="blog-filters" aria-label="Filtrar posts por categoria"></div>
-            <div id="blog-pagination" class="blog-pagination" aria-label="Paginação do blog"></div>
+        <div class="container blog-layout">
+            <aside class="blog-sidebar">
+                <div class="blog-sidebar__panel">
+                    <span class="blog-controls__label">Categorias</span>
+                    <div id="blog-filters" class="blog-filters" aria-label="Filtrar posts por categoria"></div>
+                </div>
+            </aside>
+
+            <div class="blog-content">
+                <div id="blog-pagination" class="blog-pagination" aria-label="Paginação do blog"></div>
+                <section class="blog-section">
+                    <div class="blog-grid">
+                        <!-- Posts carregados dinamicamente via blog-loader.js -->
+                    </div>
+                </section>
+            </div>
         </div>
     </section>
-        <section class="blog-section">
-            <div class="container">
-                <div class="blog-grid">
-                    <!-- Posts carregados dinamicamente via blog-loader.js -->
-                </div>
-            </div>
-        </section>
     </main>
     <div id="footer-container"></div>
     <script src="script.js" defer></script>

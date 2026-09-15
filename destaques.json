@@ -1,39 +1,39 @@
 {
-  "destaques": [  
+  "destaques": [
     {
-      "image": "/assets/lojinha.png",
-      "title": "Lançamento!",
-      "description": "Nova camiseta da lojinha UXBrasília — encomende a sua agora e vista a camisa da nossa comunidade",
-      "link": "loja/produto.html?id=camiseta-cafe-uxui",
-      "buttonText": "Comprar agora"
-    },
-    {
-      "image": "/assets/clube.png",
-      "title": "Clube do livro UX Brasília",
-      "description": "Saiba sobre o clube do livro, participe das discussões e explore os temas mais relevantes em UX/UI",
-      "link": "https://chat.whatsapp.com/JjShRWCa8qe5fOYNBy09Bu?mode=gi_t",
-      "buttonText": "Participar"
+      "image": "/blog/imagens/leads.jpg",
+      "title": "Vagas abertas para leads",
+      "description": "Estamos abrindo novas frentes para pessoas que querem liderar programas, eventos e iniciativas da comunidade UX Brasília.",
+      "link": "/vagas.html",
+      "buttonText": "Ver vagas"
     },
     {
       "image": "/assets/comunidade.png",
       "title": "Faça parte da comunidade UX Brasília",
-      "description": "Designers, desenvolvedores e entusiastas de UX/UI se encontram aqui para crescer juntos",
+      "description": "Designers, desenvolvedores e entusiastas de UX/UI se encontram aqui para crescer juntos.",
       "link": "https://chat.whatsapp.com/D6ycyYpQCWFDedC5rY6IYt",
-      "buttonText": "Entrar no grupo do whatsapp"
+      "buttonText": "Entrar no WhatsApp"
     },
     {
       "image": "/assets/img1.png",
       "title": "Eventos e Workshops",
-      "description": "Participe de encontros presenciais e online para expandir seus conhecimentos em UX/UI",
+      "description": "Participe de encontros presenciais e online para expandir seus conhecimentos em UX/UI.",
       "link": "#eventos",
       "buttonText": "Ver eventos"
     },
     {
       "image": "/assets/palestra.png",
       "title": "Submissão de palestras e workshops",
-      "description": "Quer palestrar ou ministrar um workshop? Submeta sua proposta para os próximos eventos do UX Brasília",
-      "link": "",
-      "buttonText": "Em breve"
+      "description": "Quer palestrar ou ministrar um workshop? Submeta sua proposta para os próximos eventos do UX Brasília.",
+      "link": "/contato.html",
+      "buttonText": "Enviar proposta"
+    },
+    {
+      "image": "/assets/clube.png",
+      "title": "No blog da comunidade",
+      "description": "Leia artigos, relatos e novidades sobre a construção da nossa comunidade e dos nossos encontros.",
+      "link": "/blog.html",
+      "buttonText": "Ver o blog"
     }
   ]
 }

@@ -252,6 +252,20 @@
     gap: 10px;
 }
 
+.principle-dot {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--green);
+    color: var(--green);
+    font-size: 0;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 4px rgba(56, 178, 111, 0.12);
+}
+
 .participate-text {
     font-size: 1.15rem;
     color: var(--ink);

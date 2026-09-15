@@ -10,20 +10,11 @@ requestAnimationFrame(raf);
 
 window.addEventListener('scroll', updateNav);*/
 
-const WELCOME_MODAL_KEY = 'uxbrasilia-welcome-modal-seen';
-
 window.addEventListener('load', () => {
   const modal = document.getElementById('welcome-modal');
   const closeButtons = document.querySelectorAll('.welcome-modal__close, .welcome-modal__dismiss');
 
   if (!modal) return;
-
-  const hasSeenModal = localStorage.getItem(WELCOME_MODAL_KEY) === 'true';
-  if (hasSeenModal) {
-    modal.classList.add('hidden');
-    modal.setAttribute('aria-hidden', 'true');
-    return;
-  }
 
   setTimeout(() => {
     modal.classList.remove('hidden');
@@ -34,7 +25,6 @@ window.addEventListener('load', () => {
     button.addEventListener('click', () => {
       modal.classList.add('hidden');
       modal.setAttribute('aria-hidden', 'true');
-      localStorage.setItem(WELCOME_MODAL_KEY, 'true');
     });
   });
 
@@ -42,7 +32,6 @@ window.addEventListener('load', () => {
     if (event.target === modal) {
       modal.classList.add('hidden');
       modal.setAttribute('aria-hidden', 'true');
-      localStorage.setItem(WELCOME_MODAL_KEY, 'true');
     }
   });
 });
@@ -81,33 +70,6 @@ revealUp(gsap.utils.toArray('.feature-card'));
 revealUp(gsap.utils.toArray('.team-card'));
 revealUp(gsap.utils.toArray('.event-card'));
 
-
- const databaseId = "25dd872b-594c-804f-817c-0037079730f6"; 
-    const notionToken = "Ssecret_A0H8EooSifEIZVq5u09dki6NUQ3HJwwXcujZ09uGdyd"; 
-
-    async function getPosts() {
-      const response = await fetch(`https://api.notion.com/v1/databases/${databaseId}/query`, {
-        method: "POST",
-        headers: {
-          "Authorization": `Bearer ${notionToken}`,
-          "Notion-Version": "2022-06-28",
-          "Content-Type": "application/json"
-        }
-      });
-
-      const data = await response.json();
-      console.log(data); // para testar no console
-      
-      const postsDiv = document.getElementById("posts");
-      data.results.forEach(page => {
-        const title = page.properties.Name?.title[0]?.plain_text || "Sem título";
-        const post = document.createElement("p");
-        post.textContent = title;
-        postsDiv.appendChild(post);
-      });
-    }
-
-    getPosts();
 
     let currentIndex = 0;
 const slides = document.querySelectorAll(".slide");
