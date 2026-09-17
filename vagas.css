@@ -599,6 +599,34 @@
 
 /* Responsividade Geral */
 @media (max-width: 900px) {
+    .vagas-layout {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .vagas-sidebar__sticky {
+        position: static;
+    }
+
+    .filter-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .filter-chip {
+        padding: 10px 10px;
+        font-size: 0.82rem;
+    }
+
+    .area-section {
+        padding: 24px 18px;
+    }
+
+    .programs-grid {
+        grid-template-columns: 1fr;
+    }
+
     .roles-grid {
         grid-template-columns: 1fr;
     }
@@ -614,5 +642,29 @@
     .lead-guidance__note {
         grid-template-columns: 1fr;
         gap: 10px;
+    }
+}
+
+@media (max-width: 560px) {
+    .filter-list {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar-card {
+        padding: 16px 14px;
+    }
+
+    .program-card {
+        min-height: 140px;
+        padding: 18px 16px;
+    }
+
+    .area-section__title {
+        font-size: 1.4rem;
+        gap: 8px;
+    }
+
+    .card-link-text {
+        margin-top: 14px;
     }
 }
