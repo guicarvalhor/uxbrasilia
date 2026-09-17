@@ -99,6 +99,64 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Filtros laterais das vagas
+    const filterButtons = document.querySelectorAll('.filter-chip');
+    const allSections = document.querySelectorAll('.area-section');
+    const allCards = document.querySelectorAll('.program-card');
+
+    const updateCounts = () => {
+        const categoryCounts = {
+            all: allCards.length * 2,
+            eventos: document.querySelectorAll('.program-card[data-category="eventos"]').length * 2,
+            conteudo: document.querySelectorAll('.program-card[data-category="conteudo"]').length * 2,
+            midias: document.querySelectorAll('.program-card[data-category="midias"]').length * 2,
+            parcerias: document.querySelectorAll('.program-card[data-category="parcerias"]').length * 2,
+            comunidade: document.querySelectorAll('.program-card[data-category="comunidade"]').length * 2,
+        };
+
+        document.querySelectorAll('[data-count-for]').forEach((element) => {
+            const key = element.dataset.countFor;
+            element.textContent = categoryCounts[key] || 0;
+        });
+
+        const activeValue = document.getElementById('active-vacancies');
+        if (activeValue) {
+            activeValue.textContent = categoryCounts.all || 0;
+        }
+    };
+
+    const applyFilter = (filterKey) => {
+        const selectedFilter = filterKey || 'all';
+
+        allSections.forEach((section) => {
+            const shouldShow = selectedFilter === 'all' || section.dataset.area === selectedFilter;
+            section.style.display = shouldShow ? '' : 'none';
+        });
+
+        filterButtons.forEach((button) => {
+            const isActive = button.dataset.filter === selectedFilter;
+            button.classList.toggle('active', isActive);
+        });
+
+        const visibleCount = selectedFilter === 'all'
+            ? allCards.length * 2
+            : document.querySelectorAll(`.program-card[data-category="${selectedFilter}"]`).length * 2;
+
+        const activeValue = document.getElementById('active-vacancies');
+        if (activeValue) {
+            activeValue.textContent = visibleCount;
+        }
+    };
+
+    filterButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            applyFilter(button.dataset.filter);
+        });
+    });
+
+    updateCounts();
+    applyFilter('all');
+
     // Fechar ao clicar fora das caixas dos modais
     window.addEventListener('click', (e) => {
         if (e.target === detailsModal) {

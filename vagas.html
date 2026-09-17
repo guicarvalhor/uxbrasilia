@@ -40,129 +40,154 @@
         <div class="container">
             
             <div style="max-width: 800px; margin: 0 auto 50px auto; text-align: center;">
-                <h2 class="section__title" style="margin-bottom: 20px;">Frentes estratégicas e programas</h2>
+                <h2 class="section__title" style="margin-bottom: 20px;">Frentes estratégicas e programas disponíveis</h2>
                 <p style="font-size: 1.1rem; line-height: 1.7; color: var(--muted);">
                     Cada programa conta com uma <strong>Dupla de Leads</strong>, com autonomia para planejar, organizar e executar as ações, dividindo responsabilidades e decisões.
                 </p>
             </div>
 
-            <div class="positions-wrapper">
+            <div class="vagas-layout">
+                <aside class="vagas-sidebar">
+                    <div class="vagas-sidebar__sticky">
+                        <div class="sidebar-card">
+                            <p class="sidebar-label">Filtrar por</p>
+                            <h3>Categoria</h3>
+                            <div class="filter-list">
+                                <button class="filter-chip active" type="button" data-filter="all">Todas <span data-count-for="all">0</span></button>
+                                <button class="filter-chip" type="button" data-filter="eventos">Eventos <span data-count-for="eventos">0</span></button>
+                                <button class="filter-chip" type="button" data-filter="conteudo">Conteúdo <span data-count-for="conteudo">0</span></button>
+                                <button class="filter-chip" type="button" data-filter="midias">Mídias <span data-count-for="midias">0</span></button>
+                                <button class="filter-chip" type="button" data-filter="parcerias">Parcerias <span data-count-for="parcerias">0</span></button>
+                                <button class="filter-chip" type="button" data-filter="comunidade">Comunidade <span data-count-for="comunidade">0</span></button>
+                            </div>
+                        </div>
+
                 
-                <!-- 1. EVENTOS E EXPERIÊNCIAS -->
-                <div class="area-section">
-                    <h3 class="area-section__title">🎯 Eventos e Experiências</h3>
-                    <div class="programs-grid">
-                        <div class="program-card" onclick="openDetailsModal('Eventos e Experiências', 'Eventos e Experiências', 'Dupla responsável por planejar e realizar os eventos da comunidade: workshops, palestras, encontros especiais, logística, recepção e experiência dos participantes.', 'Dupla de Leads')">
-                            <div>
-                                <h4 style="font-size: 1.1rem; margin: 0 0 6px 0; font-weight: 700;">Eventos e Experiências</h4>
-                                <span class="program-badge">Dupla de Leads</span>
+                    </div>
+                </aside>
+
+                <div class="positions-wrapper vagas-content">
+                    
+                    <!-- 1. EVENTOS E EXPERIÊNCIAS -->
+                    <div class="area-section" data-area="eventos">
+                        <h3 class="area-section__title">🎯 Eventos e Experiências</h3>
+                        <div class="programs-grid">
+                            <div class="program-card" data-category="eventos" onclick="openDetailsModal('Eventos e Experiências', 'Eventos e Experiências', 'Dupla responsável por planejar e realizar os eventos da comunidade: workshops, palestras, encontros especiais, logística, recepção e experiência dos participantes.', 'Dupla de Leads')">
+                                <div>
+                                    <h4 style="font-size: 1.1rem; margin: 0 0 6px 0; font-weight: 700;">Eventos e Experiências</h4>
+                                    <span class="program-badge">Dupla de Leads</span>
+                                </div>
+                                <span class="card-link-text">Quero saber mais →</span>
                             </div>
-                            <span class="card-link-text">Quero saber mais →</span>
                         </div>
                     </div>
-                </div>
 
-                <!-- 2. CONTEÚDO E CONHECIMENTO -->
-                <div class="area-section">
-                    <h3 class="area-section__title">✍️ Conteúdo e Conhecimento</h3>
-                    <div class="programs-grid">
-                        <div class="program-card" onclick="openDetailsModal('Curadoria de Conteúdo', 'Conteúdo e Conhecimento', 'Seleção de artigos, temas de relevância no mercado de UX e planejamento editorial da comunidade.', 'Dupla de Leads')">
-                            <div>
-                                <h4 style="font-size: 1.1rem; margin: 0 0 6px 0; font-weight: 700;">Curadoria de Conteúdo</h4>
-                                <span class="program-badge">Dupla de Leads</span>
+                    <!-- 2. CONTEÚDO E CONHECIMENTO -->
+                    <div class="area-section" data-area="conteudo">
+                        <h3 class="area-section__title">✍️ Conteúdo e Conhecimento</h3>
+                        <div class="programs-grid">
+                            <div class="program-card" data-category="conteudo" onclick="openDetailsModal('Curadoria de Conteúdo', 'Conteúdo e Conhecimento', 'Seleção de artigos, temas de relevância no mercado de UX e planejamento editorial da comunidade.', 'Dupla de Leads')">
+                                <div>
+                                    <h4 style="font-size: 1.1rem; margin: 0 0 6px 0; font-weight: 700;">Curadoria de Conteúdo</h4>
+                                    <span class="program-badge">Dupla de Leads</span>
+                                </div>
+                                <span class="card-link-text">Quero saber mais →</span>
                             </div>
-                            <span class="card-link-text" style="color: var(--blue);">Quero saber mais →</span>
-                        </div>
-                        <div class="program-card" onclick="openDetailsModal('Produção de Conteúdo', 'Conteúdo e Conhecimento', 'Criação de artigos, materiais educativos, infográficos e roteiros para as redes e iniciativas.', 'Dupla de Leads')">
-                            <div>
-                                <h4 style="font-size: 1.1rem; margin: 0 0 6px 0; font-weight: 700;">Produção de Conteúdo</h4>
-                                <span class="program-badge">Dupla de Leads</span>
+                            <div class="program-card" data-category="conteudo" onclick="openDetailsModal('Produção de Conteúdo', 'Conteúdo e Conhecimento', 'Criação de artigos, materiais educativos, infográficos e roteiros para as redes e iniciativas.', 'Dupla de Leads')">
+                                <div>
+                                    <h4 style="font-size: 1.1rem; margin: 0 0 6px 0; font-weight: 700;">Produção de Conteúdo</h4>
+                                    <span class="program-badge">Dupla de Leads</span>
+                                </div>
+                                <span class="card-link-text">Quero saber mais →</span>
                             </div>
-                            <span class="card-link-text" style="color: var(--blue);">Quero saber mais →</span>
                         </div>
                     </div>
-                </div>
 
-                <!-- 3. MÍDIAS E IDENTIDADE -->
-                <div class="area-section">
-                    <h3 class="area-section__title">🎨 Mídias e Identidade</h3>
-                    <div class="programs-grid">
-                        <div class="program-card" onclick="openDetailsModal('Redes Sociais', 'Mídias e Identidade', 'Gestão dos canais digitais; criação de peças gráficas para redes sociais e materiais impressos; atualização e aplicação dos elementos visuais da marca.', 'Dupla de Leads')">
-                            <div>
-                                <h4 style="font-size: 1.1rem; margin: 0 0 6px 0; font-weight: 700;">Redes Sociais</h4>
-                                <span class="program-badge">Dupla de Leads</span>
+                    <!-- 3. MÍDIAS E IDENTIDADE -->
+                    <div class="area-section" data-area="midias">
+                        <h3 class="area-section__title">🎨 Mídias e Identidade</h3>
+                        <div class="programs-grid">
+                            <div class="program-card" data-category="midias" onclick="openDetailsModal('Redes Sociais', 'Mídias e Identidade', 'Gestão dos canais digitais; criação de peças gráficas para redes sociais e materiais impressos; atualização e aplicação dos elementos visuais da marca.', 'Dupla de Leads')">
+                                <div>
+                                    <h4 style="font-size: 1.1rem; margin: 0 0 6px 0; font-weight: 700;">Redes Sociais</h4>
+                                    <span class="program-badge">Dupla de Leads</span>
+                                </div>
+                                <span class="card-link-text">Quero saber mais →</span>
                             </div>
-                            <span class="card-link-text" style="color: var(--pink);">Quero saber mais →</span>
-                        </div>
-                        <div class="program-card" onclick="openDetailsModal('Cobertura de Eventos', 'Mídias e Identidade', 'Registro fotográfico, gravação de vídeos, stories em tempo real e cobertura completa dos encontros.', 'Dupla de Leads')">
-                            <div>
-                                <h4 style="font-size: 1.1rem; margin: 0 0 6px 0; font-weight: 700;">Cobertura de Eventos</h4>
-                                <span class="program-badge">Dupla de Leads</span>
+                            <div class="program-card" data-category="midias" onclick="openDetailsModal('Cobertura de Eventos', 'Mídias e Identidade', 'Registro fotográfico, gravação de vídeos, stories em tempo real e cobertura completa dos encontros.', 'Dupla de Leads')">
+                                <div>
+                                    <h4 style="font-size: 1.1rem; margin: 0 0 6px 0; font-weight: 700;">Cobertura de Eventos</h4>
+                                    <span class="program-badge">Dupla de Leads</span>
+                                </div>
+                                <span class="card-link-text">Quero saber mais →</span>
                             </div>
-                            <span class="card-link-text" style="color: var(--pink);">Quero saber mais →</span>
-                        </div>
-                        <div class="program-card" onclick="openDetailsModal('Materiais & Recursos', 'Mídias e Identidade', 'Desenvolvimento de templates, guias de boas práticas, materiais educativos e apresentação de slides para eventos.', 'Dupla de Leads')">
-                            <div>
-                                <h4 style="font-size: 1.1rem; margin: 0 0 6px 0; font-weight: 700;">Materiais & Recursos</h4>
-                                <span class="program-badge">Dupla de Leads</span>
+                            <div class="program-card" data-category="midias" onclick="openDetailsModal('Materiais & Recursos', 'Mídias e Identidade', 'Desenvolvimento de templates, guias de boas práticas, materiais educativos e apresentação de slides para eventos.', 'Dupla de Leads')">
+                                <div>
+                                    <h4 style="font-size: 1.1rem; margin: 0 0 6px 0; font-weight: 700;">Materiais & Recursos</h4>
+                                    <span class="program-badge">Dupla de Leads</span>
+                                </div>
+                                <span class="card-link-text">Quero saber mais →</span>
                             </div>
-                            <span class="card-link-text" style="color: var(--pink);">Quero saber mais →</span>
                         </div>
                     </div>
-                </div>
 
-                <!-- 4. PARCERIAS E RELACIONAMENTOS -->
-                <div class="area-section">
-                    <h3 class="area-section__title">🤝 Parcerias e Relacionamentos</h3>
-                    <div class="programs-grid">
-                        <div class="program-card" onclick="openDetailsModal('Parcerias', 'Parcerias e Relacionamentos', 'Prospecção e formalização de parcerias estratégicas com empresas e instituições de ensino.', 'Dupla de Leads')">
-                            <div>
-                                <h4 style="font-size: 1.1rem; margin: 0 0 6px 0; font-weight: 700;">Parcerias</h4>
-                                <span class="program-badge">Dupla de Leads</span>
+                    <!-- 4. PARCERIAS E RELACIONAMENTOS -->
+                    <div class="area-section" data-area="parcerias">
+                        <h3 class="area-section__title">🤝 Parcerias e Relacionamentos</h3>
+                        <div class="programs-grid">
+                            <div class="program-card" data-category="parcerias" onclick="openDetailsModal('Parcerias', 'Parcerias e Relacionamentos', 'Prospecção e formalização de parcerias estratégicas com empresas e instituições de ensino.', 'Dupla de Leads')">
+                                <div>
+                                    <h4 style="font-size: 1.1rem; margin: 0 0 6px 0; font-weight: 700;">Parcerias</h4>
+                                    <span class="program-badge">Dupla de Leads</span>
+                                </div>
+                                <span class="card-link-text">Quero saber mais →</span>
                             </div>
-                            <span class="card-link-text" style="color: var(--yellow-800);">Quero saber mais →</span>
-                        </div>
-                        <div class="program-card" onclick="openDetailsModal('Apoiadores', 'Parcerias e Relacionamentos', 'Gestão de relacionamento com marcas apoiadoras e patrocinadoras dos eventos e iniciativas.', 'Dupla de Leads')">
-                            <div>
-                                <h4 style="font-size: 1.1rem; margin: 0 0 6px 0; font-weight: 700;">Apoiadores</h4>
-                                <span class="program-badge">Dupla de Leads</span>
+                            <div class="program-card" data-category="parcerias" onclick="openDetailsModal('Apoiadores', 'Parcerias e Relacionamentos', 'Gestão de relacionamento com marcas apoiadoras e patrocinadoras dos eventos e iniciativas.', 'Dupla de Leads')">
+                                <div>
+                                    <h4 style="font-size: 1.1rem; margin: 0 0 6px 0; font-weight: 700;">Apoiadores</h4>
+                                    <span class="program-badge">Dupla de Leads</span>
+                                </div>
+                                <span class="card-link-text">Quero saber mais →</span>
                             </div>
-                            <span class="card-link-text" style="color: var(--yellow-800);">Quero saber mais →</span>
-                        </div>
-                        <div class="program-card" onclick="openDetailsModal('Oportunidades & Benefícios', 'Parcerias e Relacionamentos', 'Busca por vagas de emprego, descontos e benefícios exclusivos para os membros da comunidade.', 'Dupla de Leads')">
-                            <div>
-                                <h4 style="font-size: 1.1rem; margin: 0 0 6px 0; font-weight: 700;">Oportunidades & Benefícios</h4>
-                                <span class="program-badge">Dupla de Leads</span>
+                            <div class="program-card" data-category="parcerias" onclick="openDetailsModal('Oportunidades & Benefícios', 'Parcerias e Relacionamentos', 'Busca por vagas de emprego, descontos e benefícios exclusivos para os membros da comunidade.', 'Dupla de Leads')">
+                                <div>
+                                    <h4 style="font-size: 1.1rem; margin: 0 0 6px 0; font-weight: 700;">Oportunidades & Benefícios</h4>
+                                    <span class="program-badge">Dupla de Leads</span>
+                                </div>
+                                <span class="card-link-text">Quero saber mais →</span>
                             </div>
-                            <span class="card-link-text" style="color: var(--yellow-800);">Quero saber mais →</span>
                         </div>
                     </div>
-                </div>
 
-                <!-- 5. COMUNIDADE E ENGAJAMENTO -->
-                <div class="area-section">
-                    <h3 class="area-section__title">💬 Comunidade e Engajamento</h3>
-                    <div class="programs-grid">
-                        <div class="program-card" onclick="openDetailsModal('Mentorias', 'Comunidade e Engajamento', 'Coordenação de programas de mentoria (como o Decola UXBrasília), conectando seniores a iniciantes.', 'Dupla de Leads')">
-                            <div>
-                                <h4 style="font-size: 1.1rem; margin: 0 0 6px 0; font-weight: 700;">Mentorias</h4>
-                                <span class="program-badge">Dupla de Leads</span>
+                    <!-- 5. COMUNIDADE E ENGAJAMENTO -->
+                    <div class="area-section" data-area="comunidade">
+                        <h3 class="area-section__title">💬 Comunidade e Engajamento</h3>
+                        <div class="programs-grid">
+                            <div class="program-card" data-category="comunidade" onclick="openDetailsModal('Mentorias', 'Comunidade e Engajamento', 'Coordenação de programas de mentoria (como o Decola UXBrasília), conectando seniores a iniciantes.', 'Dupla de Leads')">
+                                <div>
+                                    <h4 style="font-size: 1.1rem; margin: 0 0 6px 0; font-weight: 700;">Mentorias</h4>
+                                    <span class="program-badge">Dupla de Leads</span>
+                                </div>
+                                <span class="card-link-text">Quero saber mais →</span>
                             </div>
-                            <span class="card-link-text">Quero saber mais →</span>
                         </div>
                     </div>
-                </div>
 
+                </div>
             </div>
         </div>
     </main>
 
-    <!-- SEÇÃO 1: RELAÇÃO ENTRE PAPÉIS (Baseada na imagem 1) -->
+    <!-- SEÇÃO 1: RELAÇÃO ENTRE PAPÉIS -->
     <section class="roles-section">
         <div class="container">
-            <h4 class="roles-subtitle">RELAÇÃO ENTRE PAPÉIS</h4>
+            <div class="lead-guidance__intro">
+                <span class="section-kicker section-kicker--green">Relação entre papéis</span>
+                <h2 class="section__title">Cada papel tem um lugar no processo.</h2>
+                <p>Entender a diferença entre Head, Lead e voluntário(a) ajuda a deixar a comunidade mais clara, colaborativa e autônoma.</p>
+            </div>
+
             <div class="roles-grid">
-                <!-- Card Head -->
                 <div class="role-card">
                     <div class="role-card__icon role-card__icon--blue">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15.5 8.5-2.2 4.8-4.8 2.2 2.2-4.8 4.8-2.2Z"></path></svg>
@@ -170,7 +195,7 @@
                     <h3 class="role-card__title" style="color: var(--blue);">Head / Coordenação de Área</h3>
                     <p class="role-card__desc">Responsável por uma frente estratégica da UX Brasília. Define direcionamento, prioridades, alinhamento e dá suporte aos programas da sua área.</p>
                 </div>
-                <!-- Card Lead -->
+
                 <div class="role-card">
                     <div class="role-card__icon role-card__icon--yellow">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4"></path><path d="M5 5c4-3 7 3 14 0v9c-7 3-10-3-14 0"></path></svg>
@@ -178,15 +203,16 @@
                     <h3 class="role-card__title" style="color: var(--yellow-700);">Lead de Programa</h3>
                     <p class="role-card__desc">Responsável por um programa ou iniciativa específica. Tem autonomia para conduzir, planejar e executar as ações com liberdade e foco estratégico.</p>
                 </div>
-                <!-- Card Voluntário -->
+
                 <div class="role-card">
-                    <div class="role-card__icon role-card__icon--green">
+                    <div class="role-card__icon role-card__icon--pink">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
                     </div>
-                    <h3 class="role-card__title" style="color: var(--green);">Voluntário(a)</h3>
+                    <h3 class="role-card__title" style="color: var(--pink);">Voluntário(a)</h3>
                     <p class="role-card__desc">Colabora com seu tempo, talento e energia para apoiar iniciativas e programas da comunidade.</p>
                 </div>
             </div>
+
             <p class="roles-footer-note">
                 Head representa <span style="color: var(--blue); font-weight: 600;">responsabilidade sobre uma área</span>. Lead representa <span style="color: var(--yellow-800); font-weight: 600;">responsabilidade sobre um programa</span>. Não é uma relação de chefia e subordinação. O Head responde pela frente. Os Leads respondem pelo programa.
             </p>
@@ -197,7 +223,7 @@
     <section class="lead-guidance-section">
         <div class="container">
             <div class="lead-guidance__intro">
-                <span class="box-badge box-badge--green">Antes de se candidatar</span>
+                <span class="section-kicker section-kicker--green">Antes de se candidatar</span>
                 <h2 class="section__title">Fazer parte dos Leads é construir junto.</h2>
                 <p>Ao entrar, você passa a fazer parte do grupo de Leads da UX Brasília: uma rede de pessoas que propõe, realiza e colabora para a comunidade continuar viva.</p>
             </div>
@@ -225,7 +251,7 @@
                         <span class="lead-guidance__arrow" aria-hidden="true">↗</span>
                     </div>
                     <h3>Como vamos trabalhar</h3>
-                    <p>Teremos uma agenda semanal ou quinzenal para alinhamentos. A dedicação esperada é de aproximadamente 4 a 5 horas por semana. A atuação é voluntária, com autonomia, apoio do grupo e respeito aos limites de cada pessoa.</p>
+                    <p>Teremos uma agenda semanal ou quinzenal para alinhamentos. A dedicação esperada é de aproximadamente 4 a 5 horas por semana. A atuação é voluntária, com com autonomia para conduzir, planejar e colocar em prática as ações do programa junto aos Heads.</p>
                 </article>
             </div>
 
@@ -236,30 +262,74 @@
         </div>
     </section>
 
-    <!-- SEÇÃO 3: NOSSOS PRINCÍPIOS E COMO PARTICIPAR (Baseada na imagem 2) -->
+    <!-- SEÇÃO 3: NOSSOS PRINCÍPIOS -->
     <section class="principles-section">
         <div class="container">
-            <div class="principles-grid-two">
-                <!-- Coluna Princípios -->
-                <div class="principle-box">
-                    <span class="box-badge box-badge--green">Nossos Princípios</span>
-                    <ul class="principles-list">
-                        <li><span class="principle-dot">•</span> Colaboração acima da hierarquia</li>
-                        <li><span class="principle-dot">•</span> Transparência e escuta ativa</li>
-                        <li><span class="principle-dot">•</span> Diversidade, inclusão e respeito</li>
-                        <li><span class="principle-dot">•</span> Impacto positivo para a comunidade e para a área</li>
-                        <li><span class="principle-dot">•</span> Aprendizado contínuo e troca de conhecimento</li>
-                    </ul>
-                </div>
-                <!-- Coluna Como Participar -->
-                <div class="principle-box">
-                    <span class="box-badge box-badge--blue">Como Participar</span>
-                    <p class="participate-text">A UX Brasília é feita por pessoas da área que querem contribuir.</p>
-                    <div class="participate-cta-box">
-                        <strong>Participe! Proponha! Colabore!</strong>
+            <div class="section-kicker section-kicker--green">Nossos princípios</div>
+            <h2 class="section__title">Uma comunidade que aprende e cresce junto.</h2>
+
+            <div class="principles-list">
+                <article class="principle-card-item">
+                    <div class="principle-card-item__icon">🤝</div>
+                    <div>
+                        <h4>Colaboração</h4>
+                        <p>Construímos juntos, com ajuda mútua e respeito ao tempo e ao papel de cada pessoa.</p>
                     </div>
-         
+                </article>
+
+                <article class="principle-card-item">
+                    <div class="principle-card-item__icon">💬</div>
+                    <div>
+                        <h4>Transparência</h4>
+                        <p>Escuta ativa, clareza de processos e comunicação aberta são parte do nosso jeito de agir.</p>
+                    </div>
+                </article>
+
+                <article class="principle-card-item">
+                    <div class="principle-card-item__icon">🌱</div>
+                    <div>
+                        <h4>Inclusão</h4>
+                        <p>Valorizamos diversidade, acolhimento e um ambiente onde mais pessoas possam participar.</p>
+                    </div>
+                </article>
+
+                <article class="principle-card-item">
+                    <div class="principle-card-item__icon">✨</div>
+                    <div>
+                        <h4>Impacto</h4>
+                        <p>Geramos ações que realmente fortalecem a comunidade e ampliam oportunidades para a área.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 4: COMO PARTICIPAR -->
+    <section class="participate-section">
+        <div class="container participate-layout">
+            <div class="participate-copy">
+                <div class="section-kicker section-kicker--blue">Como participar</div>
+                <h2 class="section__title">A sua contribuição pode começar por aqui.</h2>
+                <p class="participate-text">A comunidade cresce com pessoas que querem colaborar, propor ideias e participar de processos reais dentro da UX Brasília.</p>
+
+                <div class="participate-steps">
+                    <div class="participate-step">
+                        <span>1</span>
+                        <p>Inscreva-se no programa que mais combina com você.</p>
+                    </div>
+                    <div class="participate-step">
+                        <span>2</span>
+                        <p>Entraremos em contato com os selecionados para dar continuidade ao processo.</p>
+                    </div>
+                    <div class="participate-step">
+                        <span>3</span>
+                        <p>Faça parte do onboarding e comece a participar ativamente da comunidade.</p>
+                    </div>
                 </div>
+
+                <a href="#vagas-container" class="participate-cta-box">
+                    <strong>Inscreva-se e faça parte!</strong>
+                </a>
             </div>
         </div>
     </section>
@@ -293,7 +363,8 @@
                 
                 <div style="background: #f9fafb; border: 1px solid #e5e7eb; padding: 16px; border-radius: 12px; margin-bottom: 24px;">
                     <h4 style="margin: 0 0 6px 0; font-size: 0.9rem; font-weight: 600;">Como funciona:</h4>
-                    <p style="margin: 0; font-size: 0.9rem; color: #6b7280;">Cada programa conta com <strong>2 Leads que atuam em dupla</strong>, com autonomia para planejar, organizar e executar as ações, dividindo responsabilidades e decisões.</p>
+                    <p style="margin: 0 0 8px 0; font-size: 0.9rem; color: #6b7280; line-height: 1.6;">Cada programa conta com <strong>2 Leads que atuam em dupla</strong>, com autonomia para planejar, organizar e executar as ações, dividindo responsabilidades e decisões.</p>
+                    <p style="margin: 0; font-size: 0.9rem; color: #6b7280; line-height: 1.6;">Você não precisa chegar sabendo tudo. Os Leads trabalham em dupla e contam com o apoio do Head da frente e da Coordenação da UX Brasília. A ideia é construir junto, dividir responsabilidades, trocar experiências e dar suporte no que for necessário ao longo do caminho.</p>
                 </div>
             </div>
             <div class="modal-footer">
@@ -357,8 +428,8 @@
     <!-- Rodapé Carregado via script comum -->
     <div id="footer-container"></div>
 
-    <script src="/scripts/menu-footer.js" defer></script>
-    <script src="/scripts/vagas.js"></script>
+    <script src="scripts/menu-footer.js" defer></script>
+    <script src="scripts/vagas.js"></script>
 </body>
 
 </html>
