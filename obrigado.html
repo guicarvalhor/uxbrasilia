@@ -19,6 +19,53 @@
             display: grid;
             place-items: center;
             padding: 32px 20px;
+            position: relative;
+        }
+
+        .loading-state {
+            display: grid;
+            place-items: center;
+            width: min(420px, 100%);
+            transition: opacity 0.45s ease, transform 0.45s ease, visibility 0.45s ease;
+        }
+
+        .loading-card {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.92);
+            border: 1px solid rgba(56, 178, 111, 0.18);
+            border-radius: 28px;
+            box-shadow: var(--shadow);
+            padding: clamp(28px, 5vw, 40px);
+            text-align: center;
+        }
+
+        .loader {
+            width: 68px;
+            height: 68px;
+            margin: 0 auto 18px;
+            border: 6px solid rgba(56, 178, 111, 0.15);
+            border-top-color: var(--green-600);
+            border-radius: 50%;
+            animation: spin 0.9s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .loading-title {
+            margin: 0 0 8px;
+            font-family: "Cabinet Grotesk", system-ui;
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+            color: var(--ink);
+        }
+
+        .loading-subtitle {
+            margin: 0;
+            font-size: 0.95rem;
+            color: var(--muted);
         }
 
         .thanks-card {
@@ -29,6 +76,26 @@
             box-shadow: var(--shadow);
             padding: clamp(28px, 5vw, 52px);
             text-align: center;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(18px);
+            transition: opacity 0.45s ease, transform 0.45s ease, visibility 0.45s ease;
+            position: absolute;
+        }
+
+        .thanks-card.is-visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            position: relative;
+        }
+
+        .loading-state.is-hidden {
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(0.98);
+            pointer-events: none;
+            position: absolute;
         }
 
         .thanks-badge {
@@ -78,7 +145,15 @@
 </head>
 <body>
     <main class="thanks-shell">
-        <section class="thanks-card" aria-labelledby="thanks-title">
+        <div id="loadingState" class="loading-state" aria-live="polite" aria-label="Enviando candidatura">
+            <div class="loading-card">
+                <div class="loader" aria-hidden="true"></div>
+                <p class="loading-title">Enviando sua candidatura...</p>
+                <p class="loading-subtitle">Estamos validando os seus dados.</p>
+            </div>
+        </div>
+
+        <section id="thanksCard" class="thanks-card" aria-labelledby="thanks-title">
             <div class="thanks-badge">Formulário enviado</div>
             <h1 id="thanks-title">Obrigado pela sua candidatura!</h1>
             <p>
@@ -90,5 +165,17 @@
             </div>
         </section>
     </main>
+
+    <script>
+        const loadingState = document.getElementById('loadingState');
+        const thanksCard = document.getElementById('thanksCard');
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                loadingState.classList.add('is-hidden');
+                thanksCard.classList.add('is-visible');
+            }, 1800);
+        });
+    </script>
 </body>
 </html>

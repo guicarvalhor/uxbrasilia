@@ -64,13 +64,13 @@
   "2026": [
     {
       "date": "26 — Setembro",
-      "status": "em breve",
+      "status": "em andamento",
       "title": "Design como valor para negócios",
-      "local": "Presencial | Local a definir",
-      "hora": "",
+      "local": "Presencial | Fóton Informática",
+      "hora": "14h às 18h",
       "color": "pink",
-      "linkType": null,
-      "linkUrl": null
+      "linkType": "link",
+      "linkUrl": "https://www.sympla.com.br/evento/encontro-ux-brasilia/3581883"
     },
     {
       "date": "27 - Junho",
