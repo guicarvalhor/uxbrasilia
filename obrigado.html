@@ -22,10 +22,60 @@
             position: relative;
         }
 
+        .thanks-shell > * {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .thanks-layout {
+            width: min(980px, 100%);
+            display: grid;
+            grid-template-columns: 0.95fr 1.05fr;
+            align-items: center;
+            gap: 28px;
+            justify-items: center;
+        }
+
+        .thanks-illustration {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(18px);
+            transition: opacity 0.45s ease, transform 0.45s ease, visibility 0.45s ease;
+        }
+
+        .thanks-illustration.is-visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .thanks-illustration img {
+            display: block;
+            width: min(100%, 420px);
+            max-width: 100%;
+            height: auto;
+            filter: drop-shadow(0 18px 30px rgba(13, 22, 18, 0.12));
+            animation: floatUp 4s ease-in-out infinite;
+        }
+
+        @keyframes floatUp {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
         .loading-state {
             display: grid;
             place-items: center;
             width: min(420px, 100%);
+            z-index: 2;
             transition: opacity 0.45s ease, transform 0.45s ease, visibility 0.45s ease;
         }
 
@@ -83,6 +133,29 @@
             position: absolute;
         }
 
+        @media (max-width: 768px) {
+            .thanks-layout {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .thanks-illustration img {
+                width: min(90%, 300px);
+            }
+
+            .thanks-card {
+                padding: 28px 22px;
+            }
+
+            .thanks-actions {
+                flex-direction: column;
+            }
+
+            .thanks-actions .btn {
+                width: 100%;
+            }
+        }
+
         .thanks-card.is-visible {
             opacity: 1;
             visibility: visible;
@@ -96,6 +169,13 @@
             transform: scale(0.98);
             pointer-events: none;
             position: absolute;
+        }
+
+        .thanks-card.is-visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            position: relative;
         }
 
         .thanks-badge {
@@ -153,27 +233,38 @@
             </div>
         </div>
 
-        <section id="thanksCard" class="thanks-card" aria-labelledby="thanks-title">
-            <div class="thanks-badge">Formulário enviado</div>
-            <h1 id="thanks-title">Obrigado pela sua candidatura!</h1>
-            <p>
-                Sua inscrição foi enviada com sucesso. A nossa equipe vai analisar seu interesse e entraremos em contato em breve.
-            </p>
-            <div class="thanks-actions">
-                <a href="/index.html" class="btn btn--primary">Voltar para a página inicial</a>
-                <a href="/vagas.html" class="btn btn--ghost">Ver outras oportunidades</a>
+        <div class="thanks-layout">
+            <div class="thanks-illustration" aria-hidden="true">
+                <img src="/assets/Ok-rafiki.png" alt="Ilustração de confirmação" />
             </div>
-        </section>
+
+            <section id="thanksCard" class="thanks-card" aria-labelledby="thanks-title">
+                <div class="thanks-badge">Formulário enviado</div>
+                <h1 id="thanks-title">Obrigado pela sua candidatura!</h1>
+                <p>
+                    Sua inscrição foi enviada com sucesso. A nossa equipe vai analisar seu interesse e entraremos em contato em breve.
+                </p>
+                <div class="thanks-actions">
+                    <a href="/index.html" class="btn btn--primary">Voltar para a página inicial</a>
+                    <a href="/vagas.html" class="btn btn--ghost">Ver outras oportunidades</a>
+                </div>
+            </section>
+        </div>
     </main>
 
     <script>
         const loadingState = document.getElementById('loadingState');
         const thanksCard = document.getElementById('thanksCard');
 
+        const thanksIllustration = document.querySelector('.thanks-illustration');
+
         window.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 loadingState.classList.add('is-hidden');
                 thanksCard.classList.add('is-visible');
+                if (thanksIllustration) {
+                    thanksIllustration.classList.add('is-visible');
+                }
             }, 1800);
         });
     </script>

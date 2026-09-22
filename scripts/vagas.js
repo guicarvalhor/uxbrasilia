@@ -50,6 +50,33 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const phoneInput = document.getElementById('user-phone');
+    if (phoneInput) {
+        phoneInput.setAttribute('inputmode', 'numeric');
+
+        const formatBrazilianPhone = (value) => {
+            const digits = value.replace(/\D/g, '').slice(0, 11);
+
+            if (digits.length <= 2) {
+                return digits;
+            }
+
+            if (digits.length <= 6) {
+                return `(${digits.slice(0, 2)}) ${digits.slice(2)}`;
+            }
+
+            if (digits.length <= 10) {
+                return `(${digits.slice(0, 2)}) ${digits.slice(2, 6)}-${digits.slice(6)}`;
+            }
+
+            return `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7)}`;
+        };
+
+        phoneInput.addEventListener('input', () => {
+            phoneInput.value = formatBrazilianPhone(phoneInput.value);
+        });
+    }
+
     // Envio do formulário via Formspree com redirecionamento para página de confirmação
     if (orderForm) {
         const makeSubmissionId = () => {
