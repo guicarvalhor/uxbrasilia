@@ -52,6 +52,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Envio do formulário via Formspree com redirecionamento para página de confirmação
     if (orderForm) {
+        const makeSubmissionId = () => {
+            if (window.crypto && crypto.randomUUID) {
+                return crypto.randomUUID();
+            }
+
+            return `submission-${Date.now()}-${Math.random().toString(16).slice(2)}`;
+        };
+
+        const getFormFingerprint = () => {
+            const values = ['nome', 'telefone', 'linkedin', 'programa', 'mensagem']
+                .map((fieldName) => {
+                    const field = orderForm.querySelector(`[name="${fieldName}"]`);
+                    return field ? field.value.trim().toLowerCase() : '';
+                })
+                .join('|');
+
+            return btoa(unescape(encodeURIComponent(values))).slice(0, 128);
+        };
+
         orderForm.addEventListener('submit', async (event) => {
             event.preventDefault();
 
@@ -61,14 +80,41 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
+            if (orderForm.dataset.submitting === 'true') {
+                console.warn('Duplicate submission blocked.');
+                return;
+            }
+
+            const formFingerprint = getFormFingerprint();
+            const duplicateCacheKey = `uxbrasilia-submission-${formFingerprint}`;
+            const now = Date.now();
+            const lastAttempt = window.sessionStorage ? Number(window.sessionStorage.getItem(duplicateCacheKey) || '0') : 0;
+
+            if (window.sessionStorage && lastAttempt && now - lastAttempt < 10000) {
+                console.warn('Recent duplicate submission detected. Blocking repeat.');
+                alert('Essa candidatura já foi enviada recentemente. Aguarde alguns segundos antes de tentar novamente.');
+                return;
+            }
+
+            const submissionInput = orderForm.querySelector('input[name="submission_id"]');
+            if (submissionInput) {
+                submissionInput.value = makeSubmissionId();
+            }
+
             const submitButton = orderForm.querySelector('button[type="submit"]');
             const originalText = submitButton ? submitButton.textContent.trim() : 'Enviar';
+
+            orderForm.dataset.submitting = 'true';
 
             if (submitButton) {
                 submitButton.disabled = true;
                 submitButton.textContent = 'Enviando...';
                 submitButton.style.opacity = '0.7';
                 submitButton.style.cursor = 'wait';
+            }
+
+            if (window.sessionStorage) {
+                window.sessionStorage.setItem(duplicateCacheKey, String(now));
             }
 
             try {
@@ -87,7 +133,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.location.href = '/obrigado.html';
             } catch (error) {
                 console.error('Erro ao enviar candidatura:', error);
+                if (window.sessionStorage) {
+                    window.sessionStorage.removeItem(duplicateCacheKey);
+                }
                 alert('Não foi possível enviar sua candidatura neste momento. Tente novamente em alguns instantes.');
+
+                orderForm.dataset.submitting = 'false';
 
                 if (submitButton) {
                     submitButton.disabled = false;
