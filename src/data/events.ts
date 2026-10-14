@@ -1,0 +1,115 @@
+export interface EventItem {
+  date: string;
+  status: 'realizado' | 'em andamento' | 'em breve';
+  title: string;
+  local: string;
+  hora?: string;
+  color: 'white' | 'yellow' | 'pink' | 'blue' | 'green';
+  linkType?: 'photos' | 'video' | 'tickets' | 'link' | null;
+  linkUrl?: string | null;
+}
+
+export const eventsData: Record<string, EventItem[]> = {
+  "2026": [
+    {
+      date: "26 — Setembro",
+      status: "em andamento",
+      title: "Design como valor para negócios",
+      local: "Presencial | Fóton Informática",
+      hora: "14h às 18h",
+      color: "pink",
+      linkType: "link",
+      linkUrl: "https://www.sympla.com.br/evento/encontro-ux-brasilia/3581883"
+    },
+    {
+      date: "27 - Junho",
+      status: "realizado",
+      title: "Roda de conversa: IA no dia a dia do UX/UI",
+      local: "Presencial | Senac",
+      color: "blue",
+      linkType: "photos",
+      linkUrl: "https://drive.google.com/drive/folders/1pVX9Iwm4aQMR6qnPgyuzzLPE3Ck_3PAA?usp=drive_link"
+    },
+    {
+      date: "28 - Março",
+      status: "realizado",
+      title: "Workshops de Aniversário UX Brasília",
+      local: "Presencial | Senac",
+      color: "yellow",
+      linkType: "video",
+      linkUrl: ""
+    },
+    {
+      date: "28 - Março",
+      status: "realizado",
+      title: "Mulheres em UX - Voz, Impacto e Decisão",
+      local: "Online",
+      hora: "",
+      color: "blue",
+      linkType: "video",
+      linkUrl: "https://www.youtube.com/watch?v=kHFC7ov9fM8&t=164s"
+    }
+  ],
+  "2025": [
+    {
+      date: "22 — Novembro",
+      status: "realizado",
+      title: "Workshops UX/UI",
+      local: "Impact Hub",
+      hora: "",
+      color: "white",
+      linkType: "photos",
+      linkUrl: ""
+    },
+    {
+      date: "04 — Setembro",
+      status: "realizado",
+      title: "O impacto da visão de negócio na experiência do usuário",
+      local: "Museu Nacional",
+      hora: "",
+      color: "yellow",
+      linkType: "photos",
+      linkUrl: "https://uxbrasilia.photos.live/photos?fbclid=PAZXh0bgNhZW0CMTEAAaeNz7xWaxxrfP2QziXUyRVM6qM71iRPX7i3mRli5PvDhy01nNltSYWB4W-kwQ_aem_3uHOaHnEy9Y4h34nhzgS1A"
+    },
+    {
+      date: "06 — Agosto",
+      status: "realizado",
+      title: "UX Research: ética, IA e prática em pesquisa de experiência.",
+      local: "Museu Nacional",
+      hora: "",
+      color: "pink",
+      linkType: "photos",
+      linkUrl: "/blog?id=post-2"
+    },
+    {
+      date: "19 - Julho",
+      status: "realizado",
+      title: "UX Inclusivo além da acessibilidade técnica",
+      local: "Online",
+      hora: "",
+      color: "blue",
+      linkType: "video",
+      linkUrl: "https://www.youtube.com/live/TaYdNV2gLNY?si=9F1nMZr4ml3oyEG1"
+    },
+    {
+      date: "07 - Junho",
+      status: "realizado",
+      title: "Uso de IA no design UX/UI e atualizações do Figma",
+      local: "Presencial",
+      hora: "",
+      color: "green",
+      linkType: "photos",
+      linkUrl: "https://drive.google.com/drive/folders/13VltBaPIGFtjkUMuGkHkkDFvlk-TbqgT?usp=sharing"
+    },
+    {
+      date: "11 - Abril",
+      status: "realizado",
+      title: "UX Além das telas",
+      local: "Presencial",
+      hora: "",
+      color: "white",
+      linkType: null,
+      linkUrl: null
+    }
+  ]
+};

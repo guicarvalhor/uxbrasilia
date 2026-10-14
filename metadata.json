@@ -1,0 +1,8 @@
+{
+  "name": "UXBrasília — Comunidade",
+  "description": "Comunidade UXBrasília: design coletivo, eventos, workshops, loja, blog, vagas e projetos colaborativos de UX/UI em Brasília.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
