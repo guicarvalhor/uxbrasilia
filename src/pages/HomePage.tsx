@@ -231,12 +231,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         <div className="container">
           <h2 id="team-title" className="section__title section__title--light">
             Quem faz acontecer
-          </h2>
-          <p className="team__subtitle">
-            Pessoas voluntárias, coordenação e lideranças que impulsionam as frentes, programas e iniciativas da comunidade UX Brasília.
-          </p>
-
-         
+          </h2>  
 
           {/* Coordenação Geral & Heads */}
           <div className="team__group-header">
