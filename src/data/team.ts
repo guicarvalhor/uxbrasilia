@@ -55,7 +55,7 @@ export const teamData: TeamMember[] = [
   // LEADS DAS FRENTES
   {
     id: 'carlos',
-    name: 'Carlos Eduardo',
+    name: 'Carlos Guilherme',
     role: 'Lead de Mentorias',
     group: 'leads',
     groupLabel: 'Leads de Frentes e Programas',
@@ -79,7 +79,7 @@ export const teamData: TeamMember[] = [
   },
   {
     id: 'whelyda',
-    name: 'Whelyda',
+    name: 'Whelyda Meira',
     role: 'Lead de Produção de Conteúdos',
     group: 'leads',
     groupLabel: 'Leads de Frentes e Programas',
@@ -91,7 +91,7 @@ export const teamData: TeamMember[] = [
   },
   {
     id: 'vanessa',
-    name: 'Vanessa Lima',
+    name: 'Vanessa Sousa',
     role: 'Lead de Parcerias',
     group: 'leads',
     groupLabel: 'Leads de Frentes e Programas',
@@ -103,7 +103,7 @@ export const teamData: TeamMember[] = [
   },
   {
     id: 'gustavo',
-    name: 'Gustavo',
+    name: 'Gustavo Henrique',
     role: 'Lead de Redes Sociais',
     group: 'leads',
     groupLabel: 'Leads de Frentes e Programas',
@@ -115,7 +115,7 @@ export const teamData: TeamMember[] = [
   },
   {
     id: 'lana',
-    name: 'Lana',
+    name: 'Lana Rodrigues',
     role: 'Lead de Materiais e Recursos',
     group: 'leads',
     groupLabel: 'Leads de Frentes e Programas',
@@ -127,7 +127,7 @@ export const teamData: TeamMember[] = [
   },
   {
     id: 'victoria',
-    name: 'Victoria',
+    name: 'Victoria Cristina',
     role: 'Lead Clube do Livro',
     group: 'leads',
     groupLabel: 'Leads de Frentes e Programas',
