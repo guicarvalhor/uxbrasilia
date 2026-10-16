@@ -67,7 +67,7 @@ export const teamData: TeamMember[] = [
   },
   {
     id: 'renato',
-    name: 'Renato Silva',
+    name: 'Renato Pina',
     role: 'Lead de Mentorias',
     group: 'leads',
     groupLabel: 'Leads de Frentes e Programas',
