@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="grad-victoria" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2e67ff" />
+      <stop offset="100%" stop-color="#193eb0" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#grad-victoria)" />
+  <circle cx="200" cy="150" r="60" fill="#ffffff" opacity="0.9" />
+  <path d="M100 340 C100 245 150 225 200 225 C250 225 300 245 300 340 Z" fill="#ffffff" opacity="0.9" />
+  <circle cx="100" cy="100" r="28" fill="#d83b96" />
+  <text x="200" y="380" text-anchor="middle" font-family="'Work Sans', sans-serif" font-weight="700" font-size="16" fill="#ffffff" letter-spacing="2">CLUBE DO LIVRO</text>
+  <text x="200" y="162" text-anchor="middle" font-family="'Cabinet Grotesk', sans-serif" font-weight="800" font-size="44" fill="#193eb0">V</text>
+</svg>

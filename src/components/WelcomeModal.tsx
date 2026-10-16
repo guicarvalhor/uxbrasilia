@@ -34,10 +34,13 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onNavigate }) => {
         >
           ×
         </button>
-        <div className="welcome-modal__badge">Colabore com a comunidade</div>
-        <h2 id="welcome-modal-title">Voluntariado de Eventos UXBrasília</h2>
+        <div className="welcome-modal__badge">Voluntariado</div>
+        <h2 id="welcome-modal-title">Vem construir o evento de novembro!</h2>
         <p>
-          Estamos com inscrições abertas para pessoas voluntárias apoiarem os eventos presenciais da comunidade: recepção, acolhimento e credenciamento dos participantes. Venha fazer acontecer com a gente!
+          Estamos com inscrições abertas para pessoas voluntárias apoiarem o próximo evento presencial da comunidade.
+        </p>
+        <p>
+          Você participa no dia, conhece gente nova e fica por dentro das próximas chamadas.
         </p>
         <div className="welcome-modal__actions">
           <button
@@ -48,7 +51,7 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onNavigate }) => {
               onNavigate('/voluntariado');
             }}
           >
-            Quero ser voluntário(a)
+            Quero participar
           </button>
         </div>
       </div>

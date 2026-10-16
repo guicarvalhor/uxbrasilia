@@ -131,10 +131,10 @@ export const VoluntariadoPage: React.FC<VoluntariadoPageProps> = ({ onNavigate }
                   color: '#111827',
                 }}
               >
-                Inscrição para Voluntariado de Eventos
+                Faça parte do evento de Novembro
               </h2>
               <p style={{ color: 'var(--muted)', fontSize: '1.05rem', margin: 0, lineHeight: 1.6, maxWidth: '680px', marginInline: 'auto' }}>
-                Preencha os campos abaixo para atuar no apoio e organização presencial dos eventos, palestras e workshops da comunidade UX Brasília.
+               Nosso próximo evento está chegando e queremos contar com você para receber a comunidade. São 5 vagas para pessoas voluntárias apoiarem o evento no dia 28 de Novembro.
               </p>
             </div>
 
@@ -292,6 +292,7 @@ export const VoluntariadoPage: React.FC<VoluntariadoPageProps> = ({ onNavigate }
                 style={{
                   width: '100%',
                   padding: '16px',
+                  fontFamily: '"Work Sans", sans-serif',
                   fontSize: '1.1rem',
                   fontWeight: 700,
                   background: 'var(--pink)',
@@ -326,20 +327,6 @@ export const VoluntariadoPage: React.FC<VoluntariadoPageProps> = ({ onNavigate }
               }}
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
-                <span
-                  style={{
-                    background: 'rgba(216, 59, 150, 0.12)',
-                    color: 'var(--pink)',
-                    padding: '4px 12px',
-                    borderRadius: '999px',
-                    fontSize: '0.75rem',
-                    fontWeight: 700,
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.06em',
-                  }}
-                >
-                  Atividades
-                </span>
                 <h3
                   style={{
                     fontFamily: "'Cabinet Grotesk', sans-serif",
@@ -381,20 +368,6 @@ export const VoluntariadoPage: React.FC<VoluntariadoPageProps> = ({ onNavigate }
               }}
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
-                <span
-                  style={{
-                    background: 'rgba(216, 59, 150, 0.12)',
-                    color: 'var(--pink)',
-                    padding: '4px 12px',
-                    borderRadius: '999px',
-                    fontSize: '0.75rem',
-                    fontWeight: 700,
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.06em',
-                  }}
-                >
-                  Benefícios
-                </span>
                 <h3
                   style={{
                     fontFamily: "'Cabinet Grotesk', sans-serif",
@@ -435,20 +408,7 @@ export const VoluntariadoPage: React.FC<VoluntariadoPageProps> = ({ onNavigate }
               }}
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
-                <span
-                  style={{
-                    background: 'rgba(216, 59, 150, 0.12)',
-                    color: 'var(--pink)',
-                    padding: '4px 12px',
-                    borderRadius: '999px',
-                    fontSize: '0.75rem',
-                    fontWeight: 700,
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.06em',
-                  }}
-                >
-                  Formato & Encontros
-                </span>
+    
                 <h3
                   style={{
                     fontFamily: "'Cabinet Grotesk', sans-serif",
@@ -462,13 +422,13 @@ export const VoluntariadoPage: React.FC<VoluntariadoPageProps> = ({ onNavigate }
               </div>
               <ul style={{ paddingLeft: '20px', margin: 0, color: '#374151', lineHeight: '1.8', fontSize: '0.98rem' }}>
                 <li style={{ marginBottom: '8px' }}>
-                  <strong>Atuação Presencial:</strong> Nos dias e locais oficiais dos eventos da comunidade UX Brasília (habitualmente aos sábados à tarde).
+                  <strong>Atuação presencial e pontual:</strong> Você atua no dia e local oficial do evento da comunidade.
                 </li>
                 <li style={{ marginBottom: '8px' }}>
-                  <strong>Alinhamento Prévio:</strong> Chegada 30 a 45 minutos antes do início do evento para um breve alinhamento, crachás e distribuição harmoniosa das tarefas.
+                  <strong>Alinhamento prévio:</strong> Chegada 30 a 45 minutos antes do início do evento para um breve alinhamento, crachás e distribuição harmoniosa das tarefas.
                 </li>
                 <li style={{ marginBottom: '4px' }}>
-                  <strong>Coordenação Ágil:</strong> Os voluntários selecionados são inseridos no grupo oficial do WhatsApp para receber comunicados, escalas e combinados de cada evento.
+                  <strong>Coordenação ágil:</strong> Os voluntários selecionados são inseridos no grupo oficial do WhatsApp para receber comunicados, escalas e combinados de cada evento.
                 </li>
               </ul>
             </div>

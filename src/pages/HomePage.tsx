@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { WelcomeModal } from '../components/WelcomeModal';
 import { destaquesData } from '../data/destaques';
 import { eventsData, EventItem } from '../data/events';
+import { teamData } from '../data/team';
 
 interface HomePageProps {
   onNavigate: (path: string) => void;
@@ -231,39 +232,78 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           <h2 id="team-title" className="section__title section__title--light">
             Quem faz acontecer
           </h2>
+          <p className="team__subtitle">
+            Pessoas voluntárias, coordenação e lideranças que impulsionam as frentes, programas e iniciativas da comunidade UX Brasília.
+          </p>
 
+         
+
+          {/* Coordenação Geral & Heads */}
+          <div className="team__group-header">
+            <h3 className="team__group-title">Coordenação Geral & Heads</h3>
+            <div className="team__group-line"></div>
+          </div>
           <div className="team__grid">
-            <figure className="team-card">
-              <img src="/assets/perfis/gui.jpg" alt="Guilherme Rodrigues" />
-              <figcaption>
-                <h3>Guilherme Rodrigues</h3>
-                <p>Coordenação Geral</p>
-              </figcaption>
-            </figure>
+            {teamData
+              .filter((m) => m.group === 'coordenacao')
+              .map((member) => (
+                <figure className="team-card" key={member.id}>
+                  <img
+                    src={member.img}
+                    alt={member.name}
+                    loading="lazy"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      if (member.fallbackImg && target.src !== member.fallbackImg) {
+                        target.src = member.fallbackImg;
+                      } else {
+                        target.src = '/assets/perfis/gui.jpg';
+                      }
+                    }}
+                  />
+                  <figcaption>
+                    <span className={`team-badge team-badge--${member.badgeType}`}>
+                      {member.badgeLabel}
+                    </span>
+                    <h3>{member.name}</h3>
+                    <p>{member.role}</p>
+                  </figcaption>
+                </figure>
+              ))}
+          </div>
 
-            <figure className="team-card">
-              <img src="/assets/perfis/kary.jpg" alt="Karynne Marinho" />
-              <figcaption>
-                <h3>Karynne Marinho</h3>
-                <p>Head de logística e parcerias</p>
-              </figcaption>
-            </figure>
-
-            <figure className="team-card">
-              <img src="/assets/perfis/lany.jpg" alt="Lanyelle Mota" />
-              <figcaption>
-                <h3>Lanyelle Mota</h3>
-                <p>Head de curadoria de conteúdo</p>
-              </figcaption>
-            </figure>
-
-            <figure className="team-card">
-              <img src="/assets/perfis/vi.jpg" alt="Victor Braz" />
-              <figcaption>
-                <h3>Victor Braz</h3>
-                <p>Head de comunicação e redes sociais</p>
-              </figcaption>
-            </figure>
+          {/* Leads das Frentes */}
+          <div className="team__group-header" style={{ marginTop: '48px' }}>
+            <h3 className="team__group-title">Leads de Frentes e Programas</h3>
+            <div className="team__group-line"></div>
+          </div>
+          <div className="team__grid">
+            {teamData
+              .filter((m) => m.group === 'leads')
+              .map((member) => (
+                <figure className="team-card" key={member.id}>
+                  <img
+                    src={member.img}
+                    alt={member.name}
+                    loading="lazy"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      if (member.fallbackImg && target.src !== member.fallbackImg) {
+                        target.src = member.fallbackImg;
+                      } else {
+                        target.src = '/assets/perfis/gui.jpg';
+                      }
+                    }}
+                  />
+                  <figcaption>
+                    <span className={`team-badge team-badge--${member.badgeType}`}>
+                      {member.badgeLabel}
+                    </span>
+                    <h3>{member.name}</h3>
+                    <p>{member.role}</p>
+                  </figcaption>
+                </figure>
+              ))}
           </div>
         </div>
       </section>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="grad-gustavo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38b26f" />
+      <stop offset="100%" stop-color="#1b5a37" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#grad-gustavo)" />
+  <circle cx="200" cy="150" r="60" fill="#ffffff" opacity="0.9" />
+  <path d="M100 340 C100 245 150 225 200 225 C250 225 300 245 300 340 Z" fill="#ffffff" opacity="0.9" />
+  <circle cx="90" cy="90" r="28" fill="#f6c446" />
+  <text x="200" y="380" text-anchor="middle" font-family="'Work Sans', sans-serif" font-weight="700" font-size="16" fill="#ffffff" letter-spacing="2">REDES SOCIAIS</text>
+  <text x="200" y="162" text-anchor="middle" font-family="'Cabinet Grotesk', sans-serif" font-weight="800" font-size="44" fill="#1b5a37">G</text>
+</svg>
