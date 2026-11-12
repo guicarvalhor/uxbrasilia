@@ -27,7 +27,7 @@ A ideia não é assumir uma hierarquia rígida, mas sim liderar com clareza, esc
 Se você tem interesse em assumir uma frente de atuação, conhecer melhor a dinâmica da comunidade e contribuir com seu tempo e energia, essa é a sua chance.
 
 <div class="post-cta-button">
-    <a href="/vagas.html" class="btn btn--primary">Ver vagas abertas</a>
+    <a href="/contato" class="btn btn--primary">Falar com a coordenação</a>
 </div>
 
 ## A comunidade cresce com pessoas que se envolvem

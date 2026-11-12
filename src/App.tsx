@@ -10,6 +10,7 @@ import { ParceirosPage } from './pages/ParceirosPage';
 import { ContatoPage } from './pages/ContatoPage';
 import { DecolaPage } from './pages/DecolaPage';
 import { ObrigadoPage } from './pages/ObrigadoPage';
+import { blogPostsData } from './data/posts';
 
 export function App() {
   const [currentPath, setCurrentPath] = useState<string>(() => {
@@ -52,7 +53,16 @@ export function App() {
     }
 
     if (cleanPath === '/blog/post' || cleanPath === '/blog/post.html') {
-      return <BlogPostPage postId={idParam || 'post-3'} onNavigate={handleNavigate} />;
+      return <BlogPostPage postId={idParam || blogPostsData[0].id} onNavigate={handleNavigate} />;
+    }
+
+    if (cleanPath.startsWith('/blog/')) {
+      const slugOrId = cleanPath.replace('/blog/', '').replace(/\.html$/, '');
+      const matchedPost = blogPostsData.find((p) => p.slug === slugOrId || p.id === slugOrId);
+      if (matchedPost) {
+        return <BlogPostPage postId={matchedPost.id} onNavigate={handleNavigate} />;
+      }
+      return <BlogPage onNavigate={handleNavigate} />;
     }
 
     if (cleanPath === '/catalogo' || cleanPath === '/catalogo.html') {

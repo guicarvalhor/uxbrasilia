@@ -1,5 +1,18 @@
 [
   {
+    "id": "post-4",
+    "slug": "entrando-em-ux-ui-por-onde-comecar",
+    "title": "Entrando em UX/UI sem surtar: por onde começar, o que estudar e como trocar ideia na comunidade",
+    "subtitle": "Um guia pé no chão com o que realmente ajuda no começo da jornada — dos primeiros rabiscos no papel até como perder a vergonha de mandar mensagem no grupo.",
+    "category": "Carreira",
+    "date": "12 de Novembro, 2026",
+    "image": "/blog/imagens/carreira-ux-ui.jpg",
+    "imageAlt": "Caderno com rascunhos de telas mobile feitas à mão, post-its, notebook com interface e café em mesa de madeira em Brasília",
+    "excerpt": "Começando agora em UX e UI e sem saber qual passo dar primeiro? Reunimos dicas práticas do que fazer, onde estudar de graça e como se comunicar no grupo da comunidade sem trava.",
+    "content": "blog/paginas/post-4.md",
+    "format": "md"
+  },
+  {
     "id": "post-3",
     "slug": "abertura-de-vagas-para-leads",
     "title": "Abertura de vagas para leads: venha construir a próxima etapa da UX Brasília",
