@@ -10,7 +10,6 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
 
   const navLinks = [
     { href: '/', label: 'Página inicial' },
-    { href: '/voluntariado', label: 'Voluntariado' },
     { href: '/blog', label: 'Blog' },
     { href: '/parceiros', label: 'Parceiros' },
     { href: '/contato', label: 'Contatos' },

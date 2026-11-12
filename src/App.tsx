@@ -9,7 +9,6 @@ import { ProdutoDetailPage } from './pages/ProdutoDetailPage';
 import { ParceirosPage } from './pages/ParceirosPage';
 import { ContatoPage } from './pages/ContatoPage';
 import { DecolaPage } from './pages/DecolaPage';
-import { VoluntariadoPage } from './pages/VoluntariadoPage';
 import { ObrigadoPage } from './pages/ObrigadoPage';
 
 export function App() {
@@ -43,10 +42,6 @@ export function App() {
 
     if (cleanPath === '/' || cleanPath === '/index.html') {
       return <HomePage onNavigate={handleNavigate} />;
-    }
-
-    if (cleanPath === '/vagas' || cleanPath === '/vagas.html' || cleanPath === '/voluntariado' || cleanPath === '/voluntariado.html') {
-      return <VoluntariadoPage onNavigate={handleNavigate} />;
     }
 
     if (cleanPath === '/blog' || cleanPath === '/blog.html') {

@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { WelcomeModal } from '../components/WelcomeModal';
 import { destaquesData } from '../data/destaques';
 import { eventsData, EventItem } from '../data/events';
 import { teamData } from '../data/team';
@@ -58,8 +57,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
 
   return (
     <>
-      <WelcomeModal onNavigate={onNavigate} />
-
       {/* HERO */}
       <section id="hero" className="hero">
         <div className="hero__bg">

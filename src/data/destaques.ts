@@ -8,13 +8,6 @@ export interface DestaqueItem {
 
 export const destaquesData: DestaqueItem[] = [
   {
-    image: "/blog/imagens/leads.jpg",
-    title: "Voluntariado de Eventos",
-    description: "Venha colaborar na recepção, acolhimento e suporte dos eventos presenciais da comunidade UX Brasília.",
-    link: "/voluntariado",
-    buttonText: "Ser voluntário(a)"
-  },
-  {
     image: "/assets/comunidade.png",
     title: "Faça parte da comunidade UX Brasília",
     description: "Designers, desenvolvedores e entusiastas de UX/UI se encontram aqui para crescer juntos.",

@@ -39,11 +39,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 </a>
               </li>
               <li>
-                <a href="/voluntariado" onClick={(e) => handleNav(e, '/voluntariado')}>
-                  Voluntariado
-                </a>
-              </li>
-              <li>
                 <a href="/blog" onClick={(e) => handleNav(e, '/blog')}>
                   Blog
                 </a>

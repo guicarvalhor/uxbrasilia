@@ -103,13 +103,6 @@ export const ObrigadoPage: React.FC<ObrigadoPageProps> = ({ onNavigate }) => {
               >
                 Voltar para a página inicial
               </button>
-              <button
-                type="button"
-                className="btn btn--ghost"
-                onClick={() => onNavigate('/voluntariado')}
-              >
-                Voltar para Voluntariado
-              </button>
             </div>
           </section>
         </div>
