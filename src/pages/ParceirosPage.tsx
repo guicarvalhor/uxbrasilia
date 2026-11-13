@@ -1,10 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 interface ParceirosPageProps {
   onNavigate: (path: string) => void;
 }
 
+const ARARA_COUPON_CODE = 'UXBRASILIA';
+
 export const ParceirosPage: React.FC<ParceirosPageProps> = ({ onNavigate }) => {
+  const [copiedCoupon, setCopiedCoupon] = useState(false);
+
+  const handleCopyCoupon = async () => {
+    try {
+      await navigator.clipboard.writeText(ARARA_COUPON_CODE);
+      setCopiedCoupon(true);
+    } catch {
+      const tempInput = document.createElement('input');
+      tempInput.value = ARARA_COUPON_CODE;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempInput);
+      setCopiedCoupon(true);
+    }
+    window.setTimeout(() => setCopiedCoupon(false), 2600);
+  };
+
   return (
     <main>
       <section id="hero-voluntariado" className="hero">
@@ -73,6 +93,39 @@ export const ParceirosPage: React.FC<ParceirosPageProps> = ({ onNavigate }) => {
               }}
             >
               <img src="/assets/thestarter.svg" alt="Logo da The Starter" style={{ height: '44px' }} />
+            </a>
+            <a
+              href="https://arara.school/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="supporter-logo-item"
+              title="Arara School"
+              style={{
+                background: '#fff',
+                padding: '20px 32px',
+                borderRadius: '16px',
+                boxShadow: '0 4px 20px rgba(0,0,0,0.04)',
+                border: '1px solid #e5e7eb',
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: 'auto',
+                height: 'auto',
+                minHeight: '86px',
+              }}
+            >
+              <span
+                style={{
+                  fontFamily: "'Cabinet Grotesk', sans-serif",
+                  fontWeight: 700,
+                  fontSize: '1.25rem',
+                  color: 'var(--ink)',
+                  letterSpacing: '-0.02em',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                Arara School
+              </span>
             </a>
           </div>
         </div>
@@ -163,6 +216,123 @@ export const ParceirosPage: React.FC<ParceirosPageProps> = ({ onNavigate }) => {
                     style={{ display: 'inline-block' }}
                   >
                     Preencher formulário FIAP
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article
+            className="partner-card"
+            style={{
+              background: '#fff',
+              borderRadius: '24px',
+              padding: '36px',
+              boxShadow: '0 10px 30px rgba(0,0,0,0.06)',
+              maxWidth: '900px',
+              margin: '32px auto 0',
+            }}
+          >
+            <div style={{ marginBottom: '24px' }}>
+              <div
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  padding: '14px 20px',
+                  borderRadius: '14px',
+                  background: '#f4f9f5',
+                  border: '1px solid #cfe1d8',
+                }}
+              >
+                <span
+                  style={{
+                    fontFamily: "'Cabinet Grotesk', sans-serif",
+                    fontWeight: 700,
+                    fontSize: '1.3rem',
+                    color: 'var(--ink)',
+                    letterSpacing: '-0.02em',
+                  }}
+                >
+                  Arara School
+                </span>
+              </div>
+            </div>
+            <div className="partner-card__content">
+              <h3 style={{ fontFamily: "'Cabinet Grotesk', sans-serif", fontSize: '1.6rem', marginBottom: '12px' }}>
+                Arara School
+              </h3>
+              <p style={{ color: 'var(--muted)', lineHeight: 1.7, marginBottom: '28px' }}>
+                Escola e comunidade focada em Design Conversacional, UX Writing, chatbots, interfaces de voz e inteligência artificial aplicada à experiência de produto.
+              </p>
+              <div
+                className="benefit-item"
+                style={{
+                  background: '#f9fafb',
+                  padding: '24px',
+                  borderRadius: '16px',
+                  border: '1px solid #e5e7eb',
+                }}
+              >
+                <strong style={{ display: 'block', fontSize: '1.1rem', marginBottom: '8px', color: 'var(--green-600)' }}>
+                  Cupom de desconto exclusivo para a comunidade
+                </strong>
+                <p style={{ fontSize: '0.95rem', color: 'var(--muted)', marginBottom: '16px', lineHeight: 1.5 }}>
+                  Use o código abaixo no checkout dos cursos da Arara School para garantir o benefício da parceria UX Brasília:
+                </p>
+                <div
+                  style={{
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    alignItems: 'center',
+                    gap: '12px',
+                  }}
+                >
+                  <code
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      minHeight: '44px',
+                      padding: '10px 18px',
+                      borderRadius: '12px',
+                      border: '1.5px dashed var(--green-600)',
+                      background: '#fff',
+                      color: 'var(--ink)',
+                      fontWeight: 700,
+                      fontSize: '1rem',
+                      letterSpacing: '0.06em',
+                    }}
+                  >
+                    {ARARA_COUPON_CODE}
+                  </code>
+                  <button
+                    type="button"
+                    onClick={handleCopyCoupon}
+                    className="btn btn--ghost"
+                    style={{
+                      width: 'auto',
+                      minHeight: '44px',
+                      padding: '10px 18px',
+                      border: '1px solid #d5ded9',
+                      fontSize: '0.95rem',
+                    }}
+                  >
+                    {copiedCoupon ? 'Cupom copiado!' : 'Copiar cupom'}
+                  </button>
+                  <a
+                    href="https://arara.school/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn--primary"
+                    style={{
+                      width: 'auto',
+                      minHeight: '44px',
+                      padding: '10px 18px',
+                      fontSize: '0.95rem',
+                      display: 'inline-flex',
+                    }}
+                  >
+                    Acessar Arara School
                   </a>
                 </div>
               </div>

@@ -123,6 +123,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ postId, onNavigate }
     const lines = text.split(/\r?\n/);
     const elements: React.ReactNode[] = [];
     let listBuffer: string[] = [];
+    let orderedListBuffer: string[] = [];
     let htmlBuffer: string[] = [];
     let htmlDepth = 0;
     const headingCounts = new Map<string, number>();
@@ -166,6 +167,16 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ postId, onNavigate }
           </ul>
         );
         listBuffer = [];
+      }
+      if (orderedListBuffer.length > 0) {
+        elements.push(
+          <ol key={`ol-${elements.length}`}>
+            {orderedListBuffer.map((item, idx) => (
+              <li key={idx} dangerouslySetInnerHTML={{ __html: inlineMarkdown(item) }} />
+            ))}
+          </ol>
+        );
+        orderedListBuffer = [];
       }
     };
 
@@ -265,7 +276,15 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ postId, onNavigate }
       }
 
       if (line.startsWith('- ') || line.startsWith('* ')) {
+        if (orderedListBuffer.length > 0) flushList();
         listBuffer.push(line.slice(2));
+        return;
+      }
+
+      const orderedMatch = line.match(/^\d+\.\s+(.*)$/);
+      if (orderedMatch) {
+        if (listBuffer.length > 0) flushList();
+        orderedListBuffer.push(orderedMatch[1]);
         return;
       }
 
